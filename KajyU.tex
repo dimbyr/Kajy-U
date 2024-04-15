@@ -1,17 +1,25 @@
+% !TeX spellcheck = en_US
 \documentclass[11pt,fancy,authorye]{elegantbook}
 \usepackage{xcolor}
+%\usepackage{titletoc}
+\usepackage{minitoc}
+
 
 \definecolor{remarkcolor}{RGB}{255,128,0} % Define the color for "Remark"
-
+% Define a command for chapter-wise mini tables of contents
+%\newcommand{\chaptertoc}{%
+%	\startcontents[chapters]
+%	\printcontents[chapters]{}{1}{\section*{\contentsname}}
+%	\vspace{1cm} % Adjust the spacing as needed
+%}
 
 \newtheorem{remarque}{Remarque}
 
+\title{Kajy University: Informatique}
+\subtitle{Algorithmes et structures de données}
 
-\title{Template \LaTeX{} Kajy University}
-\subtitle{Formation \LaTeX{} }
-
-\author{Kajy University}
-\date{21 Mars 2024}
+\author{Dimby Rabearivony}
+\date{\today}
 \version{1.0}
 
 
@@ -19,7 +27,7 @@
 
 \logo{Kajy U.png}
 \cover{hay.jpg}
-
+%\usepackage{minitoc}
 
 \begin{document}
 	
@@ -29,9 +37,18 @@
 	\tableofcontents
 	
 	\mainmatter
+	\include{chapters/chap0.tex}
+	\include{chapters/chap1.tex}
+	\include{chapters/chap2.tex}
+	\include{chapters/chap3.tex}
+	\include{chapters/chap4.tex}
+	\include{chapters/chap5.tex}
 
+%\chapter{Structures de donn\'ees fondamentales}
+%\chapter{Algorithmes de recherche et de tri}
+%\chapter{Complexité algorithmique}
 
 \nocite{*}
 \bibliographystyle{plain}
-\bibliography{references}	
+\bibliography{reference}	
 \end{document}

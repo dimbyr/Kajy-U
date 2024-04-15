@@ -1,10 +1,12 @@
 \begin{thebibliography}{}
 
+\bibitem[Karumanchi, 2017]{narasimha2017data}
+Karumanchi, N. (2017).
+\newblock Data structures and algorithms made easy.
 
-
-\bibitem[Kajy University, 2024]{kajy}
-Fanomezana A. N (2001).
-\newblock Fomation Latex.
-\newblock Madagascar.
+\bibitem[Knuth, 1986]{texbook}
+Knuth, D.~E. (1986).
+\newblock {\em The {\TeX} Book}.
+\newblock Addison-Wesley Professional.
 
 \end{thebibliography}
