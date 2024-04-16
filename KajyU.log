@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  15 APR 2024 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  16 APR 2024 16:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1325,7 +1325,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 34.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<./figure/hay.jpg, id=151, 3767.07375pt x 2510.37875pt>
+<./figure/hay.jpg, id=147, 3767.07375pt x 2510.37875pt>
 File: ./figure/hay.jpg Graphic file (type jpg)
 <use ./figure/hay.jpg>
 Package pdftex.def Info: ./figure/hay.jpg  used on input line 34.
@@ -1353,7 +1353,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 34.
-<./figure/Kajy U.png, id=152, 447.17062pt x 490.83376pt>
+<./figure/Kajy U.png, id=148, 447.17062pt x 490.83376pt>
 File: ./figure/Kajy U.png Graphic file (type png)
 <use ./figure/Kajy U.png>
 Package pdftex.def Info: ./figure/Kajy U.png  used on input line 34.
@@ -1391,7 +1391,7 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (./chapters/chap1.tex
 Chapter 1 1.
 Package minitoc Info: I0006
-(minitoc)             KajyU.mtc1 is empty on input line 3.
+(minitoc)             KajyU.mtc1 is empty on input line 4.
 ) [2
 
 
@@ -1403,7 +1403,7 @@ Package minitoc Info: I0006
  (./chapters/chap2.tex
 Chapter 2 2.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 4.
+(Font)              scaled to size 12.0pt on input line 30.
 ) [3
 
 
@@ -1501,27 +1501,28 @@ Package minitoc(hints) Warning: W0024
 (./chapters/chap2.aux) (./chapters/chap3.aux) (./chapters/chap4.aux)
 (./chapters/chap5.aux))
 Package rerunfilecheck Info: File `KajyU.out' has not changed.
-(rerunfilecheck)             Checksum: 513BE3AF4BBF479F0E1A9FC7C16D43DA;4849.
+(rerunfilecheck)             Checksum: 613BA92EE6B1C712F06F22293B67F1C8;4716.
  ) 
 Here is how much of TeX's memory you used:
- 36419 strings out of 476097
- 708422 string characters out of 5791138
+ 36513 strings out of 476097
+ 710334 string characters out of 5791138
  1865851 words of memory out of 5000000
- 55845 multiletter control sequences out of 15000+600000
+ 55930 multiletter control sequences out of 15000+600000
  537989 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,11n,136p,563b,888s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,11n,136p,563b,1338s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/t
-exlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/20
-23/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on KajyU.pdf (9 pages, 2074101 bytes).
+r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/te
+xlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/202
+3/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on KajyU.pdf (9 pages, 2092471 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
- 40 named destinations out of 1000 (max. 500000)
- 359 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 288 PDF objects out of 1000 (max. 8388607)
+ 239 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 351 words of extra memory for PDF output out of 10000 (max. 10000000)
 
