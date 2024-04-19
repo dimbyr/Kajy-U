@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  19 APR 2024 17:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  19 APR 2024 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1507,7 +1507,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 46.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<./figure/hay.jpg, id=147, 3767.07375pt x 2510.37875pt>
+<./figure/hay.jpg, id=139, 3767.07375pt x 2510.37875pt>
 File: ./figure/hay.jpg Graphic file (type jpg)
 <use ./figure/hay.jpg>
 Package pdftex.def Info: ./figure/hay.jpg  used on input line 46.
@@ -1535,7 +1535,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 46.
-<./figure/Kajy U.png, id=148, 447.17062pt x 490.83376pt>
+<./figure/Kajy U.png, id=140, 447.17062pt x 490.83376pt>
 File: ./figure/Kajy U.png Graphic file (type png)
 <use ./figure/Kajy U.png>
 Package pdftex.def Info: ./figure/Kajy U.png  used on input line 46.
@@ -1603,7 +1603,7 @@ LaTeX Font Warning: Font shape `OMS/ntxtlf/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbackslash' on input line 167.
 
-) [6] [7]
+[6]) [7]
 \openout2 = `chapters/chap2.aux'.
 
  (./chapters/chap2.tex
@@ -1700,31 +1700,41 @@ Package minitoc(hints) Warning: W0024
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `KajyU.out' has not changed.
-(rerunfilecheck)             Checksum: 613BA92EE6B1C712F06F22293B67F1C8;4716.
+
+Package rerunfilecheck Warning: File `KajyU.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `KajyU.out':
+(rerunfilecheck)             Before: 3550A52DEF1841BBE943F223E9F52A3B;4420
+(rerunfilecheck)             After:  1A17941BD7E75BCB39806264826EB753;4298.
  ) 
 Here is how much of TeX's memory you used:
- 39788 strings out of 476097
- 765755 string characters out of 5791138
+ 39801 strings out of 476097
+ 765828 string characters out of 5791138
  2104851 words of memory out of 5000000
  59050 multiletter control sequences out of 15000+600000
  540798 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,13n,136p,563b,1343s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
-local/texlive/2023/texmf-dist/fonts/type1/public/newtx/ntxsups-Bold.pfb></usr/l
-ocal/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texl
-ive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2023/
-texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on KajyU.pdf (14 pages, 2130227 bytes).
+
+pdfTeX warning (dest): name{section.1.5} has been referenced but does not exist
+, replaced by a fixed one
+
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
+ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
+cal/texlive/2023/texmf-dist/fonts/type1/public/newtx/ntxsups-Bold.pfb></usr/loc
+al/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texliv
+e/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2023/te
+xmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on KajyU.pdf (14 pages, 2132141 bytes).
 PDF statistics:
- 433 PDF objects out of 1000 (max. 8388607)
- 374 compressed objects within 4 object streams
- 145 named destinations out of 1000 (max. 500000)
- 351 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 381 compressed objects within 4 object streams
+ 158 named destinations out of 1000 (max. 500000)
+ 335 words of extra memory for PDF output out of 10000 (max. 10000000)
 
