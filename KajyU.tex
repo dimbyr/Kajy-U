@@ -1,8 +1,20 @@
 % !TeX spellcheck = en_US
 \documentclass[11pt,fancy,authorye]{elegantbook}
 \usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
 %\usepackage{titletoc}
 \usepackage{minitoc}
+\usepackage{mdframed}
+\usepackage{verbatim}
+\usepackage{listings}
+\lstset{% Formatting C codes
+	language=C,
+	basicstyle=\ttfamily,
+	numbers=left,
+	xleftmargin=1cm, % Adjust this value as needed
+	xrightmargin=0cm, % Adjust this value as needed
+}
 
 
 \definecolor{remarkcolor}{RGB}{255,128,0} % Define the color for "Remark"

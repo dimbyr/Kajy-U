@@ -1,20 +1,184 @@
 \chapter{Structures de donn\'ees fondamentales}
-\minitoc
-%\section{La mémoire}
-
-
+%\minitoc
 \section{Variables et langage de programmation}
 
-Avant de passer à la définition des variables, mettons-les en relation avec d'anciennes équations mathématiques. Nous avons tous résolu de nombreuses équations mathématiques depuis notre enfance. À titre d'exemple, considérons l'équation ci-dessous :
+\subsection{Déclaration de variables}
 
-\begin{equation*}
-	3x + 4y = 5
-\end{equation*}
+Les variables constituent l'un des concepts les plus fondamentaux en programmation. En langage C, une variable est un espace de stockage nommé qui peut contenir une valeur modifiable. Les variables sont utilisées pour stocker des données telles que des nombres, des caractères et des adresses mémoire.
 
-Nous n’avons pas à nous soucier de l’utilisation de cette équation. La chose importante que nous devons comprendre est que l’équation a des noms ($x$ et $y$) qui contiennent des valeurs (données). Cela signifie que les noms ($x$ et $y$) sont des espaces réservés pour représenter les données. De même, en programmation informatique, nous avons besoin de quelque chose pour conserver les données, et les variables sont le moyen d'y parvenir.
+\begin{lstlisting}
+	int age; // Declaration d'une variable de type entier appelee "age"
+	float prix; // Declaration d'une variable de type flottant appelee "prix"
+	char lettre; // Declaration d'une variable de type caractere appelee "lettre"
+\end{lstlisting}
+
+\subsection{Initialisation des variables}
+
+Les variables peuvent être initialisées lors de leur déclaration en leur attribuant une valeur initiale. Par exemple :
+
+\begin{lstlisting}
+	int nombre = 10; // Declaration et initialisation d'une variable de type entier avec la valeur 10
+	float pi = 3.14; // Declaration et initialisation d'une variable de type flottant avec la valeur 3.14
+	char grade = 'A'; // Declaration et initialisation d'une variable de type caractere avec la valeur 'A'
+\end{lstlisting}
+
+\subsection{Utilisation des variables}
+
+Une fois déclarées et éventuellement initialisées, les variables peuvent être utilisées dans le programme pour stocker et manipuler des données. Par exemple :
+
+\begin{lstlisting}
+	#include <stdio.h>;
+	int x = 5;
+	int y = 10;
+	int somme = x + y; // Addition des valeurs des variables x et y
+	printf("La somme de %d et %d est %d\n", x, y, somme); // Affichage du resultat
+\end{lstlisting}
+
+\subsection{Portée des variables}
+
+La portée d'une variable en C détermine où elle peut être utilisée dans le programme. Les variables peuvent être locales à une fonction, auquel cas elles ne sont accessibles que dans cette fonction, ou elles peuvent être globales, auquel cas elles sont accessibles dans tout le programme.
+
+\begin{lstlisting}
+	#include <stdio.h>;
+	
+	int globalVar = 100; // Variable globale
+	
+	void exampleFunction() {
+		int localVar = 50; // Variable locale a la fonction exampleFunction
+		printf("La variable globale est %d\n", globalVar); // Acces a la variable globale
+		printf("La variable locale est %d\n", localVar); // Acces a la variable locale
+	}
+	
+	int main() {
+		printf("La variable globale est %d\n", globalVar); // Acces a la variable globale
+		// printf("La variable locale est %d\n", localVar); // Cela generera une erreur car localVar est locale a exampleFunction
+		exampleFunction();
+		return 0;
+	}
+\end{lstlisting}
+
+Les variables sont un element essentiel en langage C et constituent la base de la manipulation des donnees dans les programmes. Il est crucial de comprendre leur declaration, leur initialisation, leur utilisation et leur portee pour ecrire des programmes efficaces et fonctionnels.
+
 
 \section{Pointeurs}
+
+Les pointeurs sont un concept essentiel en langage C. Un pointeur est une variable qui contient l'adresse mémoire d'une autre variable. En d'autres termes, un pointeur pointe vers l'emplacement en mémoire où une valeur est stockée.
+
+\subsection{Déclaration de pointeurs}
+
+En langage C, un pointeur est déclaré en précédant le nom de la variable avec l'opérateur d'indirection *, qui indique que la variable est un pointeur. Voici un exemple de déclaration de pointeur :
+
+\begin{lstlisting}
+	int *ptr; // Declaration d'un pointeur vers un entier
+	float *ptr_float; // Declaration d'un pointeur vers un flottant
+	char *ptr_char; // Declaration d'un pointeur vers un caractere
+\end{lstlisting}
+
+\subsection{Initialisation de pointeurs}
+
+Les pointeurs peuvent être initialisés avec l'adresse mémoire d'une variable existante à l'aide de l'opérateur d'adresse \&. Voici un exemple d'initialisation de pointeur :
+
+\begin{lstlisting}
+	int var = 10; // Declaration et initialisation d'une variable
+	int *ptr; // Declaration d'un pointeur
+	ptr = &var; // Initialisation du pointeur avec l'adresse de la variable var
+\end{lstlisting}
+
+\subsection{Utilisation de pointeurs}
+
+Une fois qu'un pointeur est initialisé, il peut être utilisé pour accéder à la valeur à laquelle il pointe ou pour modifier cette valeur. Voici quelques exemples :
+
+\begin{lstlisting}
+	#include <stdio.h>;
+	int var = 10; // Declaration et initialisation d'une variable
+	int *ptr; // Declaration d'un pointeur
+	ptr = &var; // Initialisation du pointeur avec l'adresse de la variable var
+	printf("La valeur de var est %d\n", var); // Affichage de la valeur de var
+	printf("L'adresse de var est %p\n", &var); // Affichage de l'adresse de var
+	printf("La valeur pointee par le pointeur est %d\n", *ptr); // Affichage de la valeur pointee par le pointeur
+	*ptr = 20; // Modification de la valeur pointee par le pointeur
+	printf("La nouvelle valeur de var est %d\n", var); // Affichage de la nouvelle valeur de var
+\end{lstlisting}
+
+Les pointeurs sont un concept puissant en langage C, mais ils nécessitent une manipulation prudente pour éviter les erreurs de segmentation et les fuites de mémoire.
+
+
 \section{Types de données}
+
+Les types de données en langage C déterminent la nature des valeurs qu'une variable peut contenir. Le langage C prend en charge plusieurs types de données de base, notamment les entiers, les flottants et les caractères, ainsi que des types de données dérivés tels que les tableaux et les structures.
+
+\subsection{Types de données de base}
+
+Les types de données de base définissent les valeurs simples que peuvent contenir les variables en langage C. Voici quelques-uns des types de données de base les plus couramment utilisés :
+
+\begin{enumerate}[label=\alph*)]
+	\item \textbf{int} : Pour les entiers signés.
+	\item \textbf{float} : Pour les nombres à virgule flottante.
+	\item \textbf{double} : Pour les nombres à virgule flottante doubles précision.
+	\item \textbf{char} : Pour les caractères ASCII.
+\end{enumerate}
+
+Voici comment ces types de données peuvent être utilisés dans des déclarations de variables :
+
+\begin{lstlisting}
+	int age = 30; // Declaration d'une variable de type entier
+	float poids = 75.5; // Declaration d'une variable de type flottant
+	double prix = 99.99; // Declaration d'une variable de type double
+	char grade = 'A'; // Declaration d'une variable de type caractere
+\end{lstlisting}
+
+\subsection{Types de données dérivés \footnote{Refer back to \cite{narasimha2017data} for this section. Check well that all is correct.}}
+
+Outre les types de données de base, le langage C offre la possibilité de créer des types de données dérivés, tels que les tableaux, les structures et les pointeurs. Ces types de données permettent de regrouper des valeurs connexes ou d'adresser des données de manière plus complexe.
+
+\begin{enumerate}[label=\alph*)]
+	\item \textbf{Tableaux} :
+	
+	Un tableau est une collection ordonnée d'éléments du même type. Les éléments d'un tableau sont accessibles via un index numérique. Voici un exemple de déclaration et d'utilisation d'un tableau en langage C :
+	
+	\begin{lstlisting}
+		int tableau[5]; // Declaration d'un tableau d'entiers de taille 5
+		tableau[0] = 10; // Attribution de la valeur 10 au premier element du tableau
+		tableau[1] = 20; // Attribution de la valeur 20 au deuxieme element du tableau
+	\end{lstlisting}
+	
+	\item \textbf{Structures} :
+	
+	Une structure est une collection de variables de types différents regroupées sous un seul nom. Elle permet de définir des types de données personnalisés. Voici un exemple de déclaration et d'utilisation d'une structure en langage C :
+	
+	\begin{lstlisting}
+		#include <stdio.h>;
+		#include <string.h>;
+		
+		struct Personne {
+			char nom[50];
+			int age;
+			float taille;
+		};
+		
+		struct Personne p1; // Declaration d'une structure de type Personne
+		strcpy(p1.nom, "John Doe"); // Attribution d'une valeur au champ nom
+		p1.age = 30; // Attribution d'une valeur au champ age
+		p1.taille = 1.75; // Attribution d'une valeur au champ taille
+	\end{lstlisting}
+
+ \item \textbf{Chaînes de caractères} :
+
+Les chaînes de caractères en C sont des tableaux de caractères terminés par un caractère nul ('\textbackslash0'). Elles sont utilisées pour représenter et manipuler du texte. Voici un exemple de déclaration et d'utilisation de chaînes de caractères en langage C :
+
+\begin{lstlisting}
+	#include <stdio.h>;
+	#include <string.h>;
+	
+	char chaine[50]; // Declaration d'une chaine de caracteres
+	strcpy(chaine, "Bonjour"); // Attribution d'une valeur a la chaine
+	printf("%s\n", chaine); // Affichage de la chaine
+\end{lstlisting}
+
+\end{enumerate}
+
+Les types de données en langage C offrent une flexibilité et une puissance considérables pour la manipulation des données. Il est essentiel de comprendre ces types de données et leurs utilisations pour écrire des programmes efficaces et fonctionnels.
+
 \section{Tableaux}
 \section{Chaînes de caractères}
 \section{Struct}

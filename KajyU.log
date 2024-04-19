@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  16 APR 2024 16:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  19 APR 2024 17:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1106,7 +1106,54 @@ Package bm Info: No bold for \U/rsfs/m/n, using \pmb.
 Package bm Info: No bold for \U/msa/m/n, using \pmb.
 Package bm Info: No bold for \U/msb/m/n, using \pmb.
 ))
-(/usr/local/texlive/2023/texmf-dist/tex/latex/minitoc/minitoc.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks45
+\inpenc@posthook=\toks46
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2023/05/11 v3.89 The Babel package
+\babel@savecnt=\count388
+\U@D=\dimen317
+\l@unhyphenated=\language87
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read5
+\bbl@dirlevel=\count389
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/babel-french/french.ldf
+Language: french 2023/03/08 v3.5q French support from the babel system
+Package babel Info: Hyphen rules for 'acadian' set to \l@french
+(babel)             (\language29). Reported on input line 91.
+Package babel Info: Hyphen rules for 'canadien' set to \l@french
+(babel)             (\language29). Reported on input line 92.
+\FB@nonchar=\count390
+Package babel Info: Making : an active character on input line 395.
+Package babel Info: Making ; an active character on input line 396.
+Package babel Info: Making ! an active character on input line 397.
+Package babel Info: Making ? an active character on input line 398.
+\FBguill@level=\count391
+\FBold@everypar=\toks47
+\FB@Mht=\dimen318
+\mc@charclass=\count392
+\mc@charfam=\count393
+\mc@charslot=\count394
+\std@mcc=\count395
+\dec@mcc=\count396
+\FB@parskip=\dimen319
+\listindentFB=\dimen320
+\descindentFB=\dimen321
+\labelindentFB=\dimen322
+\labelwidthFB=\dimen323
+\leftmarginFB=\dimen324
+\parindentFFN=\dimen325
+\FBfnindent=\dimen326
+))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/fr/babel-french.te
+x
+Package babel Info: Importing font and identification data for french
+(babel)             from babel-fr.ini. Reported on input line 11.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/minitoc/minitoc.sty
 Package: minitoc 2018/07/12 v62 Package minitoc
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/minitoc/mtcmess.sty
@@ -1123,7 +1170,7 @@ Package minitoc Info: I0023
 (minitoc)             part level macros available.
 Package minitoc Info: I0003
 (minitoc)             chapter level macros available.
-\mtc@toks=\toks45
+\mtc@toks=\toks48
 \mtc@strutbox=\box131
 \mtc@hstrutbox=\box132
 Package minitoc Info: I0002
@@ -1143,10 +1190,10 @@ Package minitoc Info: I0031
 
 \openout6 = `KajyU.mtc0'.
 
-\c@mtc=\count388
-\c@minitocdepth=\count389
-\c@ptc=\count390
-\c@parttocdepth=\count391
+\c@mtc=\count397
+\c@minitocdepth=\count398
+\c@ptc=\count399
+\c@parttocdepth=\count400
 \ptcindent=\skip77
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
@@ -1158,15 +1205,132 @@ File: english.mld 2006/01/13
 (/usr/local/texlive/2023/texmf-dist/tex/latex/minitoc/english.mld
 File: english.mld 2006/01/13
 ))
-\c@remarque=\count392
+(/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2022-04-07 v2.34 Module abspage for zref (HO)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2022-04-07 v2.34 Module base for zref (HO)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+\c@abspage=\count401
+Package zref Info: New property: abspage on input line 65.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip78
+\c@mdf@globalstyle@cnt=\count402
+\mdf@skipabove@length=\skip79
+\mdf@skipbelow@length=\skip80
+\mdf@leftmargin@length=\skip81
+\mdf@rightmargin@length=\skip82
+\mdf@innerleftmargin@length=\skip83
+\mdf@innerrightmargin@length=\skip84
+\mdf@innertopmargin@length=\skip85
+\mdf@innerbottommargin@length=\skip86
+\mdf@splittopskip@length=\skip87
+\mdf@splitbottomskip@length=\skip88
+\mdf@outermargin@length=\skip89
+\mdf@innermargin@length=\skip90
+\mdf@linewidth@length=\skip91
+\mdf@innerlinewidth@length=\skip92
+\mdf@middlelinewidth@length=\skip93
+\mdf@outerlinewidth@length=\skip94
+\mdf@roundcorner@length=\skip95
+\mdf@footenotedistance@length=\skip96
+\mdf@userdefinedwidth@length=\skip97
+\mdf@needspace@length=\skip98
+\mdf@frametitleaboveskip@length=\skip99
+\mdf@frametitlebelowskip@length=\skip100
+\mdf@frametitlerulewidth@length=\skip101
+\mdf@frametitleleftmargin@length=\skip102
+\mdf@frametitlerightmargin@length=\skip103
+\mdf@shadowsize@length=\skip104
+\mdf@extratopheight@length=\skip105
+\mdf@subtitleabovelinewidth@length=\skip106
+\mdf@subtitlebelowlinewidth@length=\skip107
+\mdf@subtitleaboveskip@length=\skip108
+\mdf@subtitlebelowskip@length=\skip109
+\mdf@subtitleinneraboveskip@length=\skip110
+\mdf@subtitleinnerbelowskip@length=\skip111
+\mdf@subsubtitleabovelinewidth@length=\skip112
+\mdf@subsubtitlebelowlinewidth@length=\skip113
+\mdf@subsubtitleaboveskip@length=\skip114
+\mdf@subsubtitlebelowskip@length=\skip115
+\mdf@subsubtitleinneraboveskip@length=\skip116
+\mdf@subsubtitleinnerbelowskip@length=\skip117
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box133
+\mdf@footnotebox=\box134
+\mdf@splitbox@one=\box135
+\mdf@splitbox@two=\box136
+\mdf@splitbox@save=\box137
+\mdfsplitboxwidth=\skip118
+\mdfsplitboxtotalwidth=\skip119
+\mdfsplitboxheight=\skip120
+\mdfsplitboxdepth=\skip121
+\mdfsplitboxtotalheight=\skip122
+\mdfframetitleboxwidth=\skip123
+\mdfframetitleboxtotalwidth=\skip124
+\mdfframetitleboxheight=\skip125
+\mdfframetitleboxdepth=\skip126
+\mdfframetitleboxtotalheight=\skip127
+\mdffootnoteboxwidth=\skip128
+\mdffootnoteboxtotalwidth=\skip129
+\mdffootnoteboxheight=\skip130
+\mdffootnoteboxdepth=\skip131
+\mdffootnoteboxtotalheight=\skip132
+\mdftotallinewidth=\skip133
+\mdfboundingboxwidth=\skip134
+\mdfboundingboxtotalwidth=\skip135
+\mdfboundingboxheight=\skip136
+\mdfboundingboxdepth=\skip137
+\mdfboundingboxtotalheight=\skip138
+\mdf@freevspace@length=\skip139
+\mdf@horizontalwidthofbox@length=\skip140
+\mdf@verticalmarginwhole@length=\skip141
+\mdf@horizontalspaceofbox=\skip142
+\mdfsubtitleheight=\skip143
+\mdfsubsubtitleheight=\skip144
+\c@mdfcountframes=\count403
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count404
+\c@mdf@env@i=\count405
+\c@mdf@env@ii=\count406
+\c@mdf@zref@counter=\count407
+Package zref Info: New property: mdf@pagevalue on input line 895.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+)
+\c@remarque=\count408
 LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input lin
-e 32.
+e 44.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 32.
+(Font)              scaled to size 10.95pt on input line 44.
 
 
 LaTeX Warning: Unused global option(s):
@@ -1177,25 +1341,25 @@ LaTeX Warning: Unused global option(s):
 (./chapters/chap5.aux))
 \openout1 = `KajyU.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-Package hyperref Info: Link coloring ON on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+Package hyperref Info: Link coloring ON on input line 44.
  (./KajyU.out) (./KajyU.out)
 \@outlinefile=\write7
 \openout7 = `KajyU.out'.
@@ -1235,21 +1399,21 @@ Package hyperref Info: Link coloring ON on input line 32.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count393
-\c@mv@boldtabular=\count394
+\c@mv@tabular=\count409
+\c@mv@boldtabular=\count410
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count395
-\scratchdimen=\dimen317
-\scratchbox=\box133
-\nofMPsegments=\count396
-\nofMParguments=\count397
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count398
-\MPscratchDim=\dimen318
-\MPnumerator=\count399
-\makeMPintoPDFobject=\count400
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count411
+\scratchdimen=\dimen327
+\scratchbox=\box138
+\nofMPsegments=\count412
+\nofMParguments=\count413
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count414
+\MPscratchDim=\dimen328
+\MPnumerator=\count415
+\makeMPintoPDFobject=\count416
+\everyMPtoPDFconversion=\toks50
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1260,14 +1424,15 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: french babel package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2022/03/08 v6.0d a miscellany of footnote facilities
-\FN@temptoken=\toks48
-\footnotemargin=\dimen319
-\@outputbox@depth=\dimen320
+\FN@temptoken=\toks51
+\footnotemargin=\dimen329
+\@outputbox@depth=\dimen330
 Package footmisc Info: Declaring symbol style bringhurst on input line 695.
 Package footmisc Info: Declaring symbol style chicago on input line 703.
 Package footmisc Info: Declaring symbol style wiley on input line 712.
@@ -1277,7 +1442,25 @@ Package footmisc Info: Declaring symbol style lamport* on input line 743.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 764
 .
 )
-\c@lstlisting=\count401
+\c@lstlisting=\count417
+LaTeX Info: Redefining \degres on input line 44.
+
+
+Package french.ldf Warning: Please load the "listings" package
+(french.ldf)                AFTER babel/french; reported on input line 44.
+
+Package french.ldf Info: Setting StandardItemizeEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 44.
+Package french.ldf Info: Setting StandardEnumerateEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 44.
+LaTeX Info: Redefining \up on input line 44.
+
+Package french.ldf Warning: OT1 encoding should not be used for French.
+(french.ldf)                Add \usepackage[T1]{fontenc} to the preamble
+(french.ldf)                of your document; reported on input line 44.
+
 Package minitoc(hints) Info: I0049
 (minitoc(hints))             ==> You requested the hints option. 
 (minitoc(hints))             Some hints are eventually given below.
@@ -1286,13 +1469,12 @@ Package minitoc(hints) Info: I0042
 (minitoc(hints))             See the minitoc package documentation 
 (minitoc(hints))             for specific precautions.
 
-
 Package minitoc(hints) Warning: W0099
 (minitoc(hints))                --- The titlesec package is loaded. 
 (minitoc(hints))                It is incompatible 
 (minitoc(hints))                with the minitoc package.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 34.
+Package hyperref Info: Option `pageanchor' set `false' on input line 46.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1328,38 +1510,38 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 34.
 <./figure/hay.jpg, id=147, 3767.07375pt x 2510.37875pt>
 File: ./figure/hay.jpg Graphic file (type jpg)
 <use ./figure/hay.jpg>
-Package pdftex.def Info: ./figure/hay.jpg  used on input line 34.
+Package pdftex.def Info: ./figure/hay.jpg  used on input line 46.
 (pdftex.def)             Requested size: 597.50787pt x 398.14473pt.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 34.
+(Font)              scaled to size 10.95pt on input line 46.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 24.88pt on input line 34.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 34
+(Font)              scaled to size 24.88pt on input line 46.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 46
 .
 (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
 
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
 
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 34.
+(Font)              scaled to size 14.4pt on input line 46.
 <./figure/Kajy U.png, id=148, 447.17062pt x 490.83376pt>
 File: ./figure/Kajy U.png Graphic file (type png)
 <use ./figure/Kajy U.png>
-Package pdftex.def Info: ./figure/Kajy U.png  used on input line 34.
+Package pdftex.def Info: ./figure/Kajy U.png  used on input line 46.
 (pdftex.def)             Requested size: 119.50148pt x 131.17128pt.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.95pt on input line 34.
+(Font)              scaled to size 10.95pt on input line 46.
  [1
 
 
@@ -1368,7 +1550,7 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
 cal/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc} <./figure/ha
 y.jpg> <./figure/Kajy U.png>]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 17.28pt on input line 37.
+(Font)              scaled to size 17.28pt on input line 49.
  (./KajyU.toc)
 \tf@toc=\write8
 \openout8 = `KajyU.toc'.
@@ -1389,22 +1571,44 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 
 
 (./chapters/chap1.tex
-Chapter 1 1.
-Package minitoc Info: I0006
-(minitoc)             KajyU.mtc1 is empty on input line 4.
-) [2
+Chapitre 1.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 5.
+[2
 
 
 
 
 ]
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 70.
+ [3] [4]
+LaTeX Font Info:    Trying to load font information for OT1+ntxsups on input li
+ne 130.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/newtx/ot1ntxsups.fd
+File: ot1ntxsups.fd 2015/01/17 v1.0
+)
+LaTeX Font Info:    Font shape `OT1/ntxsups/b/n' will be
+(Font)              scaled to size 12.0pt on input line 130.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 9.0pt on input line 130.
+
+[5{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntxsups_ot1.enc}]
+LaTeX Font Info:    Trying to load font information for OMS+ntxtlf on input lin
+e 167.
+LaTeX Font Info:    No file OMSntxtlf.fd. on input line 167.
+
+
+LaTeX Font Warning: Font shape `OMS/ntxtlf/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbackslash' on input line 167.
+
+) [6] [7]
 \openout2 = `chapters/chap2.aux'.
 
  (./chapters/chap2.tex
-Chapter 2 2.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 30.
-) [3
+Chapitre 2.
+) [8
 
 
 
@@ -1413,7 +1617,7 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 \openout2 = `chapters/chap3.aux'.
 
  (./chapters/chap3.tex
-Chapter 3 3.
+Chapitre 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
@@ -1446,7 +1650,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
 
-) [4
+) [9
 
 
 
@@ -1455,8 +1659,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 \openout2 = `chapters/chap4.aux'.
 
  (./chapters/chap4.tex
-Chapter 4 4.
-) [5
+Chapitre 4.
+) [10
 
 
 
@@ -1465,15 +1669,13 @@ Chapter 4 4.
 \openout2 = `chapters/chap5.aux'.
 
  (./chapters/chap5.tex
-Chapter 5 5.
-) [6
+Chapitre 5.
+) [11
 
 
 
 
 ] (./KajyU.bbl
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 1.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
 (Font)              scaled to size 9.0pt on input line 9.
 )
@@ -1484,45 +1686,45 @@ Package minitoc Info: I0009
 
 
 
-Package minitoc(hints) Warning: W0059
-(minitoc(hints))                You have used \minitoc, 
-(minitoc(hints))                but not \dominitoc.
-
-
 Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the KajyU.log file.
 
-[7
+[12
 
 
 
 ] (./KajyU.aux (./chapters/chap0.aux) (./chapters/chap1.aux)
 (./chapters/chap2.aux) (./chapters/chap3.aux) (./chapters/chap4.aux)
 (./chapters/chap5.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `KajyU.out' has not changed.
 (rerunfilecheck)             Checksum: 613BA92EE6B1C712F06F22293B67F1C8;4716.
  ) 
 Here is how much of TeX's memory you used:
- 36513 strings out of 476097
- 710334 string characters out of 5791138
- 1865851 words of memory out of 5000000
- 55930 multiletter control sequences out of 15000+600000
- 537989 words of font info for 97 fonts, out of 8000000 for 9000
+ 39788 strings out of 476097
+ 765755 string characters out of 5791138
+ 2104851 words of memory out of 5000000
+ 59050 multiletter control sequences out of 15000+600000
+ 540798 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,11n,136p,563b,1338s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,13n,136p,563b,1343s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/te
-xlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/202
-3/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on KajyU.pdf (9 pages, 2092471 bytes).
+/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
+local/texlive/2023/texmf-dist/fonts/type1/public/newtx/ntxsups-Bold.pfb></usr/l
+ocal/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texl
+ive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2023/
+texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on KajyU.pdf (14 pages, 2130227 bytes).
 PDF statistics:
- 288 PDF objects out of 1000 (max. 8388607)
- 239 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
+ 433 PDF objects out of 1000 (max. 8388607)
+ 374 compressed objects within 4 object streams
+ 145 named destinations out of 1000 (max. 500000)
  351 words of extra memory for PDF output out of 10000 (max. 10000000)
 
