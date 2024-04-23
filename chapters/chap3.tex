@@ -1,6 +1,182 @@
+%\chapter{Complexité algorithmique}
+%\section{R\'ecursion}
+%\section{La notation $O$}
+%\section{Les notations $\Omega$ et $\theta$}
+%\section{Complexit\'e de certains algorithmes}
+%\section{Exercices}
+%\chapter{Complexité algorithmique}
+%
+
+
 \chapter{Complexité algorithmique}
-\section{R\'ecursion}
-\section{La notation $O$}
+
+\section{Récursion}
+La récursion est un concept fondamental en informatique où une fonction s'appelle elle-même. C'est souvent utilisé pour résoudre des problèmes qui peuvent être décomposés en sous-problèmes similaires. Les fonctions récursives nécessitent une condition de terminaison pour éviter des appels infinis, ce qui peut entraîner des débordements de pile.
+
+Un exemple classique de récursion est le calcul de la factorielle d'un nombre:
+
+\begin{lstlisting}
+	int fact(int n) {
+		if (n == 0) {
+			return 1;
+		} else {
+			return n * fact(n - 1);
+		}
+	}
+\end{lstlisting}
+
+Les récursions peuvent aussi entraîner des complexités spatiales élevées à cause de l'utilisation de la pile pour stocker les appels récursifs. 
+
+\section{La notation O}
+La notation "O" (grand O) est utilisée pour décrire la complexité temporelle d'un algorithme. Elle donne une estimation du temps d'exécution en fonction de la taille de l'entrée, ce qui aide à évaluer l'efficacité d'un algorithme. 
+
+L'estimation du temps peut être déterminée par le nombre de fois qu'une opération clé est effectuée. Par exemple, un algorithme de recherche binaire divise le tableau en deux à chaque itération, ce qui donne une complexité de `O(log n)`:
+
+\begin{lstlisting}
+	fonction recherche_binaire(tableau, valeur)
+	gauche = 0
+	droite = taille(tableau) - 1
+	\While gauche <= droite
+	milieu = (gauche + droite) / 2
+	\If tableau[milieu] == valeur \Then
+	retour milieu
+	\ElsIf tableau[milieu] < valeur \Then
+	gauche = milieu + 1
+	\Else
+	droite = milieu - 1
+	\EndIf
+	\EndWhile
+	retour -1
+	fin fonction
+\end{lstlisting}
+
+Ce "log n" provient du fait que chaque étape réduit le problème de moitié, ce qui correspond à la définition de logarithme binaire.
+
 \section{Les notations $\Omega$ et $\theta$}
-\section{Complexit\'e de certains algorithmes}
+Les notations $\Omega$ et $\theta$ complètent la notation "O" pour donner une vision complète de la complexité algorithmique.
+
+- $\Omega$ représente une borne inférieure. Cela signifie que l'algorithme ne peut pas être plus rapide que cette complexité.
+- $\theta$ représente une borne moyenne. Cela signifie que c'est la complexité attendue en pratique.
+
+Pour un algorithme de somme de tableau, la complexité est $\theta(n)$ car chaque élément doit être parcouru:
+
+\begin{lstlisting}
+	fonction somme(tableau)
+	somme = 0
+	\For i de 0 a taille(tableau) - 1 \Do
+	somme = somme + tableau[i]
+	\EndFor
+	retour somme
+	fin fonction
+\end{lstlisting}
+
+\section{Complexité de certains algorithmes}
+La complexité des algorithmes peut varier en fonction de leur nature et de leur structure. Les algorithmes de tri et de recherche ont souvent des complexités bien connues.
+
+- Tri par insertion: Complexité $O(n^2)$. Les opérations de déplacement des éléments génèrent une complexité quadratique.
+- Tri rapide (QuickSort): Complexité `O(n log n)`. Les divisions successives du tableau et le tri récursif permettent cette complexité.
+- Recherche linéaire: Complexité `O(n)`. Il faut parcourir tous les éléments pour trouver une correspondance.
+- Recherche binaire: Complexité `O(log n)`. Cette complexité provient de la division successive du tableau.
+
 \section{Exercices}
+Pour appliquer les concepts étudiés, voici quelques exercices:
+
+1. Implémentez un algorithme qui trouve le maximum dans un tableau d'entiers.
+2. Créez un algorithme récursif pour calculer le terme `n` d'une suite de Fibonacci.
+3. Implémentez un algorithme pour trier un tableau d'entiers avec le tri par sélection.
+4. Écrivez un algorithme qui compte le nombre d'occurrences d'un élément donné dans un tableau.
+5. Implémentez un algorithme qui recherche un élément dans un tableau avec la recherche binaire.
+1
+
+
+%\section{Récursion}
+%La récursion est une technique dans laquelle une fonction s'appelle elle-même directement ou indirectement. Elle est couramment utilisée pour résoudre des problèmes qui peuvent être décomposés en sous-problèmes similaires.
+%
+%\textbf{Exemple d'algorithme :}
+%\begin{algorithm}
+%	\caption{Calcul du facteuriel}
+%	\begin{algorithmic}
+%		\If {$n = 0$}
+%		\State retourner 1
+%		\Else
+%		\State retourner $n \times$ facteuriel($n - 1$)
+%		\EndIf
+%	\end{algorithmic}
+%\end{algorithm}
+%
+%\textbf{Exemple de code C :}
+%\begin{lstlisting}
+%	#include <stdio.h>
+%	
+%	// Fonction rEcursive pour calculer le facteuriel
+%	int factorial(int n) {
+%		if (n == 0) {
+%			return 1; // Cas de base
+%		} else {
+%			return n * factorial(n - 1); // Appel rEcursif
+%		}
+%	}
+%	
+%	int main() {
+%		int n = 5;
+%		printf("Factorial of %d is %d\n", n, factorial(n));
+%		return 0;
+%	}
+%\end{lstlisting}
+%
+%
+%
+%\section{La notation $O$}
+%La notation $O$ (grand O) est utilisée pour décrire la complexité temporelle ou spatiale d'un algorithme. Elle mesure la pire complexité dans le cas le plus défavorable.
+%
+%\textbf{Exemple :}
+%- Un algorithme de recherche linéaire a une complexité $O(n)$, où $n$ est le nombre d'éléments à parcourir.
+%- Un algorithme de tri rapide a une complexité moyenne de $O(n \log n)$, mais peut atteindre $O(n^2)$ dans le pire des cas.
+%
+%\section{Les notations $\Omega$ et $\theta$}
+%Les notations $\Omega$ et $\theta$ sont également utilisées pour mesurer la complexité d'un algorithme.
+%- La notation $\Omega$ décrit la meilleure complexité, c'est-à-dire le cas le plus favorable.
+%- La notation $\theta$ indique une complexité moyenne.
+%
+%\textbf{Exemple :}
+%- Pour un algorithme de tri par insertion, la complexité est $\Omega(n)$ dans le cas le plus favorable.
+%- Pour le même algorithme, la complexité est $\theta(n^2)$, ce qui reflète une complexité moyenne.
+%
+%\section{Complexité de certains algorithmes}
+%Cette section examine la complexité de quelques algorithmes communs.
+%
+%\textbf{Exemple de code C pour recherche linéaire :}
+%\begin{lstlisting}
+%	#include <stdio.h>
+%	
+%	// Recherche lineaire dans un tableau
+%	int linear_search(int arr[], int size, int target) {
+%		for (int i = 0; i < size; i++) {
+%			if (arr[i] == target) {
+%				return i; // TrouvE
+%			}
+%		}
+%		return -1; // Non trouvE
+%	}
+%	
+%	int main() {
+%		int arr[] = {1, 2, 3, 4, 5};
+%		int target = 3;
+%		int index = linear_search(arr, sizeof(arr) / sizeof(arr[0]), target);
+%		if (index != -1) {
+%			printf("Element found at index %d\n", index);
+%		} else {
+%			printf("Element not found\n");
+%		}
+%		return 0;
+%	}
+%\end{lstlisting}
+%
+%\section{Exercices}
+%\begin{enumerate}
+%	\item Implémentez une fonction récursive pour calculer le n-ième terme de la suite de Fibonacci.
+%	\item Écrivez un algorithme pour inverser un tableau de nombres.
+%	\item Implémentez une recherche binaire dans un tableau trié.
+%	\item Écrivez un algorithme pour trier un tableau avec le tri par sélection.
+%	\item Implémentez un algorithme pour déterminer si un mot est un palindrome.
+%\end{enumerate}

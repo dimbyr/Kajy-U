@@ -1,10 +1,235 @@
+%\chapter{Structures de données avancées}
+%%\minitoc
+%\section{Listes chaînées}
+%\section{ Piles}
+%\section{Files}
+%\section{Arbres binaires}
+%\section{Arbres}
+%\section{ Graphes}
+%
+%\section{Exercices}
+
+
 \chapter{Structures de données avancées}
-%\minitoc
+
 \section{Listes chaînées}
-\section{ Piles}
+Les listes chaînées sont des structures de données composées de nœuds, où chaque nœud contient des données et un pointeur vers le nœud suivant. Elles sont utiles pour des opérations d'insertion et de suppression rapides sans nécessiter de réallocation de mémoire.
+
+Exemple d'implémentation d'une liste chaînée en C :
+
+\begin{lstlisting}
+	typedef struct Node {
+		int data;
+		struct Node* next;
+	} Node;
+	
+	void insert(Node** head, int new_data) {
+		Node* new_node = (Node*)malloc(sizeof(Node));
+		new_node->data = new_data;
+		new_node->next = *head;
+		*head = new_node;
+	}
+	
+	void delete(Node** head, int key) {
+		Node* temp = *head, *prev;
+		if (temp != NULL && temp->data == key) {
+			*head = temp->next;
+			free(temp);
+			return;
+		}
+		while (temp != NULL && temp->data != key) {
+			prev = temp;
+			temp = temp->next;
+		}
+		if (temp == NULL) return;
+		prev->next = temp->next;
+		free(temp);
+	}
+\end{lstlisting}
+
+\section{Piles}
+Les piles (ou LIFO, Last In First Out) permettent des opérations de push et pop. Elles suivent le principe du dernier entré, premier sorti. Les piles sont couramment utilisées pour les opérations de retour en arrière, comme dans les navigateurs Web ou les algorithmes de récursion.
+
+Voici un exemple simple d'utilisation de pile pour vérifier les parenthèses équilibrées :
+
+\begin{lstlisting}
+	int areParenthesesBalanced(char expr[]) {
+		Stack* stack = createStack(strlen(expr));
+		for (int i = 0; i < strlen(expr); i++) {
+			if (expr[i] == '(') {
+				push(stack, expr[i]);
+			} else if (expr[i] == ')') {
+				if (isEmpty(stack)) {
+					return 0;
+				}
+				pop(stack);
+			}
+		}
+		return isEmpty(stack);
+	}
+\end{lstlisting}
+
 \section{Files}
+Les files (ou FIFO, First In First Out) permettent des opérations d'enfilage et de défilage. Elles sont utiles pour la gestion des tâches, les files d'attente, et les algorithmes de parcours.
+
+Exemple d'une file utilisant une structure de données basée sur des listes chaînées :
+
+\begin{lstlisting}
+	typedef struct QueueNode {
+		int data;
+		struct QueueNode* next;
+	} QueueNode;
+	
+	typedef struct Queue {
+		QueueNode* front;
+		QueueNode* rear;
+	} Queue;
+	
+	Queue* createQueue() {
+		Queue* queue = (Queue*)malloc(sizeof(Queue));
+		queue->front = queue->rear = NULL;
+		return queue;
+	}
+	
+	void enqueue(Queue* queue, int data) {
+		QueueNode* new_node = (QueueNode*)malloc(sizeof(QueueNode));
+		new_node->data = data;
+		new_node->next = NULL;
+		if (queue->rear == NULL) {
+			queue->rear = queue->front = new_node;
+		} else {
+			queue->rear->next = new_node;
+			queue->rear = new_node;
+		}
+	}
+	
+	int dequeue(Queue* queue) {
+		if (queue->front == NULL) {
+			return -1;
+		}
+		QueueNode* temp = queue->front;
+		queue->front = queue->front->next;
+		if (queue->front == NULL) {
+			queue->rear = NULL;
+		}
+		int data = temp->data;
+		free(temp);
+		return data;
+	}
+\end{lstlisting}
+
 \section{Arbres binaires}
+Les arbres binaires sont des structures de données où chaque nœud a au maximum deux enfants, généralement appelés gauche et droite. Les arbres binaires sont utilisés pour des opérations de recherche et des algorithmes de parcours comme pré-ordre, en-ordre et post-ordre.
+
+Exemple d'implémentation d'un arbre binaire :
+
+\begin{lstlisting}
+	typedef struct TreeNode {
+		int data;
+		struct TreeNode* left;
+		struct TreeNode* right;
+	} TreeNode;
+	
+	TreeNode* createNode(int data) {
+		TreeNode* new_node = (TreeNode*)malloc(sizeof(TreeNode));
+		new_node->data = data;
+		new_node->left = NULL;
+		new_node->right = NULL;
+		return new_node;
+	}
+	
+	void insert(TreeNode** root, int data) {
+		if (*root == NULL) {
+			*root = createNode(data);
+		} else {
+			if (data < (*root)->data) {
+				insert(&(*root)->left, data);
+			} else {
+				insert(&(*root)->right, data);
+			}
+		}
+	}
+\end{lstlisting}
+
 \section{Arbres}
-\section{ Graphes}
+Les arbres sont des structures de données génériques qui peuvent avoir plusieurs enfants. Ils sont utilisés dans des contextes comme les arbres de syntaxe abstraite, les arbres de préfixes, et les arbres de décision.
+
+Exemple d'utilisation d'un arbre pour un arbre de décision :
+
+\begin{lstlisting}
+	typedef struct DecisionNode {
+		char* question;
+		struct DecisionNode* yes;
+		struct DecisionNode* no;
+	} DecisionNode;
+	
+	DecisionNode* createDecisionNode(char* question) {
+		DecisionNode* node = (DecisionNode*)malloc(sizeof(DecisionNode));
+		node->question = question;
+		node->yes = NULL;
+		node->no = NULL;
+		return node;
+	}
+	
+	void addDecision(DecisionNode* root, char* question, int answer) {
+		if (answer == 1) {
+			root->yes = createDecisionNode(question);
+		} else {
+			root->no = createDecisionNode(question);
+		}
+	}
+\end{lstlisting}
+
+\section{Graphes}
+Les graphes sont des structures de données qui contiennent des nœuds (ou sommets) et des arêtes (qui relient les nœuds). Les graphes sont utilisés pour des problèmes complexes comme la recherche de plus courts chemins, la détection de cycles, et le partitionnement.
+
+Exemple d'implémentation d'un graphe avec des listes d'adjacence :
+
+\begin{lstlisting}
+	typedef struct GraphNode {
+		int vertex;
+		struct GraphNode* next;
+	} GraphNode;
+	
+	typedef struct Graph {
+		int num_vertices;
+		GraphNode** adj_lists;
+	} Graph;
+	
+	Graph* createGraph(int num_vertices) {
+		Graph* graph = (Graph*)malloc(sizeof(Graph));
+		graph->num_vertices = num_vertices;
+		graph->adj_lists = (GraphNode**)malloc(num_vertices * sizeof(GraphNode*));
+		for (int i = 0; i < num_vertices; i++) {
+			graph->adj_lists[i] = NULL;
+		}
+		return graph;
+	}
+	
+	void addEdge(Graph* graph, int src, int dest) {
+		GraphNode* new_node = (GraphNode*)malloc(sizeof(GraphNode));
+		new_node->vertex = src;
+		new_node->next = graph->adj_lists[dest];
+		graph->adj_lists[dest] = new_node;
+		
+		new_node = (GraphNode*)malloc(sizeof(GraphNode));
+		new_node->vertex = dest;
+		new_node->next = graph's adj_lists[src];
+		graph's adj_lists[src] = new_node;
+	}
+\end{lstlisting}
 
 \section{Exercices}
+Voici quelques exercices pour vous aider à pratiquer et consolider vos connaissances des structures de données avancées :
+
+\begin{enumerate}
+	\item Implémentez une liste chaînée avec des opérations d'insertion et de suppression. Testez votre implémentation avec plusieurs cas d'utilisation.
+	
+	\item Créez un algorithme qui utilise une pile pour évaluer une expression mathématique simple, comme "3 + 5 * 2".
+	
+	\item Implémentez une file qui suit le principe FIFO (First In, First Out) avec des opérations d'enfilage et de défilage. Testez-la avec différents types de données.
+	
+	\item Créez un arbre binaire qui peut insérer des valeurs en maintenant une structure de recherche binaire. Ajoutez des fonctions de recherche, de suppression, et de parcours.
+	
+	\item Implémentez un graphe qui utilise des listes d'adjacence pour représenter des connexions entre des sommets. Ajoutez des fonctions pour ajouter et supprimer des arêtes, et pour trouver des chemins entre des sommets.
+\end{enumerate}
