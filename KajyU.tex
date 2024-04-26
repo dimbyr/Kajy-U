@@ -5,6 +5,20 @@
 \usepackage[french]{babel}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+% Custom definitions for French keywords in algorithmicx
+\algrenewcommand\algorithmicif{\textbf{Si}}
+\algrenewcommand\algorithmicelse{\textbf{Sinon}}
+\algrenewcommand\algorithmicfor{\textbf{Pour}}
+\algrenewcommand\algorithmicdo{\textbf{Faire}}
+\algrenewcommand\algorithmicwhile{\textbf{Tant~que}}
+%\algrenewcommand\algorithmicendwhile{\textbf{Fin Tant que}}
+%\algrenewcommand\algorithmicelseif{\textbf{Sinon Si}}
+
+\algrenewcommand\algorithmicthen{\textbf{Alors}}
+\algrenewcommand\algorithmicend{\textbf{Fin}}
+\algrenewcommand\algorithmicreturn{\textbf{Retour}}
+
+
 \usepackage[T1]{fontenc}
 %\usepackage{titletoc}
 \usepackage{minitoc}
@@ -15,8 +29,8 @@
 	language=C,
 	basicstyle=\ttfamily,
 	numbers=left,
-	xleftmargin=1cm, % Adjust this value as needed
-	xrightmargin=0cm, % Adjust this value as needed
+	xleftmargin=1.5cm, % Adjust this value as needed
+	xrightmargin=.5cm, % Adjust this value as needed
 }
 
 

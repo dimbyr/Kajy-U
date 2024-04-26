@@ -2,7 +2,7 @@
 
 \section{Qu’est-ce qu’un algorithme ?}
 
-Un algorithme est une série d'étapes visant à résoudre un problème ou à accomplir une tâche spécifique. En informatique, les algorithmes permettent de manipuler, trier, rechercher, et transformer des données. Pour qu'un algorithme soit efficace, il doit être:
+Un \emph{algorithme} est une série d'étapes visant à résoudre un problème ou à accomplir une tâche spécifique. En informatique, les algorithmes permettent de manipuler, trier, rechercher, et transformer des données. Pour qu'un algorithme soit efficace, il doit être:
 
 \begin{enumerate}
 	\item \textbf{Correct}: Donner le bon résultat pour tous les cas.
@@ -24,32 +24,132 @@ Un exemple simple d'algorithme qui trouve le maximum de deux nombres:
 	\end{algorithmic}
 \end{algorithm}
 
-\section{Tri}
+\section{Récursion}
+
+La récursion est un concept fondamental en informatique où une fonction s'appelle elle-même. C'est souvent utilisé pour résoudre des problèmes qui peuvent être décomposés en sous-problèmes similaires. Les fonctions récursives nécessitent une condition de terminaison pour éviter des appels infinis, ce qui pourrait entraîner des débordements de pile et des erreurs critiques.
+
+Un exemple classique de récursion est le calcul de la factorielle d'un nombre. Voici un algorithme qui montre comment la récursion fonctionne pour la factorielle:
+
+\begin{algorithm}
+	\caption{Calcul de la factorielle d'un nombre}
+	\begin{algorithmic}
+		\Function{factorielle}{n}
+		\If{n == 0}
+		\State \Return 1
+		\Else
+		\State \Return n $\times$ \Call{factorielle}{n - 1}
+	    \EndIf
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+Dans cet exemple, la fonction `factorielle` utilise la récursion pour multiplier un nombre par la factorielle du nombre précédent, jusqu'à ce qu'elle atteigne le cas de base (n == 0). La condition de terminaison empêche la récursion infinie et garantit que la fonction finit par retourner une valeur.
+
+Les fonctions récursives peuvent entraîner des complexités spatiales élevées en raison de l'utilisation de la pile pour stocker les appels récursifs. Chaque appel de fonction récursive crée un nouveau contexte d'exécution dans la pile, ce qui peut augmenter l'utilisation de la mémoire. Pour éviter des débordements de pile, il est essentiel d'avoir des conditions de terminaison robustes et de gérer la profondeur de récursion.
+
+\subsection*{Exemples d'autres problèmes résolus par la récursion}
+\textit{Calculer la suite de Fibonacci}: La suite de Fibonacci peut être calculée récursivement en additionnant les deux termes précédents, avec des cas de base pour les premiers termes. Rapellons la d\'efinition de la suite de Fibonacci: 
+\[ \begin{cases}
+	U_0 = U_1 = 1 & \\
+	U_{n+2} = U_{n+1} + U_{n} & \text{pour } n\ge 0.
+\end{cases} \]
+
+
+La récursion est un outil puissant pour résoudre des problèmes de manière élégante, mais elle doit être utilisée avec précaution pour éviter des complications liées à la mémoire et à la performance.
+
+\section{Algorithmes de tri}
 
 Le tri consiste à organiser les données dans un ordre particulier. Les algorithmes de tri couramment utilisés comprennent:
 
 \begin{enumerate}
-	\item \textbf{Tri à bulles}: Compare et échange des éléments adjacents pour les mettre dans le bon ordre.
-	\item \textbf{Tri par insertion}: Insère chaque élément dans sa position correcte.
-	\item \textbf{Tri rapide (QuickSort)}: Utilise la technique de division et conquête.
-	\item \textbf{Tri fusion (MergeSort)}: Divise, trie séparément, puis fusionne.
-	\item \textbf{Tri par tas (HeapSort)}: Utilise une structure de tas.
-\end{enumerate}
-
-Voici un exemple de tri à bulles:
-
-\begin{algorithm}
-	\caption{Tri à bulles}
-	\begin{algorithmic}[1]
-		\For{i de 0 à n-2}
+	\item \textbf{Tri à bulles (Bubble Sort)}: Compare et échange des éléments adjacents pour les mettre dans le bon ordre. C'est l'un des algorithmes de tri les plus simples mais aussi le moins efficace pour les grandes listes. 
+%	Algorithm \ref{bulles} donne  un exemple de tri à bulles. 
+	\item \textbf{Tri par insertion (Insertion Sort)}: Insère chaque élément dans sa position correcte. C'est efficace pour les petites listes ou les listes qui sont déjà presque triées.
+	
+	\item \textbf{Tri rapide (QuickSort)}: Utilise la technique de division et conquête. Il divise la liste en sous-listes autour d'un pivot et trie les sous-listes indépendamment.
+	
+	\item \textbf{Tri fusion (MergeSort)}: Divise, trie séparément, puis fusionne. C'est un tri stable, ce qui signifie qu'il maintient l'ordre relatif des éléments égaux. 
+	
+%	\item \textbf{Tri par tas (HeapSort)}: Utilise une structure de tas (heap) pour trier les éléments. Il crée un tas binaire et extrait le plus grand élément pour le placer à la bonne position.
+	
+	\begin{algorithm}
+		\caption{Tri à bulles}
+		\label{bulles}
+		\begin{algorithmic}[1]
+			\For{i de 0 à n-2}
 			\For{j de 0 à n-i-2}
 			\If{arr[j] > arr[j+1]}
 			\State échanger arr[j] et arr[j+1]
 			\EndIf
 			\EndFor
-		\EndFor
-	\end{algorithmic}
-\end{algorithm}
+			\EndFor
+		\end{algorithmic}
+		\end{algorithm}
+		
+%		 Voici un exemple de tri par insertion:
+		
+		\begin{algorithm}
+			\caption{Tri par insertion}
+			\begin{algorithmic}[1]
+				\For{i de 1 à n-1}
+				\State clef := arr[i]
+				\State j := i - 1
+				\While{j >= 0 et arr[j] > clef}
+				\State arr[j + 1] = arr[j]
+				\State j = j - 1
+				\EndWhile
+				\State arr[j + 1] = clef
+				\EndFor
+			\end{algorithmic}
+			\end{algorithm}
+			
+%			 Voici un exemple de tri rapide:
+			
+			\begin{algorithm}
+				\caption{Tri rapide (QuickSort)}
+				\begin{algorithmic}[1]
+					\Function{QuickSort}{arr, bas, haut}
+					\If{bas < haut}
+					\State pivot := \Call{Partition}{arr, bas, haut}
+					\State \Call{QuickSort}{arr, bas, pivot - 1}
+					\State \Call{QuickSort}{arr, pivot + 1, haut}
+					\EndIf
+					\EndFunction
+				\end{algorithmic}
+			\end{algorithm}
+			
+			\begin{algorithm}
+				\caption{Tri fusion (MergeSort)}
+				\begin{algorithmic}[1]
+					\Function{MergeSort}{arr, gauche, droite}
+					\If{gauche < droite}
+					\State milieu := (gauche + droite) / 2
+					\State \Call{MergeSort}{arr, gauche, milieu}
+					\State \Call{MergeSort}{arr, milieu + 1, droite}
+					\State \Call{Fusion}{arr, gauche, milieu, droite}
+					\EndIf
+					\EndFunction
+				\end{algorithmic}
+			\end{algorithm}
+			
+%			 Voici un exemple de tri par tas:
+%			
+%			\begin{algorithm}
+%				\caption{Tri par tas (HeapSort)}
+%				\begin{algorithmic}[1]
+%					\Function{HeapSort}{arr}
+%					\State Construire le tas
+%					\For{i de n-1 à 1}
+%					\State échanger arr[0] et arr[i]
+%					\State Réorganiser le tas pour maintenir la propriété du tas
+%					\EndFor
+%					\EndFunction
+%				\end{algorithmic}
+%			\end{algorithm}
+		\end{enumerate}
+		
+		Les algorithmes de tri sont essentiels pour organiser les données efficacement. Chacun de ces algorithmes a ses avantages et inconvénients, avec des applications spécifiques en fonction des contraintes de temps et d'espace. Le choix de l'algorithme de tri dépendra de nombreux facteurs, y compris la taille de la liste, les caractéristiques des données, et les exigences de performance.
+
 
 \section{Algorithmes de recherche}
 
@@ -80,17 +180,18 @@ Et un exemple de recherche binaire:
 
 \begin{algorithm}
 	\caption{Recherche binaire}
-	\begin{algorithmic}[1]
-		\State left := 0
-		\State right := n-1
-		\While{left <= right}
-		\State mid := left + (right - left) / 2
-		\If{arr[mid] == target}
-		\State retour mid
-		\ElsIf{arr[mid] < target}
-		\State left := mid + 1
+	\begin{algorithmic}
+		\State gauche := 0
+		\State droite := n - 1
+		\While{gauche <= droite}
+		\State milieu := gauche + (droite - gauche) / 2
+		\If{tableau[milieu] == cible}
+		\State retour milieu
+		\Else\If{tableau[milieu] < cible}
+		\State gauche := milieu + 1
 		\Else
-		\State right := mid - 1
+		\State droite := milieu - 1
+		\EndIf
 		\EndIf
 		\EndWhile
 		\State retour -1

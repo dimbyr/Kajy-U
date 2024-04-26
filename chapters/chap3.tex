@@ -10,22 +10,6 @@
 
 \chapter{Complexité algorithmique}
 
-\section{Récursion}
-La récursion est un concept fondamental en informatique où une fonction s'appelle elle-même. C'est souvent utilisé pour résoudre des problèmes qui peuvent être décomposés en sous-problèmes similaires. Les fonctions récursives nécessitent une condition de terminaison pour éviter des appels infinis, ce qui peut entraîner des débordements de pile.
-
-Un exemple classique de récursion est le calcul de la factorielle d'un nombre:
-
-\begin{lstlisting}
-	int fact(int n) {
-		if (n == 0) {
-			return 1;
-		} else {
-			return n * fact(n - 1);
-		}
-	}
-\end{lstlisting}
-
-Les récursions peuvent aussi entraîner des complexités spatiales élevées à cause de l'utilisation de la pile pour stocker les appels récursifs. 
 
 \section{La notation O}
 La notation "O" (grand O) est utilisée pour décrire la complexité temporelle d'un algorithme. Elle donne une estimation du temps d'exécution en fonction de la taille de l'entrée, ce qui aide à évaluer l'efficacité d'un algorithme. 

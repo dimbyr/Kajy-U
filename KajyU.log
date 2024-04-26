@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  23 APR 2024 10:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  26 APR 2024 23:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1366,13 +1366,13 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
 \c@remarque=\count417
 LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line
- 47.
+ 61.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 47.
+(Font)              scaled to size 10.95pt on input line 61.
 
 
 LaTeX Warning: Unused global option(s):
@@ -1383,25 +1383,25 @@ LaTeX Warning: Unused global option(s):
 (./chapters/chap5.aux))
 \openout1 = `KajyU.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-Package hyperref Info: Link coloring ON on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+Package hyperref Info: Link coloring ON on input line 61.
  (./KajyU.out) (./KajyU.out)
 \@outlinefile=\write7
 \openout7 = `KajyU.out'.
@@ -1486,19 +1486,19 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 764
 .
 )
 \c@lstlisting=\count426
-LaTeX Info: Redefining \degres on input line 47.
+LaTeX Info: Redefining \degres on input line 61.
 
 
 Package french.ldf Warning: Please load the "listings" package
-(french.ldf)                AFTER babel/french; reported on input line 47.
+(french.ldf)                AFTER babel/french; reported on input line 61.
 
 Package french.ldf Info: Setting StandardItemizeEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 47.
+(french.ldf)             reported on input line 61.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 47.
-LaTeX Info: Redefining \up on input line 47.
+(french.ldf)             reported on input line 61.
+LaTeX Info: Redefining \up on input line 61.
 Package minitoc(hints) Info: I0049
 (minitoc(hints))             ==> You requested the hints option. 
 (minitoc(hints))             Some hints are eventually given below.
@@ -1512,7 +1512,7 @@ Package minitoc(hints) Warning: W0099
 (minitoc(hints))                It is incompatible 
 (minitoc(hints))                with the minitoc package.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 49.
+Package hyperref Info: Option `pageanchor' set `false' on input line 63.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1545,41 +1545,41 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 49.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<./figure/hay.jpg, id=135, 3767.07375pt x 2510.37875pt>
+<./figure/hay.jpg, id=131, 3767.07375pt x 2510.37875pt>
 File: ./figure/hay.jpg Graphic file (type jpg)
 <use ./figure/hay.jpg>
-Package pdftex.def Info: ./figure/hay.jpg  used on input line 49.
+Package pdftex.def Info: ./figure/hay.jpg  used on input line 63.
 (pdftex.def)             Requested size: 597.50787pt x 398.14473pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 49.
+(Font)              scaled to size 10.95pt on input line 63.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 24.88pt on input line 49.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 49
+(Font)              scaled to size 24.88pt on input line 63.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 63
 .
 (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 63.
 
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 63.
 
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 49.
-<./figure/Kajy U.png, id=136, 447.17062pt x 490.83376pt>
+(Font)              scaled to size 14.4pt on input line 63.
+<./figure/Kajy U.png, id=132, 447.17062pt x 490.83376pt>
 File: ./figure/Kajy U.png Graphic file (type png)
 <use ./figure/Kajy U.png>
-Package pdftex.def Info: ./figure/Kajy U.png  used on input line 49.
+Package pdftex.def Info: ./figure/Kajy U.png  used on input line 63.
 (pdftex.def)             Requested size: 119.50148pt x 131.17128pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.95pt on input line 49.
+(Font)              scaled to size 10.95pt on input line 63.
  [1
 
 
@@ -1588,7 +1588,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 cal/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc} <./figure/hay
 .jpg> <./figure/Kajy U.png>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 17.28pt on input line 52.
+(Font)              scaled to size 17.28pt on input line 66.
  (./KajyU.toc)
 \tf@toc=\write8
 \openout8 = `KajyU.toc'.
@@ -1611,9 +1611,9 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (./chapters/chap1.tex
 Chapitre 1.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 5.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 9
-.
+(Font)              scaled to size 12.0pt on input line 6.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+0.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ) [2
@@ -1623,83 +1623,77 @@ File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 
 {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 70.
+(Font)              scaled to size 8.0pt on input line 67.
  [3] [4]
-LaTeX Font Info:    Trying to load font information for T1+ntxsups on input lin
-e 130.
-
-(/usr/local/texlive/2023/texmf-dist/tex/latex/newtx/t1ntxsups.fd
-File: t1ntxsups.fd 2015/01/17 v1.0
-)
-LaTeX Font Info:    Font shape `T1/ntxsups/b/n' will be
-(Font)              scaled to size 12.0pt on input line 130.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 130.
- [5{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntxsups_t1.enc}] [
-6]) [7]
+[5] [6] [7] [8] [9] [10] [11] [12]) [13]
 \openout2 = `chapters/chap2.aux'.
 
-
-(./chapters/chap2.tex
+ (./chapters/chap2.tex
 Chapitre 2.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 17.
-[8
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
+(Font)              scaled to size 10.95pt on input line 36.
+[14
 
 
 
 
-]) [9]
+{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.0pt on input line 54.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 9.0pt on input line 79.
+ [15] [16]) [17]
 \openout2 = `chapters/chap3.aux'.
 
  (./chapters/chap3.tex
 Chapitre 3.
-[10
-
-
-
-
-]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 55.
+(hyperref)                removing `math shift' on input line 39.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Omega' on input line 55.
+(hyperref)                removing `\Omega' on input line 39.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 55.
+(hyperref)                removing `math shift' on input line 39.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 55.
+(hyperref)                removing `math shift' on input line 39.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\theta' on input line 55.
+(hyperref)                removing `\theta' on input line 39.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 55.
+(hyperref)                removing `math shift' on input line 39.
 
-[11]) [12]
+[18
+
+
+
+
+]) [19]
 \openout2 = `chapters/chap4.aux'.
 
  (./chapters/chap4.tex
 Chapitre 4.
-[13
+[20
 
 
 
 
-] [14] [15] [16] [17]) [18]
+] [21] [22] [23] [24]) [25]
 \openout2 = `chapters/chap5.aux'.
 
  (./chapters/chap5.tex
 Chapitre 5.
-) [19
+) [26
 
 
 
@@ -1724,52 +1718,40 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the KajyU.log file.
 
-[20
+[27
 
 
 
 ] (./KajyU.aux (./chapters/chap0.aux) (./chapters/chap1.aux)
 (./chapters/chap2.aux) (./chapters/chap3.aux) (./chapters/chap4.aux)
 (./chapters/chap5.aux))
-
-Package rerunfilecheck Warning: File `KajyU.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `KajyU.out':
-(rerunfilecheck)             Before: CB1AC511333233227FF534C2CB47453A;4389
-(rerunfilecheck)             After:  7F0EF4A402892C14EE53CF249361FEC4;4168.
+Package rerunfilecheck Info: File `KajyU.out' has not changed.
+(rerunfilecheck)             Checksum: DAA7BDB5E0EBFF1DD749726A07D301DF;4097.
  ) 
 Here is how much of TeX's memory you used:
- 41134 strings out of 476097
- 784417 string characters out of 5791138
- 2103851 words of memory out of 5000000
- 60175 multiletter control sequences out of 15000+600000
- 550638 words of font info for 82 fonts, out of 8000000 for 9000
+ 41299 strings out of 476097
+ 786481 string characters out of 5791138
+ 2070851 words of memory out of 5000000
+ 60236 multiletter control sequences out of 15000+600000
+ 555585 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,136p,563b,2006s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{section.6.1} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{chapter.6} has been referenced but does not exist, 
-replaced by a fixed one
-
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
-al/texlive/2023/texmf-dist/fonts/type1/public/newtx/ntxsups-Bold.pfb></usr/loca
-l/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/
-texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/2
-023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2023/texmf
--dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on KajyU.pdf (22 pages, 2172208 bytes).
+ 102i,12n,136p,563b,2141s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/t
+exlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/20
+23/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2023/texmf-
+dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on KajyU.pdf (29 pages, 2219119 bytes).
 PDF statistics:
- 712 PDF objects out of 1000 (max. 8388607)
- 642 compressed objects within 7 object streams
- 363 named destinations out of 1000 (max. 500000)
- 327 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 871 PDF objects out of 1000 (max. 8388607)
+ 788 compressed objects within 8 object streams
+ 470 named destinations out of 1000 (max. 500000)
+ 319 words of extra memory for PDF output out of 10000 (max. 10000000)
 

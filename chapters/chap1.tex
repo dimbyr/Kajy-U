@@ -1,10 +1,11 @@
 \chapter{Structures de donn\'ees fondamentales}
 %\minitoc
-\section{Variables et langage de programmation}
+\section{Variables}
+Les variables constituent l'un des concepts les plus fondamentaux en programmation. En langage C, une variable est un espace de stockage nommé qui peut contenir une valeur modifiable. Les variables sont utilisées pour stocker des données telles que des nombres, des caractères et des adresses mémoire.
 
 \subsection{Déclaration de variables}
 
-Les variables constituent l'un des concepts les plus fondamentaux en programmation. En langage C, une variable est un espace de stockage nommé qui peut contenir une valeur modifiable. Les variables sont utilisées pour stocker des données telles que des nombres, des caractères et des adresses mémoire.
+En language C, on d\'eclare une variable en pr\'ec\'edant son nom le type de donn\'ee qu'elle contient. 
 
 \begin{lstlisting}
 	int age; // Declaration d'une variable de type entier appelee "age"
@@ -62,11 +63,11 @@ Les variables sont un element essentiel en langage C et constituent la base de l
 
 \section{Pointeurs}
 
-Les pointeurs sont un concept essentiel en langage C. Un pointeur est une variable qui contient l'adresse mémoire d'une autre variable. En d'autres termes, un pointeur pointe vers l'emplacement en mémoire où une valeur est stockée.
+Les pointeurs sont un concept essentiel en langage C. Un \emph{pointeur} est une variable qui contient l'adresse mémoire d'une autre variable. En d'autres termes, un pointeur pointe vers l'emplacement en mémoire où une valeur est stockée.
 
 \subsection{Déclaration de pointeurs}
 
-En langage C, un pointeur est déclaré en précédant le nom de la variable avec l'opérateur d'indirection *, qui indique que la variable est un pointeur. Voici un exemple de déclaration de pointeur :
+En langage C, un pointeur est déclaré en précédant le nom de la variable avec l'opérateur *, qui indique que la variable est un pointeur. Voici un exemple de déclaration de pointeur :
 
 \begin{lstlisting}
 	int *ptr; // Declaration d'un pointeur vers un entier
@@ -102,23 +103,76 @@ Une fois qu'un pointeur est initialisé, il peut être utilisé pour accéder à
 
 Les pointeurs sont un concept puissant en langage C, mais ils nécessitent une manipulation prudente pour éviter les erreurs de segmentation et les fuites de mémoire.
 
+\subsection{Double pointeurs}
+
+Les double pointeurs (ou pointeurs vers des pointeurs) contiennent l'adresse mémoire d'un autre pointeur. Ils sont utiles pour passer des pointeurs par référence à des fonctions, pour des structures de données complexes comme des tableaux de tableaux, ou pour manipuler des listes chaînées.
+
+Voici un exemple de déclaration et d'utilisation d'un double pointeur :
+
+\begin{lstlisting}
+	int a = 5;
+	int *ptr = &a; // Pointeur vers int
+	int **double_ptr = &ptr; // Double pointeur vers pointeur int
+	
+	printf("La valeur de a est %d\\n", a); // Affichage de la valeur de a
+	printf("La valeur pointe par ptr est %d\\n", *ptr); // Affichage de la valeur pointee par ptr
+	printf("La valeur pointee par double_ptr est %d\\n", **double_ptr); // Affichage de la valeur pointee par double_ptr
+\end{lstlisting}
+
+Les double pointeurs sont également utilisés pour retourner des pointeurs depuis des fonctions ou pour allouer dynamiquement de la mémoire pour des structures comme des tableaux 2D.
+
+\subsection{Utilisation avancée des pointeurs}
+
+Les pointeurs permettent des opérations avancées comme l'arithmétique des pointeurs, où vous pouvez ajouter ou soustraire des valeurs pour déplacer le pointeur en mémoire. Voici un exemple :
+
+\begin{lstlisting}
+	int tableau[5] = {1, 2, 3, 4, 5};
+	int *ptr = tableau;
+	
+	printf("Premier element: %d\\n", *ptr); // Affichage du premier element
+	ptr++; // Deplacement du pointeur vers le prochain element
+	printf("Deuxieme element: %d\\n", *ptr); // Affichage du deuxieme element
+\end{lstlisting}
+
+Soyez prudent avec l'arithmétique des pointeurs, car elle peut conduire à des erreurs de segmentation si vous sortez des limites de la mémoire allouée.
+
+\subsection{Pointeurs et mémoire dynamique}
+
+Les pointeurs sont essentiels pour la gestion de la mémoire dynamique en langage C. Avec des fonctions comme `malloc` et `free`, vous pouvez allouer et libérer de la mémoire au moment de l'exécution. Voici un exemple :
+
+\begin{lstlisting}
+	int *array = (int *)malloc(10 * sizeof(int)); // Allouer de la memoire pour 10 entiers
+	if (array == NULL) {
+		printf("Echec de l'allocation de memoire!\\n");
+		return 1;
+	}
+	
+	for (int i = 0; i < 10; i++) {
+		array[i] = i * 2; // Initialisation de la memoire allouee
+	}
+	
+	free(array); // Liberer la memoire
+\end{lstlisting}
+
+La gestion de la mémoire est cruciale lors de l'utilisation des pointeurs. Assurez-vous de toujours libérer la mémoire allouée pour éviter les fuites de mémoire.
+
 
 \section{Types de données}
 
-Les types de données en langage C déterminent la nature des valeurs qu'une variable peut contenir. Le langage C prend en charge plusieurs types de données de base, notamment les entiers, les flottants et les caractères, ainsi que des types de données dérivés tels que les tableaux et les structures.
+Les types de données en langage C déterminent la nature des valeurs qu'une variable peut contenir. Le langage C prend en charge plusieurs types de données de base, ainsi que des types de données dérivés tels que les tableaux et les structures.
 
 \subsection{Types de données de base}
 
-Les types de données de base définissent les valeurs simples que peuvent contenir les variables en langage C. Voici quelques-uns des types de données de base les plus couramment utilisés :
+Les types de données de base définissent les valeurs simples que peuvent contenir les variables en langage C. Voici quelques-uns des types de données de base les plus couramment utilisés, avec leurs tailles habituelles:
 
 \begin{enumerate}[label=\alph*)]
-	\item \textbf{int} : Pour les entiers signés.
-	\item \textbf{float} : Pour les nombres à virgule flottante.
-	\item \textbf{double} : Pour les nombres à virgule flottante doubles précision.
-	\item \textbf{char} : Pour les caractères ASCII.
+	\item \textbf{int} : Pour les entiers signés (généralement 4 octets).
+	\item \textbf{float} : Pour les nombres à virgule flottante (généralement 4 octets).
+	\item \textbf{double} : Pour les nombres à virgule flottante double précision (généralement 8 octets).
+	\item \textbf{char} : Pour les caractères ASCII (généralement 1 octet).
 \end{enumerate}
 
-Voici comment ces types de données peuvent être utilisés dans des déclarations de variables :
+Voici des exemples de déclaration de variables pour ces types de données:
 
 \begin{lstlisting}
 	int age = 30; // Declaration d'une variable de type entier
@@ -127,24 +181,24 @@ Voici comment ces types de données peuvent être utilisés dans des déclaratio
 	char grade = 'A'; // Declaration d'une variable de type caractere
 \end{lstlisting}
 
-\subsection{Types de données dérivés \footnote{Refer back to \cite{narasimha2017data} for this section. Check well that all is correct.}}
+\subsection{Types de données dérivés}
 
-Outre les types de données de base, le langage C offre la possibilité de créer des types de données dérivés, tels que les tableaux, les structures et les pointeurs. Ces types de données permettent de regrouper des valeurs connexes ou d'adresser des données de manière plus complexe.
+Outre les types de données de base, le langage C offre la possibilité de créer des types de données dérivés, comme les tableaux, les structures, les unions et les énumérations.
 
 \begin{enumerate}[label=\alph*)]
 	\item \textbf{Tableaux} :
 	
-	Un tableau est une collection ordonnée d'éléments du même type. Les éléments d'un tableau sont accessibles via un index numérique. Voici un exemple de déclaration et d'utilisation d'un tableau en langage C :
+	Un tableau est une collection ordonnée d'éléments du même type. Les éléments d'un tableau sont accessibles via un index numérique. Voici un exemple de déclaration d'un tableau et d'opérations de base:
 	
 	\begin{lstlisting}
-		int tableau[5]; // Declaration d'un tableau d'entiers de taille 5
-		tableau[0] = 10; // Attribution de la valeur 10 au premier element du tableau
-		tableau[1] = 20; // Attribution de la valeur 20 au deuxieme element du tableau
+		int tableau[5]; // Declaration d'un tableau de taille 5
+		tableau[0] = 10; // Attribuer la valeur 10 au premier element
+		tableau[1] = 20; // Attribuer la valeur 20 au deuxieme element
 	\end{lstlisting}
 	
 	\item \textbf{Structures} :
 	
-	Une structure est une collection de variables de types différents regroupées sous un seul nom. Elle permet de définir des types de données personnalisés. Voici un exemple de déclaration et d'utilisation d'une structure en langage C :
+	Les structures permettent de regrouper des variables de types différents. Elles permettent de définir des types de données personnalisés. Voici un exemple d'utilisation des structures:
 	
 	\begin{lstlisting}
 		#include <stdio.h>;
@@ -161,27 +215,115 @@ Outre les types de données de base, le langage C offre la possibilité de crée
 		p1.age = 30; // Attribution d'une valeur au champ age
 		p1.taille = 1.75; // Attribution d'une valeur au champ taille
 	\end{lstlisting}
-
- \item \textbf{Chaînes de caractères} :
-
-Les chaînes de caractères en C sont des tableaux de caractères terminés par un caractère nul ('\textbackslash0'). Elles sont utilisées pour représenter et manipuler du texte. Voici un exemple de déclaration et d'utilisation de chaînes de caractères en langage C :
-
-\begin{lstlisting}
-	#include <stdio.h>;
-	#include <string.h>;
 	
-	char chaine[50]; // Declaration d'une chaine de caracteres
-	strcpy(chaine, "Bonjour"); // Attribution d'une valeur a la chaine
-	printf("%s\n", chaine); // Affichage de la chaine
-\end{lstlisting}
-
+	\item \textbf{Unions} :
+	
+	Les unions permettent de partager la même zone mémoire entre différents types de données. Voici un exemple de déclaration d'une union:
+	
+	\begin{lstlisting}
+		union Data {
+			int entier;
+			float flottant;
+			char caractere;
+		};
+		
+		union Data d;
+		d.entier = 10; // Utilisation de l'union avec un entier
+		d.flottant = 5.5; // Utilisation avec un flottant (ecrase l'entier)
+	\end{lstlisting}
+	
+	\item \textbf{Énumérations} :
+	
+	Les énumérations permettent de définir un ensemble de valeurs nommées. Elles sont utiles pour créer des listes de constantes. Voici un exemple d'utilisation des énumérations:
+	
+	\begin{lstlisting}
+		enum Jour {LUNDI, MARDI, MERCREDI, JEUDI, VENDREDI, SAMEDI, DIMANCHE};
+		
+		enum Jour aujourdhui = MERCREDI; // Declaration d'une enumeration et initialisation
+	\end{lstlisting}
 \end{enumerate}
 
-Les types de données en langage C offrent une flexibilité et une puissance considérables pour la manipulation des données. Il est essentiel de comprendre ces types de données et leurs utilisations pour écrire des programmes efficaces et fonctionnels.
+\subsection{Typedef}
 
-%\section{Tableaux}
-%\section{Chaînes de caractères}
-%\section{Struct}
+Le mot-clé \emph{typedef} permet de créer des alias pour des types de données existants. Cela peut simplifier des déclarations complexes, rendre le code plus lisible, et améliorer l'abstraction des types. `typedef` est couramment utilisé pour simplifier des déclarations de pointeurs, de structures, d'unions, et de fonctions.
+
+\subsubsection*{Alias pour des types de base}
+
+Voici un exemple d'utilisation de `typedef` pour créer un alias pour un type de base :
+
+\begin{lstlisting}
+	typedef int Entier; // Creation d'un alias pour int
+	Entier age = 30; // Utilisation du typedef pour creer un alias
+\end{lstlisting}
+
+Cet exemple montre comment `typedef` peut simplifier des déclarations. Utiliser des alias descriptifs peut rendre le code plus lisible et compréhensible, en particulier lorsque les types de base ont des applications spécifiques.
+
+\subsubsection*{Utilisation avec des pointeurs}
+
+Les pointeurs en C peuvent être complexes à déclarer, surtout pour les pointeurs de fonctions ou les structures dérivées. `typedef` simplifie les déclarations de pointeurs en créant des alias :
+
+\begin{lstlisting}
+	typedef int* PointeurEntier; // Alias pour un pointeur vers int
+	PointeurEntier ptr = NULL; // Declaration d'un pointeur vers int
+\end{lstlisting}
+
+Vous pouvez également utiliser `typedef` pour simplifier des déclarations de pointeurs de fonctions, rendant le code plus lisible :
+
+\begin{lstlisting}
+	typedef int (*Fonction)(int, int); // Alias pour un pointeur vers une fonction
+\end{lstlisting}
+
+\subsubsection*{Utilisation avec des structures}
+
+`typedef` est largement utilisé pour simplifier les déclarations de structures complexes. Cela facilite l'utilisation de structures pour regrouper des variables de types différents :
+
+\begin{lstlisting}
+	typedef struct {
+		char nom[50];
+		int age;
+		float taille;
+	} Personne;
+	
+	Personne p1; // Utilisation du typedef pour nommer une structure
+\end{lstlisting}
+
+Avec `typedef`, les déclarations de structures deviennent plus concises et lisibles, ce qui peut simplifier le code et faciliter les modifications futures.
+
+\subsubsection*{Utilisation avec des unions}
+
+Les unions permettent de partager la même zone mémoire entre différents types de données. `typedef` peut être utilisé pour nommer des unions, ce qui simplifie l'utilisation des structures complexes :
+
+\begin{lstlisting}
+	typedef union {
+		int entier;
+		float flottant;
+		char caractere;
+	} Donnees;
+	
+	Donnees d; // Utilisation du typedef pour nommer une union
+\end{lstlisting}
+
+\subsubsection*{Utilisation avec des énumérations}
+
+Les énumérations permettent de définir des ensembles de valeurs nommées. `typedef` facilite la déclaration et l'utilisation des énumérations :
+
+\begin{lstlisting}
+	typedef enum {LUNDI, MARDI, MERCREDI, JEUDI, VENDREDI, SAMEDI, DIMANCHE} Jour;
+	
+	Jour aujourd'hui = MERCREDI; // Utilisation de l'enumeration avec typedef
+\end{lstlisting}
+
+\subsubsection*{Avantages de `typedef`}
+
+`typedef` offre plusieurs avantages pour le code C, notamment :
+
+- \textbf{Simplification des déclarations complexes} : `typedef` permet de rendre le code plus concis en créant des alias pour des déclarations compliquées.
+- \textbf{Lisibilité accrue} : Les alias créés avec `typedef` rendent le code plus facile à lire et à comprendre.
+- \textbf{Abstraction des types} : `typedef` permet de créer des abstractions pour des types de données, ce qui facilite les modifications futures.
+- \textbf{Réutilisation du code} : Les alias créés avec `typedef` peuvent être réutilisés dans différents contextes, ce qui améliore la maintenabilité du code.
+
+Dans l'ensemble, `typedef` est un outil puissant en langage C qui permet de simplifier les déclarations complexes, de rendre le code plus lisible, et de faciliter la création de types de données personnalisés. Que ce soit pour des pointeurs, des structures, des unions, ou des fonctions, `typedef` est un outil précieux pour les développeurs C.
+
 
 \section{Exercices}
 
@@ -193,25 +335,100 @@ Les types de données en langage C offrent une flexibilité et une puissance con
 	\item Créez une structure \texttt{Personne} avec des champs pour le nom, l'âge et la taille. Déclarez une variable de type \texttt{Personne} et initialisez-la avec des valeurs fictives. Affichez ensuite ces valeurs à l'écran.
 	\item Écrivez une fonction en C pour inverser une chaîne de caractères donnée.
 	\item Écrivez une fonction en C pour trier un tableau d'entiers en utilisant l'algorithme de tri à bulles.
-\end{enumerate}
+%\end{enumerate}
 
 \textbf{Types de données de base:}
 
-\begin{enumerate}
+%\begin{enumerate}
 	\item Écrivez un programme C pour convertir un nombre entier en binaire.
 	\item Écrivez une fonction en C pour calculer la somme des chiffres d'un nombre entier.
 	\item Déclarez une variable de type \texttt{char} et utilisez-la pour stocker une lettre majuscule. Ensuite, utilisez une opération pour convertir cette lettre en minuscule.
 	\item Écrivez un programme C pour vérifier si un nombre donné est premier ou non.
 	\item Écrivez une fonction récursive en C pour calculer le factoriel d'un nombre entier.
-\end{enumerate}
+%\end{enumerate}
 
 \textbf{Types de données dérivés:}
 
-\begin{enumerate}
+%\begin{enumerate}
 	\item Écrivez une fonction en C pour concaténer deux chaînes de caractères données.
 	\item Déclarez un tableau de structures \texttt{Etudiant} avec des champs pour le nom, l'âge et la moyenne. Initialisez-le avec des valeurs fictives et affichez ensuite ces valeurs à l'écran.
 	\item Écrivez une fonction en C pour ajouter un élément à une liste chaînée.
 	\item Implémentez une file (queue) en utilisant des listes chaînées en C.
 	\item Écrivez une fonction en C pour supprimer un élément d'un arbre binaire de recherche.
-\end{enumerate}
+%\end{enumerate}
 
+\textbf{Typedef}
+
+%\begin{enumerate}
+	 \item \textbf{Création d'un alias pour un type de base}
+	
+	Utilisez `typedef` pour créer un alias pour un type de données de base. Ensuite, déclarez une variable de ce type et affichez sa valeur.
+	
+	\begin{lstlisting}
+		typedef ...
+		... var = 25;
+		
+		printf("La valeur de var est %d\\n", var);
+	\end{lstlisting}
+	
+	\item \textbf{Utilisation de typedef avec des pointeurs}
+	
+	Utilisez `typedef` pour créer un alias pour un pointeur vers un entier. Initialisez le pointeur avec l'adresse d'une variable entière et affichez la valeur à laquelle le pointeur fait référence.
+	
+	\begin{lstlisting}
+		typedef ...
+		int a = 10;
+		... ptr = &a;
+		
+		printf("La valeur pointee par le pointeur est %d\\n", *ptr);
+	\end{lstlisting}
+	
+	\item \textbf{Utilisation de typedef avec des structures}
+	
+	Utilisez `typedef` pour créer un alias pour une structure représentant une personne avec des champs comme le nom, l'âge, et la taille. Ensuite, déclarez une variable de ce type et attribuez des valeurs aux champs.
+	
+	\begin{lstlisting}
+		typedef struct {
+			char nom[50];
+			int age;
+			float taille;
+		} ...;
+		
+		... p1;
+		
+		strcpy(p1.nom, "Alice");
+		p1.age = 25;
+		p1.taille = 1.65;
+	\end{lstlisting}
+	
+	\item \textbf{Utilisation de typedef avec des énumérations}
+	
+	Utilisez `typedef` pour créer un alias pour une énumération représentant les jours de la semaine. Déclarez une variable de ce type et attribuez-lui un jour spécifique.
+	
+	\begin{lstlisting}
+		typedef enum {
+			LUNDI,
+			MARDI,
+			MERCREDI,
+			...
+		} ...;
+		
+		... aujourd'hui = MERCREDI;
+	\end{lstlisting}
+	
+	\item \textbf{Utilisation de typedef avec des unions}
+	
+	Utilisez `typedef` pour créer un alias pour une union contenant un entier, un flottant, et un caractère. Déclarez une variable de ce type et attribuez des valeurs aux différents éléments de l'union.
+	
+	\begin{lstlisting}
+		typedef union {
+			int entier;
+			float flottant;
+			char caractere;
+		} ...;
+		
+		... d;
+		d.entier = 10;
+		d.flottant = 5.5;
+	\end{lstlisting}
+\end{enumerate}
