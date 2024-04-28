@@ -59,124 +59,153 @@ La récursion est un outil puissant pour résoudre des problèmes de manière é
 
 \section{Algorithmes de tri}
 
-Le tri consiste à organiser les données dans un ordre particulier. Les algorithmes de tri couramment utilisés comprennent:
+Le \emph{tri} consiste à organiser les données dans un ordre particulier. Les algorithmes de tri couramment utilisés comprennent:
 
 \begin{enumerate}
-	\item \textbf{Tri à bulles (Bubble Sort)}: Compare et échange des éléments adjacents pour les mettre dans le bon ordre. C'est l'un des algorithmes de tri les plus simples mais aussi le moins efficace pour les grandes listes. 
+		\item \textbf{Tri à bulles (Bubble Sort)} : Cet algorithme compare des éléments adjacents (côte à côte) et les échange s'ils ne sont pas dans le bon ordre. On répète le processus jusqu'à ce que toute la liste soit triée. C'est le plus simple des algorithmes de tri, mais il n'est pas très efficace pour les grandes listes, car il doit comparer de nombreux éléments.
+	
 %	Algorithm \ref{bulles} donne  un exemple de tri à bulles. 
-	\item \textbf{Tri par insertion (Insertion Sort)}: Insère chaque élément dans sa position correcte. C'est efficace pour les petites listes ou les listes qui sont déjà presque triées.
+	\item \textbf{Tri par insertion (Insertion Sort)} : Cet algorithme place chaque élément à la bonne position dans la liste, un par un. C'est efficace pour les petites listes ou les listes presque triées, car il insère chaque nouvel élément à sa position correcte sans avoir besoin de beaucoup de déplacements.
+
 	
-	\item \textbf{Tri rapide (QuickSort)}: Utilise la technique de division et conquête. Il divise la liste en sous-listes autour d'un pivot et trie les sous-listes indépendamment.
+	\item \textbf{Tri rapide (QuickSort)} : Cet algorithme utilise la technique de division et conquête. Il choisit un pivot (un élément central), divise la liste en deux parties (éléments plus petits d'un côté, plus grands de l'autre), puis trie chaque partie séparément. Cela en fait un algorithme rapide et efficace pour les grandes listes.
+
 	
-	\item \textbf{Tri fusion (MergeSort)}: Divise, trie séparément, puis fusionne. C'est un tri stable, ce qui signifie qu'il maintient l'ordre relatif des éléments égaux. 
+	\item \textbf{Tri fusion (MergeSort)} : Cet algorithme divise la liste en deux moitiés, trie chaque moitié séparément, puis les fusionne pour créer une liste triée. C'est un tri stable, ce qui signifie qu'il maintient l'ordre relatif des éléments égaux. C'est souvent utilisé pour les grandes listes car il offre de bonnes performances.
+
 	
 %	\item \textbf{Tri par tas (HeapSort)}: Utilise une structure de tas (heap) pour trier les éléments. Il crée un tas binaire et extrait le plus grand élément pour le placer à la bonne position.
-	
-	\begin{algorithm}
-		\caption{Tri à bulles}
-		\label{bulles}
-		\begin{algorithmic}[1]
-			\For{i de 0 à n-2}
-			\For{j de 0 à n-i-2}
-			\If{arr[j] > arr[j+1]}
-			\State échanger arr[j] et arr[j+1]
-			\EndIf
-			\EndFor
-			\EndFor
-		\end{algorithmic}
-		\end{algorithm}
-		
-%		 Voici un exemple de tri par insertion:
-		
-		\begin{algorithm}
-			\caption{Tri par insertion}
-			\begin{algorithmic}[1]
-				\For{i de 1 à n-1}
-				\State clef := arr[i]
-				\State j := i - 1
-				\While{j >= 0 et arr[j] > clef}
-				\State arr[j + 1] = arr[j]
-				\State j = j - 1
-				\EndWhile
-				\State arr[j + 1] = clef
-				\EndFor
-			\end{algorithmic}
-			\end{algorithm}
-			
-%			 Voici un exemple de tri rapide:
-			
-			\begin{algorithm}
-				\caption{Tri rapide (QuickSort)}
-				\begin{algorithmic}[1]
-					\Function{QuickSort}{arr, bas, haut}
-					\If{bas < haut}
-					\State pivot := \Call{Partition}{arr, bas, haut}
-					\State \Call{QuickSort}{arr, bas, pivot - 1}
-					\State \Call{QuickSort}{arr, pivot + 1, haut}
-					\EndIf
-					\EndFunction
-				\end{algorithmic}
-			\end{algorithm}
-			
-			\begin{algorithm}
-				\caption{Tri fusion (MergeSort)}
-				\begin{algorithmic}[1]
-					\Function{MergeSort}{arr, gauche, droite}
-					\If{gauche < droite}
-					\State milieu := (gauche + droite) / 2
-					\State \Call{MergeSort}{arr, gauche, milieu}
-					\State \Call{MergeSort}{arr, milieu + 1, droite}
-					\State \Call{Fusion}{arr, gauche, milieu, droite}
-					\EndIf
-					\EndFunction
-				\end{algorithmic}
-			\end{algorithm}
-			
-%			 Voici un exemple de tri par tas:
-%			
-%			\begin{algorithm}
-%				\caption{Tri par tas (HeapSort)}
-%				\begin{algorithmic}[1]
-%					\Function{HeapSort}{arr}
-%					\State Construire le tas
-%					\For{i de n-1 à 1}
-%					\State échanger arr[0] et arr[i]
-%					\State Réorganiser le tas pour maintenir la propriété du tas
-%					\EndFor
-%					\EndFunction
-%				\end{algorithmic}
-%			\end{algorithm}
-		\end{enumerate}
-		
-		Les algorithmes de tri sont essentiels pour organiser les données efficacement. Chacun de ces algorithmes a ses avantages et inconvénients, avec des applications spécifiques en fonction des contraintes de temps et d'espace. Le choix de l'algorithme de tri dépendra de nombreux facteurs, y compris la taille de la liste, les caractéristiques des données, et les exigences de performance.
-
-
-\section{Algorithmes de recherche}
-
-Les algorithmes de recherche permettent de trouver des éléments spécifiques dans un ensemble de données. Les types courants d'algorithmes de recherche incluent:
-
-\begin{enumerate}
-	\item \textbf{Recherche linéaire}: Parcourt une liste séquentiellement.
-	\item \textbf{Recherche binaire}: Utilise une technique de division pour accélérer la recherche.
-	\item \textbf{Recherche par hachage}: Utilise une table de hachage pour recherche rapide.
-	\item \textbf{Recherche dans un arbre binaire}: Utilise une structure d'arbre binaire de recherche.
 \end{enumerate}
 
-Voici un exemple de recherche linéaire:
 
 \begin{algorithm}
-	\caption{Recherche linéaire}
+	\caption{Tri à bulles}
+	\label{bulles}
 	\begin{algorithmic}[1]
-		\For{i de 0 à n-1}
-		\If{arr[i] == target}
-		\State retour i
+		\While{non triée}
+		\For{i de 0 à n - 2}
+		\For{j de 0 à n - i - 2}
+		\If{tableau[j] > tableau[j + 1]}
+		\State échanger tableau[j] et tableau[j + 1]
 		\EndIf
 		\EndFor
-		\State retour -1
+		\EndFor
+		\EndWhile
 	\end{algorithmic}
 \end{algorithm}
 
-Et un exemple de recherche binaire:
+\begin{algorithm}
+	\caption{Tri par insertion}
+	\begin{algorithmic}[1]
+		\For{i de 1 à n - 1}
+		\State clé := tableau[i]
+		\State j := i - 1
+		\While{j >= 0 et tableau[j] > clé}
+		\State tableau[j + 1] = tableau[j]
+		\State j = j - 1
+		\EndWhile
+		\State tableau[j + 1] = clé
+		\EndFor
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{Tri rapide (QuickSort)}
+	\begin{algorithmic}[1]
+		\Function{QuickSort}{tableau, bas, haut}
+		\If{bas < haut}
+		\State pivot := \Call{Partition}{tableau, bas, haut}
+		\State \Call{QuickSort}{tableau, bas, pivot - 1}
+		\State \Call{QuickSort}{tableau, pivot + 1, haut}
+		\EndIf
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{Tri fusion (MergeSort)}
+	\begin{algorithmic}[1]
+		\Function{MergeSort}{tableau, gauche, droite}
+		\If{gauche < droite}
+		\State milieu := (gauche + droite) / 2
+		\State \Call{MergeSort}{tableau, gauche, milieu}
+		\State \Call{MergeSort}{tableau, milieu + 1, droite}
+		\State \Call{Fusion}{tableau, gauche, milieu, droite}
+		\EndIf
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{Tri par tas (HeapSort)}
+	\begin{algorithmic}[1]
+		\Function{HeapSort}{tableau}
+		\State Construire le tas
+		\For{i de n - 1 à 1}
+		\State échanger tableau[0] et tableau[i]
+		\State Réorganiser le tas pour maintenir la propriété du tas
+		\EndFor
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+		Les algorithmes de tri sont essentiels pour organiser les données efficacement. Chacun de ces algorithmes a ses avantages et inconvénients, avec des applications spécifiques en fonction des contraintes de temps et d'espace. Le choix de l'algorithme de tri dépendra de nombreux facteurs, y compris la taille de la liste, les caractéristiques des données, et les exigences de performance. 
+		
+\textit{T\^ache: Montrer que chacune des algorithmes de tri ci-dessus se termine.
+}
+
+\section{Algorithmes de recherche}
+
+Les algorithmes de recherche permettent de trouver des éléments spécifiques dans un ensemble de données. Voici quelques-uns des types courants d'algorithmes de recherche, avec des explications détaillées et des exemples:
+
+\begin{enumerate}
+	\item \textbf{Recherche linéaire (Linear Search)} : Ce type de recherche parcourt une liste d'éléments un par un, de manière séquentielle, jusqu'à ce qu'il trouve l'élément recherché ou atteigne la fin de la liste. C'est le plus simple des algorithmes de recherche, mais il peut être lent pour les grandes listes.
+	
+%	\textbf{Exemple de recherche linéaire}
+
+	\item \textbf{Recherche binaire (Binary Search)} : La recherche binaire utilise une technique de division pour trouver rapidement un élément dans une liste triée. Elle divise la liste en moitiés, recherche le milieu, puis réduit le domaine de recherche en fonction de la valeur recherchée. Cela la rend plus rapide que la recherche linéaire, mais elle nécessite que la liste soit triée.
+	
+%	\textbf{Exemple de recherche binaire}
+	
+	
+	\item \textbf{Recherche par hachage (Hash Table Search)} : Ce type de recherche utilise une table de hachage pour trouver rapidement des éléments. Une fonction de hachage convertit chaque élément en une clé unique pour le stockage et la recherche. C'est très rapide pour les grandes listes, mais peut être complexe à mettre en place.
+	
+	\item \textbf{Recherche dans un arbre binaire (Binary Tree Search)} : Cette recherche utilise une structure appelée arbre binaire, où chaque nœud a jusqu'à deux enfants. La recherche se fait en parcourant les nœuds selon des règles spécifiques, ce qui peut être efficace pour certaines opérations de recherche.
+	
+	\item \textbf{Recherche interpolée (Interpolation Search)} : Cette recherche est une version améliorée de la recherche binaire pour les listes avec des valeurs bien réparties. Elle utilise une formule pour estimer la position de la valeur recherchée, ce qui la rend plus précise.
+	
+%	\textbf{Exemple de recherche interpolée}
+	
+	
+	\item \textbf{Recherche par saut (Jump Search)} : C'est une recherche linéaire optimisée pour les grandes listes. Elle saute de blocs en blocs pour trouver la plage dans laquelle l'élément pourrait se trouver, puis fait une recherche linéaire à l'intérieur de cette plage.
+	
+%	\textbf{Exemple de recherche par saut}
+
+
+\section{Exercices}
+
+Pour pratiquer les algorithmes de recherche, voici quelques exercices qui vous aideront à comprendre et à appliquer ces concepts:
+
+\begin{enumerate}
+	\item \textbf{Recherche linéaire} : Implémentez une recherche linéaire pour trouver un élément spécifique dans un tableau. Quelles sont les limites de cette méthode ?
+	\item \textbf{Recherche binaire} : Implémentez une recherche binaire sur un tableau trié. Que se passe-t-il si le tableau n'est pas trié ?
+	\item \textbf{Recherche par hachage} : Expliquez comment une table de hachage peut accélérer la recherche. Quels sont les risques associés à cette méthode ?
+	\item \textbf{Recherche interpolée} : Pourquoi la recherche interpolée est-elle plus efficace que la recherche binaire pour les listes avec des valeurs bien réparties ? Implémentez cet algorithme et montrez ses avantages.
+	\item \textbf{Recherche par saut} : Implémentez une recherche par saut sur un tableau de grande taille. Pourquoi cette méthode peut-elle être plus rapide que la recherche linéaire pour des tableaux de grande taille ?
+\end{enumerate}
+
+
+	\begin{algorithm}
+	\caption{Recherche linéaire}
+	\begin{algorithmic}[1]
+		\For{i de 0 à n - 1}
+		\If{tableau[i] == cible}
+		\State \textbf{Retourner} i
+		\EndIf
+		\EndFor
+		\State \textbf{Retourner} -1
+	\end{algorithmic}
+\end{algorithm}
 
 \begin{algorithm}
 	\caption{Recherche binaire}
@@ -186,164 +215,57 @@ Et un exemple de recherche binaire:
 		\While{gauche <= droite}
 		\State milieu := gauche + (droite - gauche) / 2
 		\If{tableau[milieu] == cible}
-		\State retour milieu
-		\Else\If{tableau[milieu] < cible}
+		\State \textbf{Retourner} milieu
+		\ElsIf{tableau[milieu] < cible}
 		\State gauche := milieu + 1
 		\Else
 		\State droite := milieu - 1
 		\EndIf
+		\EndWhile
+		\State \textbf{Retourner} -1
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{Recherche interpolée}
+	\begin{algorithmic}[1]
+		\State bas := 0
+		\State haut := n - 1
+		\While{bas <= haut et cible >= tableau[bas] et cible <= tableau[haut]}
+		\State pos := bas + ((cible - tableau[bas]) $\div$ (tableau[haut] - tableau[bas])) $\times$ (haut - bas)
+		\If{tableau[pos] == cible}
+		\State \textbf{Retourner} pos
+		\ElsIf{tableau[pos] < cible}
+		\State bas := pos + 1
+		\Else
+		\State haut := pos - 1
 		\EndIf
 		\EndWhile
-		\State retour -1
+		\State \textbf{Retourner} -1
 	\end{algorithmic}
 \end{algorithm}
 
 
-%\chapter{Algorithmes de recherche et de tri}
-%\section{Qu’est-ce qu’un algorithme?}
-%\begin{definition}{Algorithme} a
-%	Un \emph{algorithme} est constitué d’instructions étape par étape sans ambiguïté pour résoudre un problème donné.
-%\end{definition}
-%\begin{example}
-%	Considérons le problème de la préparation d'une omelette. Pour préparer une omelette, on suit la
-%	étapes indiquées ci-dessous :
-%	\begin{enumerate}
-%		\item Récupérez la poêle.
-%		\item  Récupérez l'huile.
-%		
-%		\begin{enumerate}
-%			\item Avons-nous de l'huile?
-%	 \begin{enumerate}
-%	 	\item Si oui, mettez-le dans la poêle.
-%	 \item  Si non, voulons-nous acheter de l'huile ?
-%	 \begin{enumerate}
-%	 	\item Si oui, sortez et achetez.
-%	 	\item Si non, on termine.
-%	 
-%	 \end{enumerate}
-%		\end{enumerate}
-%	 \end{enumerate}
-%		\item Allumez la cuisinière, etc...
-%	\end{enumerate}
-%	Ce que nous faisons, c'est que, pour un problème donné (préparer une omelette), nous proposons une procédure étape par étape pour le résoudre.
-%\end{example}
-%\section{Tri}
-%\subsection{Tri \`a bulle}
-%\subsection{Tri par tas}
-%
-%\section{Algorithmes de recherche}
-%\subsection{Recherche syst\'ematique}
-%\subsection{Recherche par }
-%
-%\section{Exercices}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter{Algorithmes de recherche et de tri}
-%
-%\section{Qu’est-ce qu’un algorithme ?}
-%
-%Un algorithme est une série d'étapes ou de procédures destinées à résoudre un problème ou à accomplir une tâche spécifique. En informatique, les algorithmes sont utilisés pour manipuler, trier, rechercher, et transformer des données. Pour qu'un algorithme soit efficace, il doit être:
-%
-%\begin{enumerate}
-%	\item \textbf{Correct}: Doit donner le bon résultat pour tous les cas.
-%	\item \textbf{Efficace}: Doit être rapide et utiliser des ressources raisonnables.
-%	\item \textbf{Simple}: Doit être compréhensible et facile à mettre en œuvre.
-%	\item \textbf{Flexible}: Peut s'adapter à différentes situations ou exigences.
-%\end{enumerate}
-%
-%Voici un exemple simple d'algorithme qui trouve le maximum de deux nombres:
-%\begin{lstlisting}
-%	int maximum(int a, int b) {
-%		if (a > b) {
-%			return a;
-%		} else {
-%			return b;
-%		}
-%	}
-%\end{lstlisting}
-%
-%La création d'algorithmes efficaces est essentielle pour des applications fiables et rapides.
-%
-%\section{Tri}
-%
-%Le tri consiste à organiser les données dans un ordre particulier. Différents algorithmes de tri ont des performances variables en termes de complexité et d'efficacité. Voici quelques exemples d'algorithmes de tri couramment utilisés:
-%
-%\begin{enumerate}
-%	\item \textbf{Tri à bulles}: Compare et échange des éléments adjacents pour les mettre dans le bon ordre.
-%	\item \textbf{Tri par insertion}: Insère chaque élément dans sa position correcte au fur et à mesure.
-%	\item \textbf{Tri rapide (QuickSort)}: Utilise la technique de division et conquête pour trier les données.
-%	\item \textbf{Tri fusion (MergeSort)}: Divise le tableau en moitiés, les trie séparément, puis les fusionne.
-%	\item \textbf{Tri par tas (HeapSort)}: Utilise une structure de données en tas pour organiser les éléments.
-%\end{enumerate}
-%
-%Un exemple simple de tri à bulles:
-%%\begin{lstlisting}
-%%	void triABulles(int arr[], int n) {
-%%		for (int i = 0; i < n - 1; i++) {
-%%			for (int j = 0; j < n - i - 1; j++) {
-%%				if (arr[j] > arr[j + 1]) {
-%%					int temp = arr[j];
-%%					arr[j] = arr[j + 1];
-%%					arr[j + 1] = temp;
-%%				}
-%%			}
-%%		}
-%%	}
-%%\end{lstlisting}
-%
-%Chaque algorithme de tri a ses avantages et inconvénients. Le choix du meilleur algorithme dépend du contexte et de la taille des données.
-%
-%\section{Algorithmes de recherche}
-%
-%Les algorithmes de recherche permettent de trouver des éléments spécifiques dans un ensemble de données. Les types courants d'algorithmes de recherche incluent:
-%
-%\begin{enumerate}
-%	\item \textbf{Recherche linéaire}: Traverse un tableau ou une liste séquentiellement à la recherche d'un élément.
-%	\item \textbf{Recherche binaire}: Nécessite un tableau trié; utilise la technique de division pour trouver rapidement un élément.
-%	\item \textbf{Recherche par hachage}: Utilise une table de hachage pour rechercher des éléments, offrant une grande rapidité.
-%	\item \textbf{Recherche dans un arbre binaire}: Utilise une structure d'arbre binaire de recherche pour trouver des éléments.
-%\end{enumerate}
-%
-%Un exemple de recherche linéaire:
-%\begin{lstlisting}
-%	int rechercheLineaire(int arr[], int n, int target) {
-%		for (int i = 0; i < n; i++) {
-%			if (arr[i] == target) {
-%				return i;
-%			}
-%		}
-%		return -1;
-%	}
-%\end{lstlisting}
-%
-%Et un exemple de recherche binaire:
-%\begin{lstlisting}
-%	int rechercheBinaire(int arr[], int n, int target) {
-%		int left = 0;
-%		int right = n - 1;
-%		while (left <= right) {
-%			int mid = left + (right - left) / 2;
-%			if (arr[mid] == target) {
-%				return mid;
-%			} else if (arr[mid] < target) {
-%				left = mid + 1;
-%			} else {
-%				right = mid - 1;
-%			}
-%		}
-%		return -1;
-%	}
-%\end{lstlisting}
-%
-%Chaque algorithme de recherche a ses utilisations spécifiques. Certains sont plus adaptés à des ensembles de données non triés, tandis que d'autres sont plus efficaces sur des données triées.
-%
-%\section{Exercices}
-%
-%Voici quelques exercices pour appliquer ce qui a été appris dans ce chapitre:
-%
-%\begin{enumerate}
-%	\item Implémentez le tri à bulles et analysez son comportement sur différents ensembles de données.
-%	\item Implémentez le tri par insertion et comparez ses performances avec d'autres algorithmes de tri.
-%	\item Écrivez un programme qui effectue une recherche binaire sur un tableau trié.
-%	\item Implémentez un algorithme de recherche par hachage et mesurez son efficacité.
-%	\item Comparez les performances de la recherche linéaire et de la recherche binaire sur des ensembles de données de différentes tailles.
-%\end{enumerate}
+\begin{algorithm}
+	\caption{Recherche par saut}
+	\begin{algorithmic}[1]
+		\State tailleBloc := \textbf{Racine} n
+		\State i := 0
+		\While{i < n et tableau[i] < cible}
+		\State i := i + tailleBloc
+		\EndWhile
+		\For{j de i - tailleBloc à \textbf{Min}(i, n)}
+		\If{tableau[j] == cible}
+		\State \textbf{Retourner} j
+		\EndIf
+		\EndFor
+		\State \textbf{Retourner} -1
+	\end{algorithmic}
+\end{algorithm}
+\end{enumerate}
+
+
+%\textit{\textbf{Objectifs des exercices
+%}}
+%Ces exercices vous aideront à pratiquer et à comprendre différents types d'algorithmes de recherche. Vous allez travailler avec des tableaux, des fonctions de recherche, et apprendre à évaluer les avantages et inconvénients de chaque algorithme. Le but est de vous donner une base solide pour comprendre comment ces algorithmes sont utilisés dans des applications réelles et pourquoi ils sont importants en informatique.
+

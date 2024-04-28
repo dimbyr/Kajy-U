@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  26 APR 2024 23:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  28 APR 2024 22:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1545,7 +1545,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 63.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<./figure/hay.jpg, id=131, 3767.07375pt x 2510.37875pt>
+<./figure/hay.jpg, id=135, 3767.07375pt x 2510.37875pt>
 File: ./figure/hay.jpg Graphic file (type jpg)
 <use ./figure/hay.jpg>
 Package pdftex.def Info: ./figure/hay.jpg  used on input line 63.
@@ -1573,7 +1573,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 63.
-<./figure/Kajy U.png, id=132, 447.17062pt x 490.83376pt>
+<./figure/Kajy U.png, id=136, 447.17062pt x 490.83376pt>
 File: ./figure/Kajy U.png Graphic file (type png)
 <use ./figure/Kajy U.png>
 Package pdftex.def Info: ./figure/Kajy U.png  used on input line 63.
@@ -1643,57 +1643,57 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.0pt on input line 54.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 79.
- [15] [16]) [17]
+(Font)              scaled to size 9.0pt on input line 85.
+ [15] [16] [17]) [18] [19]
 \openout2 = `chapters/chap3.aux'.
 
  (./chapters/chap3.tex
 Chapitre 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 39.
+(hyperref)                removing `math shift' on input line 48.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Omega' on input line 39.
+(hyperref)                removing `\Omega' on input line 48.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 39.
+(hyperref)                removing `math shift' on input line 48.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 39.
+(hyperref)                removing `math shift' on input line 48.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\theta' on input line 39.
+(hyperref)                removing `\theta' on input line 48.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 39.
+(hyperref)                removing `math shift' on input line 48.
 
-[18
-
-
-
-
-]) [19]
-\openout2 = `chapters/chap4.aux'.
-
- (./chapters/chap4.tex
-Chapitre 4.
 [20
 
 
 
 
-] [21] [22] [23] [24]) [25]
+] [21] [22]) [23]
+\openout2 = `chapters/chap4.aux'.
+
+ (./chapters/chap4.tex
+Chapitre 4.
+[24
+
+
+
+
+] [25] [26] [27] [28]) [29]
 \openout2 = `chapters/chap5.aux'.
 
  (./chapters/chap5.tex
 Chapitre 5.
-) [26
+) [30
 
 
 
@@ -1718,7 +1718,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the KajyU.log file.
 
-[27
+[31
 
 
 
@@ -1726,16 +1726,16 @@ Package minitoc(hints) Warning: W0024
 (./chapters/chap2.aux) (./chapters/chap3.aux) (./chapters/chap4.aux)
 (./chapters/chap5.aux))
 Package rerunfilecheck Info: File `KajyU.out' has not changed.
-(rerunfilecheck)             Checksum: DAA7BDB5E0EBFF1DD749726A07D301DF;4097.
+(rerunfilecheck)             Checksum: 5C47DD09E6F704AD2123AA6D98365C59;4300.
  ) 
 Here is how much of TeX's memory you used:
- 41299 strings out of 476097
- 786481 string characters out of 5791138
+ 41256 strings out of 476097
+ 786231 string characters out of 5791138
  2070851 words of memory out of 5000000
- 60236 multiletter control sequences out of 15000+600000
- 555585 words of font info for 83 fonts, out of 8000000 for 9000
+ 60196 multiletter control sequences out of 15000+600000
+ 557295 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,136p,563b,2141s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,136p,600b,2141s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -1748,10 +1748,10 @@ l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 exlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/20
 23/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2023/texmf-
 dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on KajyU.pdf (29 pages, 2219119 bytes).
+Output written on KajyU.pdf (33 pages, 2232972 bytes).
 PDF statistics:
- 871 PDF objects out of 1000 (max. 8388607)
- 788 compressed objects within 8 object streams
- 470 named destinations out of 1000 (max. 500000)
- 319 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 885 PDF objects out of 1000 (max. 8388607)
+ 797 compressed objects within 8 object streams
+ 467 named destinations out of 1000 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
 

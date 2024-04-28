@@ -21,19 +21,24 @@
 \contentsline {section}{\numberline {2.1}Qu’est-ce qu’un algorithme ?}{14}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Récursion}{14}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Algorithmes de tri}{15}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Algorithmes de recherche}{16}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Complexité algorithmique}{18}{chapter.3}%
-\contentsline {section}{\numberline {3.1}La notation O}{18}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Les notations $\Omega $ et $\theta $}{18}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Complexité de certains algorithmes}{19}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Exercices}{19}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Structures de données avancées}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Listes chaînées}{20}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Piles}{21}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Files}{21}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Arbres binaires}{22}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Arbres}{23}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Graphes}{24}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Exercices}{25}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Applications d'algorithmes en IA}{26}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Greedy algorithm}{26}{section.5.1}%
+\contentsline {section}{\numberline {2.4}Algorithmes de recherche}{17}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Exercices}{17}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Complexité algorithmique}{20}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Les bornes asymptotiques}{20}{section.3.1}%
+\contentsline {section}{\numberline {3.2}La notation O}{20}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Les notations $\Omega $ et $\theta $}{21}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Complexité de certains algorithmes}{21}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Temps constant (O(1))}{22}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Temps linéaire (O(n))}{22}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Temps quadratique (O($n^2$))}{22}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Temps exponentiel (O($2^n$))}{23}{subsection.3.4.4}%
+\contentsline {chapter}{\numberline {4}Structures de données avancées}{24}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Listes chaînées}{24}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Piles}{25}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Files}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Arbres binaires}{26}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Arbres}{27}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Graphes}{28}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Exercices}{29}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Applications d'algorithmes en IA}{30}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Greedy algorithm}{30}{section.5.1}%

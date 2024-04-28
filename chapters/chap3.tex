@@ -1,166 +1,157 @@
-%\chapter{Complexité algorithmique}
-%\section{R\'ecursion}
-%\section{La notation $O$}
-%\section{Les notations $\Omega$ et $\theta$}
-%\section{Complexit\'e de certains algorithmes}
-%\section{Exercices}
-%\chapter{Complexité algorithmique}
-%
-
-
 \chapter{Complexité algorithmique}
 
+La complexité algorithmique permet d'évaluer l'efficacité des algorithmes en termes de temps d'exécution et de consommation de ressources. Cela aide à comprendre combien de temps un algorithme prendra pour des entrées de tailles différentes. Les notations couramment utilisées pour décrire la complexité algorithmique sont $O$, $\Omega$, et $\theta$.
+
+\section{Les bornes asymptotiques}
+
+Les bornes asymptotiques, ou "asymptotic bounds," fournissent une approximation de la performance d'un algorithme pour des tailles d'entrée importantes. Elles aident à évaluer le comportement des algorithmes sous différents scénarios : meilleur cas, pire cas, et cas moyen.
+
+\begin{itemize}
+	\item \textbf{Borne supérieure (Big O)} : Représentée par la notation \(O(f(n))\), cette borne donne une estimation de la complexité maximale d'un algorithme, indiquant qu'il n'aura jamais une complexité supérieure à \(O(f(n))\). Mathématiquement, cela signifie qu'il existe des constantes \(c\) et \(n_0\) telles que :
+	
+	\[ T(n) \leq c \cdot f(n), \quad \text{pour tout } n \geq n_0. \]
+	
+	\item \textbf{Borne inférieure (Big Omega)} : Représentée par la notation \(\Omega(f(n))\), cette borne donne une estimation de la complexité minimale, indiquant que l'algorithme ne peut pas être plus rapide que cette borne. Cela signifie qu'il existe des constantes \(c\) et \(n_0\) telles que :
+	
+	\[ T(n) \geq c \cdot f(n), \quad \text{pour tout } n \geq n_0. \]
+	
+	\item \textbf{Borne moyenne (Big Theta)} : Représentée par la notation \(\theta(f(n))\), cette borne indique une complexité moyenne ou attendue. Cela signifie que l'algorithme a une borne supérieure et inférieure qui convergent vers la même fonction. Mathématiquement, cela signifie qu'il existe des constantes \(c_1\), \(c_2\), et \(n_0\) telles que :
+	
+	\[ c_1 \cdot f(n) \leq T(n) \leq c_2 \cdot f(n), \quad \text{pour tout } n \geq n_0. \]
+\end{itemize}
 
 \section{La notation O}
-La notation "O" (grand O) est utilisée pour décrire la complexité temporelle d'un algorithme. Elle donne une estimation du temps d'exécution en fonction de la taille de l'entrée, ce qui aide à évaluer l'efficacité d'un algorithme. 
 
-L'estimation du temps peut être déterminée par le nombre de fois qu'une opération clé est effectuée. Par exemple, un algorithme de recherche binaire divise le tableau en deux à chaque itération, ce qui donne une complexité de `O(log n)`:
+La notation "O" (grand O) indique la complexité maximale d'un algorithme en termes de temps ou d'espace. Elle fournit une estimation du nombre maximum d'opérations nécessaires en fonction de la taille de l'entrée. Par exemple, la recherche binaire a une complexité de `O(log n)`, car chaque étape réduit le problème de moitié.
 
-\begin{lstlisting}
-	fonction recherche_binaire(tableau, valeur)
-	gauche = 0
-	droite = taille(tableau) - 1
-	\While gauche <= droite
-	milieu = (gauche + droite) / 2
-	\If tableau[milieu] == valeur \Then
-	retour milieu
-	\ElsIf tableau[milieu] < valeur \Then
-	gauche = milieu + 1
-	\Else
-	droite = milieu - 1
-	\EndIf
-	\EndWhile
-	retour -1
-	fin fonction
-\end{lstlisting}
-
-Ce "log n" provient du fait que chaque étape réduit le problème de moitié, ce qui correspond à la définition de logarithme binaire.
+\begin{algorithm}
+	\caption{Recherche binaire}
+	\begin{algorithmic}[1]
+		\Function{recherche\_binaire}{tableau, valeur}
+		\State gauche := 0
+		\State droite := taille(tableau) - 1
+		\While{gauche <= droite}
+		\State milieu := (gauche + droite) / 2
+		\If{tableau[milieu] == valeur}
+		\State \textbf{Retourner} milieu
+		\ElsIf{tableau[milieu] < valeur}
+		\State gauche := milieu + 1
+		\Else
+		\State droite := milieu - 1
+		\EndIf
+		\EndWhile
+		\State \textbf{Retourner} -1
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
 
 \section{Les notations $\Omega$ et $\theta$}
-Les notations $\Omega$ et $\theta$ complètent la notation "O" pour donner une vision complète de la complexité algorithmique.
 
-- $\Omega$ représente une borne inférieure. Cela signifie que l'algorithme ne peut pas être plus rapide que cette complexité.
-- $\theta$ représente une borne moyenne. Cela signifie que c'est la complexité attendue en pratique.
+Ces notations complètent la notation "O" pour donner une vision complète de la complexité algorithmique.
 
-Pour un algorithme de somme de tableau, la complexité est $\theta(n)$ car chaque élément doit être parcouru:
+\begin{itemize}
+	\item \textbf{Borne inférieure (\(\Omega\))} : Représente la complexité minimale. Par exemple, la complexité de l'algorithme de somme de tableau est $\Omega(n)$, car chaque élément doit être parcouru.
+	
+	\item \textbf{Borne moyenne (\(\theta\))} : Indique la complexité moyenne ou attendue, définissant à la fois une borne inférieure et une borne supérieure qui convergent. Pour le même algorithme de somme de tableau, la complexité est $\theta(n)$. 
+\end{itemize}
 
-\begin{lstlisting}
-	fonction somme(tableau)
-	somme = 0
-	\For i de 0 a taille(tableau) - 1 \Do
-	somme = somme + tableau[i]
-	\EndFor
-	retour somme
-	fin fonction
-\end{lstlisting}
+Voici un exemple de la somme des éléments d'un tableau :
+
+\begin{algorithm}
+	\caption{Somme de tableau}
+	\begin{algorithmic}[1]
+		\Function{somme}{tableau}
+		\State somme := 0
+		\For{i de 0 à taille(tableau) - 1}
+		\State somme := somme + tableau[i]
+		\EndFor
+		\State \textbf{Retourner} somme
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
 
 \section{Complexité de certains algorithmes}
-La complexité des algorithmes peut varier en fonction de leur nature et de leur structure. Les algorithmes de tri et de recherche ont souvent des complexités bien connues.
+Voici quelques exemples d'algorithmes qui illustrent des complexités courantes, allant du temps constant à l'exponentiel.
 
-- Tri par insertion: Complexité $O(n^2)$. Les opérations de déplacement des éléments génèrent une complexité quadratique.
-- Tri rapide (QuickSort): Complexité `O(n log n)`. Les divisions successives du tableau et le tri récursif permettent cette complexité.
-- Recherche linéaire: Complexité `O(n)`. Il faut parcourir tous les éléments pour trouver une correspondance.
-- Recherche binaire: Complexité `O(log n)`. Cette complexité provient de la division successive du tableau.
+\subsection{Temps constant (O(1))}
 
-\section{Exercices}
-Pour appliquer les concepts étudiés, voici quelques exercices:
+Les algorithmes à temps constant ont une complexité qui ne dépend pas de la taille de l'entrée. Par exemple, accéder à un élément spécifique d'un tableau par son index a une complexité `O(1)`. Cela signifie qu'il y a toujours une seule opération, quelle que soit la taille du tableau.
 
-1. Implémentez un algorithme qui trouve le maximum dans un tableau d'entiers.
-2. Créez un algorithme récursif pour calculer le terme `n` d'une suite de Fibonacci.
-3. Implémentez un algorithme pour trier un tableau d'entiers avec le tri par sélection.
-4. Écrivez un algorithme qui compte le nombre d'occurrences d'un élément donné dans un tableau.
-5. Implémentez un algorithme qui recherche un élément dans un tableau avec la recherche binaire.
-1
+\begin{algorithm}
+	\caption{Accès direct à un élément du tableau}
+	\begin{algorithmic}[1]
+		\Function{accès\_direct}{tableau, index}
+		\State \textbf{Retourner} tableau[index]
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\subsection{Temps linéaire (O(n))}
+
+Les algorithmes à temps linéaire ont une complexité qui augmente proportionnellement avec la taille de l'entrée. Par exemple, le calcul de la somme des éléments d'un tableau a une complexité `O(n)`, car il faut parcourir tous les éléments.
+
+\begin{algorithm}
+	\caption{Calcul de la somme des éléments d'un tableau}
+	\begin{algorithmic}[1]
+		\Function{somme}{tableau}
+		\State somme := 0
+		\For{i de 0 à taille(tableau) - 1}
+		\State somme := somme + tableau[i]
+		\EndFor
+		\State \textbf{Retourner} somme
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\subsection{Temps quadratique (O($n^2$))}
+
+Les algorithmes à temps quadratique ont une complexité qui augmente avec le carré de la taille de l'entrée. Par exemple, le tri par insertion a une complexité `O($n^2$)`, car chaque élément doit être comparé avec tous les éléments précédents.
+
+\begin{algorithm}
+	\caption{Tri par insertion}
+	\begin{algorithmic}[1]
+		\For{i de 1 à n - 1}
+		\State clé := tableau[i]
+		\State j := i - 1
+		\While{j >= 0 et tableau[j] > clé}
+		\State tableau[j + 1] = tableau[j]
+		\State j = j - 1
+		\EndWhile
+		\State tableau[j + 1] = clé
+		\EndFor
+	\end{algorithmic}
+\end{algorithm}
+
+\subsection{Temps exponentiel (O($2^n$))}
+
+Les algorithmes à temps exponentiel ont une complexité qui augmente de manière exponentielle avec la taille de l'entrée. Par exemple, un algorithme récursif pour résoudre le problème de la tour de Hanoï a une complexité `O($2^n$)`, car chaque mouvement peut générer de multiples autres mouvements.
+
+\begin{algorithm}
+	\caption{Tour de Hanoï}
+	\begin{algorithmic}[1]
+		\Function{hanoi}{n, source, cible, intermédiaire}
+		\If{n == 1}
+		\State \textbf{Déplacer} un disque de la source vers la cible
+		\Else
+		\State \Call{hanoi}{n - 1, source, intermédiaire, cible}
+		\State \textbf{Déplacer} un disque de la source vers la cible
+		\State \Call{hanoi}{n - 1, intermédiaire, cible, source}
+		\EndIf
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
 
 
-%\section{Récursion}
-%La récursion est une technique dans laquelle une fonction s'appelle elle-même directement ou indirectement. Elle est couramment utilisée pour résoudre des problèmes qui peuvent être décomposés en sous-problèmes similaires.
+%La complexité des algorithmes varie selon le nombre d'opérations effectuées, le type d'opérations, et la structure de l'algorithme. Examinons pourquoi certains algorithmes ont des complexités spécifiques et comment ces complexités sont dérivées.
 %
-%\textbf{Exemple d'algorithme :}
-%\begin{algorithm}
-%	\caption{Calcul du facteuriel}
-%	\begin{algorithmic}
-%		\If {$n = 0$}
-%		\State retourner 1
-%		\Else
-%		\State retourner $n \times$ facteuriel($n - 1$)
-%		\EndIf
-%	\end{algorithmic}
-%\end{algorithm}
-%
-%\textbf{Exemple de code C :}
-%\begin{lstlisting}
-%	#include <stdio.h>
+%\begin{itemize}
+%	\item \textbf{Tri par insertion (Insertion Sort)} : La complexité de cet algorithme est généralement `O($n^2$)`. Cela provient du fait que, pour chaque élément du tableau, l'algorithme doit le comparer avec tous les éléments précédents pour l'insérer au bon endroit. Ainsi, pour un tableau de taille \(n\), il y a jusqu'à \(n - 1\) comparaisons pour chaque élément, menant à une complexité quadratique.
 %	
-%	// Fonction rEcursive pour calculer le facteuriel
-%	int factorial(int n) {
-%		if (n == 0) {
-%			return 1; // Cas de base
-%		} else {
-%			return n * factorial(n - 1); // Appel rEcursif
-%		}
-%	}
+%	\item \textbf{Tri rapide (QuickSort)} : La complexité de cet algorithme est `O(n log n)`, ce qui le rend plus efficace que le tri par insertion pour des tableaux de grande taille. Cela provient de sa stratégie de division et conquête, où le tableau est divisé en sous-tableaux autour d'un pivot, puis chaque sous-tableau est trié séparément. À chaque division, le problème est réduit de moitié, ce qui génère une complexité logarithmique. Comme chaque élément doit être comparé au pivot, cela crée la partie linéaire de la complexité.
 %	
-%	int main() {
-%		int n = 5;
-%		printf("Factorial of %d is %d\n", n, factorial(n));
-%		return 0;
-%	}
-%\end{lstlisting}
-%
-%
-%
-%\section{La notation $O$}
-%La notation $O$ (grand O) est utilisée pour décrire la complexité temporelle ou spatiale d'un algorithme. Elle mesure la pire complexité dans le cas le plus défavorable.
-%
-%\textbf{Exemple :}
-%- Un algorithme de recherche linéaire a une complexité $O(n)$, où $n$ est le nombre d'éléments à parcourir.
-%- Un algorithme de tri rapide a une complexité moyenne de $O(n \log n)$, mais peut atteindre $O(n^2)$ dans le pire des cas.
-%
-%\section{Les notations $\Omega$ et $\theta$}
-%Les notations $\Omega$ et $\theta$ sont également utilisées pour mesurer la complexité d'un algorithme.
-%- La notation $\Omega$ décrit la meilleure complexité, c'est-à-dire le cas le plus favorable.
-%- La notation $\theta$ indique une complexité moyenne.
-%
-%\textbf{Exemple :}
-%- Pour un algorithme de tri par insertion, la complexité est $\Omega(n)$ dans le cas le plus favorable.
-%- Pour le même algorithme, la complexité est $\theta(n^2)$, ce qui reflète une complexité moyenne.
-%
-%\section{Complexité de certains algorithmes}
-%Cette section examine la complexité de quelques algorithmes communs.
-%
-%\textbf{Exemple de code C pour recherche linéaire :}
-%\begin{lstlisting}
-%	#include <stdio.h>
+%	\item \textbf{Recherche linéaire (Linear Search)} : La complexité de cet algorithme est `O(n)`. Cela signifie que pour trouver un élément, l'algorithme doit potentiellement parcourir tous les éléments du tableau. Si l'élément recherché est le dernier, tous les éléments précédents doivent être examinés, d'où la complexité linéaire.
 %	
-%	// Recherche lineaire dans un tableau
-%	int linear_search(int arr[], int size, int target) {
-%		for (int i = 0; i < size; i++) {
-%			if (arr[i] == target) {
-%				return i; // TrouvE
-%			}
-%		}
-%		return -1; // Non trouvE
-%	}
+%	\item \textbf{Recherche binaire (Binary Search)} : La complexité de cet algorithme est `O(log n)`, ce qui le rend plus rapide que la recherche linéaire pour des tableaux triés. Cette complexité provient du fait que l'algorithme divise le tableau en deux à chaque itération. Ainsi, avec chaque division, le problème est réduit de moitié, ce qui conduit à une complexité logarithmique.
 %	
-%	int main() {
-%		int arr[] = {1, 2, 3, 4, 5};
-%		int target = 3;
-%		int index = linear_search(arr, sizeof(arr) / sizeof(arr[0]), target);
-%		if (index != -1) {
-%			printf("Element found at index %d\n", index);
-%		} else {
-%			printf("Element not found\n");
-%		}
-%		return 0;
-%	}
-%\end{lstlisting}
-%
-%\section{Exercices}
-%\begin{enumerate}
-%	\item Implémentez une fonction récursive pour calculer le n-ième terme de la suite de Fibonacci.
-%	\item Écrivez un algorithme pour inverser un tableau de nombres.
-%	\item Implémentez une recherche binaire dans un tableau trié.
-%	\item Écrivez un algorithme pour trier un tableau avec le tri par sélection.
-%	\item Implémentez un algorithme pour déterminer si un mot est un palindrome.
-%\end{enumerate}
+%	\item \textbf{Tri par sélection (Selection Sort)} : Cet algorithme a également une complexité de `O($n^2$)`. Dans le tri par sélection, l'algorithme trouve le plus petit élément du tableau et le place au début, puis répète ce processus pour les éléments suivants. Le nombre de comparaisons nécessaires pour chaque élément est lié à la taille du tableau, ce qui explique la complexité quadratique.
+%\end{itemize}
