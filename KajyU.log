@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  28 APR 2024 22:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  30 APR 2024 08:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1545,7 +1545,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 63.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<./figure/hay.jpg, id=135, 3767.07375pt x 2510.37875pt>
+<./figure/hay.jpg, id=127, 3767.07375pt x 2510.37875pt>
 File: ./figure/hay.jpg Graphic file (type jpg)
 <use ./figure/hay.jpg>
 Package pdftex.def Info: ./figure/hay.jpg  used on input line 63.
@@ -1573,7 +1573,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 63.
-<./figure/Kajy U.png, id=136, 447.17062pt x 490.83376pt>
+<./figure/Kajy U.png, id=128, 447.17062pt x 490.83376pt>
 File: ./figure/Kajy U.png Graphic file (type png)
 <use ./figure/Kajy U.png>
 Package pdftex.def Info: ./figure/Kajy U.png  used on input line 63.
@@ -1600,11 +1600,14 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 ]
 \openout2 = `chapters/chap0.aux'.
 
- (./chapters/chap0.tex) [1
+ (./chapters/chap0.tex [1
 
 
 
-]
+])
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 69.
+ [2]
 \openout2 = `chapters/chap1.aux'.
 
 
@@ -1616,16 +1619,14 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
 0.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-) [2
+) [3
 
 
 
 
-{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 67.
- [3] [4]
-[5] [6] [7] [8] [9] [10] [11] [12]) [13]
+{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] 
+[4] [5]
+[6] [7] [8] [9] [10] [11] [12] [13]) [14]
 \openout2 = `chapters/chap2.aux'.
 
  (./chapters/chap2.tex
@@ -1634,7 +1635,7 @@ Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 17.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
 (Font)              scaled to size 10.95pt on input line 36.
-[14
+[15
 
 
 
@@ -1644,7 +1645,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.0pt on input line 54.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 9.0pt on input line 85.
- [15] [16] [17]) [18] [19]
+ [16] [17] [18] [19]) [20]
 \openout2 = `chapters/chap3.aux'.
 
  (./chapters/chap3.tex
@@ -1673,27 +1674,33 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 48.
 
-[20
+[21
 
 
 
 
-] [21] [22]) [23]
+] [22] [23]) [24]
 \openout2 = `chapters/chap4.aux'.
 
  (./chapters/chap4.tex
 Chapitre 4.
-[24
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.0pt on input line 9.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.0pt on input line 9.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/sc' will be
+(Font)              scaled to size 10.0pt on input line 9.
+[25
 
 
 
 
-] [25] [26] [27] [28]) [29]
+] [26] [27] [28] [29] [30] [31]) [32]
 \openout2 = `chapters/chap5.aux'.
 
  (./chapters/chap5.tex
 Chapitre 5.
-) [30
+) [33
 
 
 
@@ -1718,7 +1725,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the KajyU.log file.
 
-[31
+[34
 
 
 
@@ -1726,14 +1733,14 @@ Package minitoc(hints) Warning: W0024
 (./chapters/chap2.aux) (./chapters/chap3.aux) (./chapters/chap4.aux)
 (./chapters/chap5.aux))
 Package rerunfilecheck Info: File `KajyU.out' has not changed.
-(rerunfilecheck)             Checksum: 5C47DD09E6F704AD2123AA6D98365C59;4300.
+(rerunfilecheck)             Checksum: 7E06288FF48B1721E49BD98FD5079861;4063.
  ) 
 Here is how much of TeX's memory you used:
- 41256 strings out of 476097
- 786231 string characters out of 5791138
+ 40914 strings out of 476097
+ 781727 string characters out of 5791138
  2070851 words of memory out of 5000000
- 60196 multiletter control sequences out of 15000+600000
- 557295 words of font info for 90 fonts, out of 8000000 for 9000
+ 59989 multiletter control sequences out of 15000+600000
+ 565956 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,12n,136p,600b,2141s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -1748,10 +1755,10 @@ l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 exlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/20
 23/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2023/texmf-
 dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on KajyU.pdf (33 pages, 2232972 bytes).
+Output written on KajyU.pdf (36 pages, 2241994 bytes).
 PDF statistics:
- 885 PDF objects out of 1000 (max. 8388607)
- 797 compressed objects within 8 object streams
- 467 named destinations out of 1000 (max. 500000)
- 333 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 726 PDF objects out of 1000 (max. 8388607)
+ 635 compressed objects within 7 object streams
+ 331 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 
