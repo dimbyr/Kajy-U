@@ -155,3 +155,77 @@ Les algorithmes à temps exponentiel ont une complexité qui augmente de manièr
 %	
 %	\item \textbf{Tri par sélection (Selection Sort)} : Cet algorithme a également une complexité de `O($n^2$)`. Dans le tri par sélection, l'algorithme trouve le plus petit élément du tableau et le place au début, puis répète ce processus pour les éléments suivants. Le nombre de comparaisons nécessaires pour chaque élément est lié à la taille du tableau, ce qui explique la complexité quadratique.
 %\end{itemize}
+\section{Exercices}
+%\section{Exercices : Complexité algorithmique}
+
+\begin{enumerate}
+	\item Quelle est la complexité temporelle des opérations suivantes ?
+	\begin{enumerate}
+		\item Parcourir un tableau d'entiers de longueur $n$.
+		\item Multiplier deux matrices de taille $n \times n$.
+		\item Effectuer une recherche binaire sur un tableau trié.
+	\end{enumerate}
+	% \textbf{Réponses} :
+	% \begin{enumerate}
+		%     \item La complexité temporelle est `O(n)`, car chaque élément du tableau est parcouru une fois.
+		%     \item La complexité temporelle est `O(n^3)`, car chaque entrée du résultat nécessite une somme de `n` produits.
+		%     \item La complexité temporelle est `O(log n)`, car chaque étape divise l'espace de recherche par deux.
+		% \end{enumerate}
+	
+	\item Quelle est la complexité temporelle du code suivant ?
+	\begin{lstlisting}
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				printf("%d ", i * j);
+			}
+		}
+	\end{lstlisting}
+	
+	Comment pouvez-vous améliorer cet algorithme pour réduire sa complexité ?
+	% \textbf{Réponses} :
+	% \begin{enumerate}
+		%     \item La complexité temporelle est `O(n^2)`, car il y a deux boucles imbriquées, chacune avec `n` itérations.
+		%     \item Pour réduire la complexité, vous pouvez utiliser des optimisations telles que l'élimination de boucles inutiles ou le recours à des techniques de pré-calcul.
+		% \end{enumerate}
+	
+	\item Analysez le code suivant pour déterminer sa complexité temporelle :
+	\begin{lstlisting}
+		void operationSurTableau(int arr[], int n) {
+			for (int i = 0; i < n; i++) {
+				arr[i] = arr[i] * 2;
+			}
+			
+			for (int i = 0; i < n; i++) {
+				arr[i] = arr[i] + 1;
+			}
+		}
+	\end{lstlisting}
+	% \textbf{Réponses} :
+	% \begin{enumerate}
+		%     \item La complexité temporelle est `O(n)`, car chaque boucle parcourt le tableau une fois.
+		%     \item Les deux boucles sont séquentielles, chacune effectuant `n` opérations. Le temps d'exécution est proportionnel à la taille du tableau.
+		% \end{enumerate}
+	
+	\item Expliquez ce que signifie $O(n \log n)$. Donnez un exemple d'algorithme qui a une complexité de $O(n \log n)$ et expliquez pourquoi. (\textit{Indication:} Tri fusion)
+	% \textbf{Réponses} :
+	% \begin{enumerate}
+		%     \item `O(n \log n)` signifie que le temps d'exécution augmente de manière logarithmique par rapport à la taille de l'entrée, généralement en raison de divisions successives.
+		%     \item Un exemple est le tri rapide (QuickSort), qui divise l'espace de recherche avec des appels récursifs. Le `log n` vient du nombre de fois où le problème est divisé, tandis que `n` représente le nombre total d'opérations.
+		% \end{enumerate}
+	
+	\item Quel est le type de complexité associé aux opérations suivantes ?
+	\begin{enumerate}
+		\item Additionner deux entiers.
+		\item Additionner les éléments d'un tableau de longueur `n`.
+		\item Effectuer un tri \'a bulle sur un tableau de longueur `n`..
+		\item Effectuer un tri par insertion sur un tableau de longueur `n`.
+	\end{enumerate}
+	% \textbf{Réponses} :
+	% \begin{enumerate}
+		%     \item `O(1)`, car l'opération prend un temps constant.
+		%     \item `O(n)`, car chaque élément est additionné une fois.
+		%     \item `O(n)`, car il faut parcourir toute la liste pour trouver l'élément.
+		%     \item `O(n^2)`, car le tri par insertion utilise des boucles imbriquées avec un nombre quadratique d'opérations.
+		% \end{enumerate}
+\end{enumerate}
+

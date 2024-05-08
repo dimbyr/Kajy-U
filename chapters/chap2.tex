@@ -253,19 +253,163 @@ Les algorithmes de recherche permettent de trouver des éléments spécifiques d
 \end{algorithm}
 \end{enumerate}
 \section{Exercices}
-
-%Pour pratiquer les algorithmes de recherche, voici quelques exercices qui vous aideront à comprendre et à appliquer ces concepts:
-
 \begin{enumerate}
-	\item \textbf{Recherche linéaire} : Implémentez une recherche linéaire pour trouver un élément spécifique dans un tableau. Quelles sont les limites de cette méthode ?
-	\item \textbf{Recherche binaire} : Implémentez une recherche binaire sur un tableau trié. Que se passe-t-il si le tableau n'est pas trié ?
-	\item \textbf{Recherche par hachage} : Expliquez comment une table de hachage peut accélérer la recherche. Quels sont les risques associés à cette méthode ?
-	\item \textbf{Recherche interpolée} : Pourquoi la recherche interpolée est-elle plus efficace que la recherche binaire pour les listes avec des valeurs bien réparties ? Implémentez cet algorithme et montrez ses avantages.
-	\item \textbf{Recherche par saut} : Implémentez une recherche par saut sur un tableau de grande taille. Pourquoi cette méthode peut-elle être plus rapide que la recherche linéaire pour des tableaux de grande taille ?
+	\item Pour chacun des algorithmes de tri cités dans ce chapitre :
+	\begin{enumerate}
+		\item Implémentez l'algorithme en C.
+		\item Testez votre code avec les cas suivants :
+		\begin{enumerate}
+			\item Un tableau vide.
+			\item Un tableau contenant un seul élément.
+			\item Un tableau déjà trié.
+			\item Le tableau [9, 1, 9, 0, 2, 6, 6, 5, 3, 4, 7].
+		\end{enumerate}
+	\end{enumerate}
+	\item Pour chacun des algorithmes de recherche cités dans ce chapitre :
+	\begin{enumerate}
+		\item Implémentez l'algorithme en C.
+		\item Testez votre code en cherchant les éléments 8, 1, et 0 dans le tableau [9, 1, 9, 0, 2, 6, 6, 5, 3, 4, 7].
+		\item Lequel de ces algorithmes n'est pas applicable au tableau précédent ? Pourquoi ?
+	\end{enumerate}
+	\item Testez votre implémentation de la recherche binaire en cherchant les éléments 0, 2, 7 et 9 dans le tableau [0, 1, 4, 4, 4, 5, 6, 7, 9, 9].
 \end{enumerate}
 
 
-%\textit{\textbf{Objectifs des exercices
-%}}
-%Ces exercices vous aideront à pratiquer et à comprendre différents types d'algorithmes de recherche. Vous allez travailler avec des tableaux, des fonctions de recherche, et apprendre à évaluer les avantages et inconvénients de chaque algorithme. Le but est de vous donner une base solide pour comprendre comment ces algorithmes sont utilisés dans des applications réelles et pourquoi ils sont importants en informatique.
+%\
+%%Pour pratiquer les algorithmes de recherche, voici quelques exercices qui vous aideront à comprendre et à appliquer ces concepts:
+%
+%\begin{enumerate}
+%	\item \textbf{Recherche linéaire} : Implémentez une recherche linéaire pour trouver un élément spécifique dans un tableau. Quelles sont les limites de cette méthode ?
+%	\item \textbf{Recherche binaire} : Implémentez une recherche binaire sur un tableau trié. Que se passe-t-il si le tableau n'est pas trié ?
+%	\item \textbf{Recherche par hachage} : Expliquez comment une table de hachage peut accélérer la recherche. Quels sont les risques associés à cette méthode ?
+%	\item \textbf{Recherche interpolée} : Pourquoi la recherche interpolée est-elle plus efficace que la recherche binaire pour les listes avec des valeurs bien réparties ? Implémentez cet algorithme et montrez ses avantages.
+%	\item \textbf{Recherche par saut} : Implémentez une recherche par saut sur un tableau de grande taille. Pourquoi cette méthode peut-elle être plus rapide que la recherche linéaire pour des tableaux de grande taille ?
+%\end{enumerate}
+%
+%
+%%\textit{\textbf{Objectifs des exercices
+%%}}
+%%Ces exercices vous aideront à pratiquer et à comprendre différents types d'algorithmes de recherche. Vous allez travailler avec des tableaux, des fonctions de recherche, et apprendre à évaluer les avantages et inconvénients de chaque algorithme. Le but est de vous donner une base solide pour comprendre comment ces algorithmes sont utilisés dans des applications réelles et pourquoi ils sont importants en informatique.
+%
 
+%\section{Exercises: Algorithmes de recherche et de tri}
+%
+%\subsection{Recherche linéaire}
+%\begin{enumerate}
+%	\item Écrivez un programme C qui utilise la recherche linéaire pour trouver un élément dans un tableau d'entiers. Le programme devrait retourner l'index de l'élément trouvé ou -1 si l'élément n'est pas présent.
+%	% \textbf{Réponse:}
+%	% \begin{lstlisting}
+%		% #include <stdio.h>
+%		
+%		% int recherche_lineaire(int arr[], int n, int valeur) {
+%			%     for (int i = 0; i < n; i++) {
+%				%         if (arr[i] == valeur) {
+%					%             return i; // Index de l'élément trouvé
+%					%         }
+%				%     }
+%			%     return -1; // Élément non trouvé
+%			% }
+%		
+%		% int main() {
+%			%     int tableau[5] = {1, 2, 3, 4, 5};
+%			%     int recherche = recherche_lineaire(tableau, 5, 3);
+%			
+%			%     printf("Résultat de la recherche: %d\n", recherche);
+%			
+%			%     return 0;
+%			% }
+%		% \end{lstlisting}
+%	
+%	\item Quel est le temps d'exécution d'un algorithme de recherche linéaire sur un tableau de longueur `n`?
+%	% \textbf{Réponse:}
+%	% La complexité temporelle est `O(n)`, car chaque élément du tableau doit être vérifié jusqu'à ce qu'on trouve l'élément ou que le tableau soit parcouru entièrement.
+%	
+%	\item Comment utiliseriez-vous la recherche linéaire pour vérifier si un tableau contient des éléments dupliqués?
+%	% \textbf{Réponse:}
+%	% Vous pourriez utiliser une recherche linéaire dans une boucle pour comparer chaque élément du tableau avec tous les autres éléments suivants. Cela donnerait une complexité de `O(n^2)`.
+%\end{enumerate}
+%
+%\subsection{Recherche binaire}
+%\begin{enumerate}
+%	\item Écrivez un programme C qui utilise la recherche binaire pour trouver un élément dans un tableau trié d'entiers.
+%	% \textbf{Réponse:}
+%	% \begin{lstlisting}
+%		% #include <stdio.h>
+%		
+%		% int recherche_binaire(int arr[], int n, int valeur) {
+%			%     int gauche = 0;
+%			%     int droite = n - 1;
+%			
+%			%     while (gauche <= droite) {
+%				%         int milieu = gauche + (droite - gauche) / 2;
+%				%         if (arr[milieu] == valeur) {
+%					%             return milieu; // L'élément trouvé
+%					%         } else if (arr[milieu] < valeur) {
+%					%             gauche = milieu + 1;
+%					%         } else {
+%					%             droite = milieu - 1;
+%					%         }
+%				%     }
+%			%     return -1; // Élément non trouvé
+%			% }
+%		
+%		% int main() {
+%			%     int tableau[5] = {1, 2, 3, 4, 5};
+%			%     int recherche = recherche_binaire(tableau, 5, 3);
+%			
+%			%     printf("Résultat de la recherche: %d\n", recherche);
+%			
+%			%     return 0;
+%			% }
+%		% \end{lstlisting}
+%	
+%	\item Quelle est la complexité temporelle de la recherche binaire? Pourquoi est-elle considérée comme efficace?
+%	% \textbf{Réponse:}
+%	% La complexité temporelle de la recherche binaire est `O(log n)`, car chaque étape divise l'espace de recherche par moitié, ce qui la rend très efficace pour les tableaux triés.
+%	
+%	\item La recherche binaire peut-elle fonctionner sur des tableaux non triés? Pourquoi ou pourquoi pas?
+%	% \textbf{Réponse:}
+%	% Non, la recherche binaire nécessite un tableau trié pour fonctionner correctement. Elle repose sur la comparaison avec un élément central et la division de l'espace de recherche en deux parties.
+%\end{enumerate}
+%
+%\subsection{Tri à bulles}
+%\begin{enumerate}
+%	\item Écrivez un programme C qui utilise le tri à bulles pour trier un tableau d'entiers.
+%	% \textbf{Réponse:}
+%	% \begin{lstlisting}
+%		% #include <stdio.h>
+%		
+%		% void tri_a_bulles(int arr[], int n) {
+%			%     for (int i = 0; i < n - 1; i++) {
+%				%         for (int j = 0; j < n - i - 1; j++) {
+%					%             if (arr[j] > arr[j + 1]) {
+%						%                 int temp = arr[j];
+%						%                 arr[j] = arr[j + 1];
+%						%                 arr[j + 1] = temp;
+%						%             }
+%					%         }
+%				%     }
+%			% }
+%		
+%		% int main() {
+%			%     int tableau[5] = {5, 4, 3, 2, 1};
+%			%     tri_a_bulles(tableau, 5);
+%			
+%			%     printf("Tableau trié: ");
+%			%     for (int i = 0; i < 5; i++) {
+%				%         printf("%d ", tableau[i]);
+%				%     }
+%			%     printf("\n");
+%			
+%			%     return 0;
+%			% }
+%		% \end{lstlisting}
+%	
+%	\item Quelle est la complexité temporelle du tri à bulles? Qu'est-ce qui rend cet algorithme peu efficace pour les grands tableaux?
+%	% \textbf{Réponse:}
+%	% La complexité temporelle est `O(n^2)`, car le tri à bulles utilise des boucles imbriquées pour comparer chaque élément avec les autres. Il n'est pas efficace pour les grands tableaux en raison du nombre élevé de comparaisons et d'échanges.
+%	
+%	\item Comment le tri à bulles traite-t-il des tableaux déjà triés?
+%	% \textbf{Réponse:}
+%	% Le tri à bulles fonctionne rapidement sur des tableaux déjà triés, mais il effectue quand même des comparaisons. On peut l'optimiser en arrêtant le tri si aucun échange n'est nécessaire, indiquant que le tableau est déjà trié.
+%\end{enumerate}

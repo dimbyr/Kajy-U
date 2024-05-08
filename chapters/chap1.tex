@@ -310,7 +310,7 @@ Les énumérations permettent de définir des ensembles de valeurs nommées. `ty
 \begin{lstlisting}
 	typedef enum {LUNDI, MARDI, MERCREDI, JEUDI, VENDREDI, SAMEDI, DIMANCHE} Jour;
 	
-	Jour aujourd'hui = MERCREDI; // Utilisation de l'enumeration avec typedef
+	Jour aujourdhui = MERCREDI; // Utilisation de l'enumeration avec typedef
 \end{lstlisting}
 
 \subsubsection*{Avantages de `typedef`}
@@ -325,110 +325,445 @@ Les énumérations permettent de définir des ensembles de valeurs nommées. `ty
 Dans l'ensemble, `typedef` est un outil puissant en langage C qui permet de simplifier les déclarations complexes, de rendre le code plus lisible, et de faciliter la création de types de données personnalisés. Que ce soit pour des pointeurs, des structures, des unions, ou des fonctions, `typedef` est un outil précieux pour les développeurs C.
 
 
+%\section{Exercices}
+%
+%\textbf{Types de données:}
+%
+%\begin{enumerate}
+%	\item Écrivez un programme C pour déclarer une variable de chaque type de données de base et initialisez-les avec des valeurs.
+%	\item Déclarez un tableau d'entiers de taille 10 et initialisez-le avec des valeurs de votre choix. Affichez ensuite ces valeurs à l'écran.
+%	\item Créez une structure \texttt{Personne} avec des champs pour le nom, l'âge et la taille. Déclarez une variable de type \texttt{Personne} et initialisez-la avec des valeurs fictives. Affichez ensuite ces valeurs à l'écran.
+%%	\item Écrivez une fonction en C pour inverser une chaîne de caractères donnée.
+%%	\item Écrivez une fonction en C pour trier un tableau d'entiers en utilisant l'algorithme de tri à bulles.
+%%\end{enumerate}
+%
+%\textbf{Types de données de base:}
+%
+%%\begin{enumerate}
+%	
+%	\item Écrivez une fonction en C pour calculer la somme des chiffres d'un nombre entier.
+%	\item Déclarez une variable de type \texttt{char} et utilisez-la pour stocker une lettre majuscule. Ensuite, utilisez une opération pour convertir cette lettre en minuscule.
+%	\item Écrivez un programme C pour vérifier si un nombre donné est premier ou non.
+%	\item Écrivez une fonction récursive en C pour calculer le factoriel d'un nombre entier.
+%	\item Écrivez un programme C pour convertir un nombre entier en binaire.
+%%\end{enumerate}
+%
+%\textbf{Types de données dérivés:}
+%
+%%\begin{enumerate}
+%	\item Écrivez une fonction en C pour concaténer deux chaînes de caractères données.
+%	\item Déclarez un tableau de structures \texttt{Etudiant} avec des champs pour le nom, l'âge et la moyenne. Initialisez-le avec des valeurs fictives et affichez ensuite ces valeurs à l'écran.
+%	\item Écrivez une fonction en C pour ajouter un élément à une liste chaînée.
+%	\item Implémentez une file (queue) en utilisant des listes chaînées en C.
+%	\item Écrivez une fonction en C pour supprimer un élément d'un arbre binaire de recherche.
+%%\end{enumerate}
+%
+%\textbf{Typedef}
+%
+%%\begin{enumerate}
+%	 \item \textbf{Création d'un alias pour un type de base}
+%	
+%	Utilisez `typedef` pour créer un alias pour un type de données de base. Ensuite, déclarez une variable de ce type et affichez sa valeur.
+%	
+%	\begin{lstlisting}
+%		typedef ...
+%		... var = 25;
+%		
+%		printf("La valeur de var est %d\\n", var);
+%	\end{lstlisting}
+%	
+%	\item \textbf{Utilisation de typedef avec des pointeurs}
+%	
+%	Utilisez `typedef` pour créer un alias pour un pointeur vers un entier. Initialisez le pointeur avec l'adresse d'une variable entière et affichez la valeur à laquelle le pointeur fait référence.
+%	
+%	\begin{lstlisting}
+%		typedef ...
+%		int a = 10;
+%		... ptr = &a;
+%		
+%		printf("La valeur pointee par le pointeur est %d\\n", *ptr);
+%	\end{lstlisting}
+%	
+%	\item \textbf{Utilisation de typedef avec des structures}
+%	
+%	Utilisez `typedef` pour créer un alias pour une structure représentant une personne avec des champs comme le nom, l'âge, et la taille. Ensuite, déclarez une variable de ce type et attribuez des valeurs aux champs.
+%	
+%	\begin{lstlisting}
+%		typedef struct {
+%			char nom[50];
+%			int age;
+%			float taille;
+%		} ...;
+%		
+%		... p1;
+%		
+%		strcpy(p1.nom, "Alice");
+%		p1.age = 25;
+%		p1.taille = 1.65;
+%	\end{lstlisting}
+%	
+%	\item \textbf{Utilisation de typedef avec des énumérations}
+%	
+%	Utilisez `typedef` pour créer un alias pour une énumération représentant les jours de la semaine. Déclarez une variable de ce type et attribuez-lui un jour spécifique.
+%	
+%	\begin{lstlisting}
+%		typedef enum {
+%			LUNDI,
+%			MARDI,
+%			MERCREDI,
+%			...
+%		} ...;
+%		
+%		... aujourd'hui = MERCREDI;
+%	\end{lstlisting}
+%	
+%	\item \textbf{Utilisation de typedef avec des unions}
+%	
+%	Utilisez `typedef` pour créer un alias pour une union contenant un entier, un flottant, et un caractère. Déclarez une variable de ce type et attribuez des valeurs aux différents éléments de l'union.
+%	
+%	\begin{lstlisting}
+%		typedef union {
+%			int entier;
+%			float flottant;
+%			char caractere;
+%		} ...;
+%		
+%		... d;
+%		d.entier = 10;
+%		d.flottant = 5.5;
+%	\end{lstlisting}
+%\end{enumerate}
+
 \section{Exercices}
 
-\textbf{Types de données:}
-
+\subsection{Variables et types de données}
 \begin{enumerate}
-	\item Écrivez un programme C pour déclarer une variable de chaque type de données de base et initialisez-les avec des valeurs.
-	\item Déclarez un tableau d'entiers de taille 10 et initialisez-le avec des valeurs de votre choix. Affichez ensuite ces valeurs à l'écran.
-	\item Créez une structure \texttt{Personne} avec des champs pour le nom, l'âge et la taille. Déclarez une variable de type \texttt{Personne} et initialisez-la avec des valeurs fictives. Affichez ensuite ces valeurs à l'écran.
-	\item Écrivez une fonction en C pour inverser une chaîne de caractères donnée.
-	\item Écrivez une fonction en C pour trier un tableau d'entiers en utilisant l'algorithme de tri à bulles.
-%\end{enumerate}
-
-\textbf{Types de données de base:}
-
-%\begin{enumerate}
-	\item Écrivez un programme C pour convertir un nombre entier en binaire.
-	\item Écrivez une fonction en C pour calculer la somme des chiffres d'un nombre entier.
-	\item Déclarez une variable de type \texttt{char} et utilisez-la pour stocker une lettre majuscule. Ensuite, utilisez une opération pour convertir cette lettre en minuscule.
-	\item Écrivez un programme C pour vérifier si un nombre donné est premier ou non.
-	\item Écrivez une fonction récursive en C pour calculer le factoriel d'un nombre entier.
-%\end{enumerate}
-
-\textbf{Types de données dérivés:}
-
-%\begin{enumerate}
-	\item Écrivez une fonction en C pour concaténer deux chaînes de caractères données.
-	\item Déclarez un tableau de structures \texttt{Etudiant} avec des champs pour le nom, l'âge et la moyenne. Initialisez-le avec des valeurs fictives et affichez ensuite ces valeurs à l'écran.
-	\item Écrivez une fonction en C pour ajouter un élément à une liste chaînée.
-	\item Implémentez une file (queue) en utilisant des listes chaînées en C.
-	\item Écrivez une fonction en C pour supprimer un élément d'un arbre binaire de recherche.
-%\end{enumerate}
-
-\textbf{Typedef}
-
-%\begin{enumerate}
-	 \item \textbf{Création d'un alias pour un type de base}
+	\item Quelle est la différence entre les types de données suivants :
+	\begin{enumerate}
+		\item \textbf{int}
+		\item \textbf{float}
+		\item \textbf{char}
+	\end{enumerate}
 	
-	Utilisez `typedef` pour créer un alias pour un type de données de base. Ensuite, déclarez une variable de ce type et affichez sa valeur.
-	
-	\begin{lstlisting}
-		typedef ...
-		... var = 25;
+	\item Écrivez un programme C qui déclare des variables pour chaque type de données mentionné et affiche leurs valeurs.
+	% \textbf{Réponse:}
+	% \begin{lstlisting}
+		% #include <stdio.h>
 		
-		printf("La valeur de var est %d\\n", var);
-	\end{lstlisting}
+		% int main() {
+			%     int entier = 42; 
+			%     float flottant = 3.14; 
+			%     char caractere = 'A'; 
+			
+			%     printf("Entier: %d\n", entier);
+			%     printf("Flottant: %.2f\n", flottant);
+			%     printf("Caractère: %c\n", caractere);
+			
+			%     return 0;
+			% }
+		% \end{lstlisting}
 	
-	\item \textbf{Utilisation de typedef avec des pointeurs}
-	
-	Utilisez `typedef` pour créer un alias pour un pointeur vers un entier. Initialisez le pointeur avec l'adresse d'une variable entière et affichez la valeur à laquelle le pointeur fait référence.
-	
-	\begin{lstlisting}
-		typedef ...
-		int a = 10;
-		... ptr = &a;
+	\item Écrivez un programme C qui utilise des variables de différents types de données pour calculer la somme d'un entier et d'un flottant, puis affichez le résultat.
+	% \textbf{Réponse:}
+	% \begin{lstlisting}
+		% #include <stdio.h>
 		
-		printf("La valeur pointee par le pointeur est %d\\n", *ptr);
-	\end{lstlisting}
+		% int main() {
+			%     int entier = 10;
+			%     float flottant = 2.5;
+			
+			%     float somme = entier + flottant; 
+			
+			%     printf("La somme est: %.2f\n", somme);
+			
+			%     return 0;
+			% }
+		% \end{lstlisting}
 	
-	\item \textbf{Utilisation de typedef avec des structures}
-	
-	Utilisez `typedef` pour créer un alias pour une structure représentant une personne avec des champs comme le nom, l'âge, et la taille. Ensuite, déclarez une variable de ce type et attribuez des valeurs aux champs.
-	
-	\begin{lstlisting}
-		typedef struct {
-			char nom[50];
-			int age;
-			float taille;
-		} ...;
+	\item Quelles sont les limites de valeurs pour les types de données suivants :
+	\begin{enumerate}
+		\item \textbf{int}
+		\item \textbf{float}
+		\item \textbf{double}
+	\end{enumerate}
+	% \textbf{Réponse:}
+	% a. `int`: généralement de `-2,147,483,648` à `2,147,483,647`.
+	% b. `float`: de `1.2E-38` à `3.4E+38`.
+	% c. `double`: de `2.3E-308` à `1.7E+308`.
+\end{enumerate}
+
+\subsection{Pointeurs}
+\begin{enumerate}
+	\item Quelle est la différence entre une variable et un pointeur ?
+	\item Écrivez un programme C qui utilise des pointeurs pour modifier la valeur d'une variable.
+	% \textbf{Réponse:}
+	% \begin{lstlisting}
+		% #include <stdio.h>
 		
-		... p1;
+		% int main() {
+			%     int x = 10;
+			%     int *p = &x; 
+			
+			%     printf("Valeur de x avant modification: %d\n", x);
+			
+			%     *p = 20;
+			
+			%     printf("Valeur de x après modification: %d\n", x);
+			
+			%     return 0;
+			% }
+		% \end{lstlisting}
+	
+	\item Écrivez un programme C qui utilise des pointeurs pour échanger les valeurs de deux variables.
+	% \textbf{Réponse:}
+	% \begin{lstlisting}
+		% #include <stdio.h>
 		
-		strcpy(p1.nom, "Alice");
-		p1.age = 25;
-		p1.taille = 1.65;
-	\end{lstlisting}
-	
-	\item \textbf{Utilisation de typedef avec des énumérations}
-	
-	Utilisez `typedef` pour créer un alias pour une énumération représentant les jours de la semaine. Déclarez une variable de ce type et attribuez-lui un jour spécifique.
-	
-	\begin{lstlisting}
-		typedef enum {
-			LUNDI,
-			MARDI,
-			MERCREDI,
-			...
-		} ...;
+		% void echanger(int *a, int *b) {
+			%     int temp = *a;
+			%     *a = *b;
+			%     *b = temp;
+			% }
 		
-		... aujourd'hui = MERCREDI;
-	\end{lstlisting}
+		% int main() {
+			%     int x = 10;
+			%     int y = 20;
+			
+			%     printf("Avant l'échange: x = %d, y = %d\n", x, y);
+			
+			%     echanger(&x, &y);
+			
+			%     printf("Après l'échange: x = %d, y = %d\n", x, y);
+			
+			%     return 0;
+			% }
+		% \end{lstlisting}
 	
-	\item \textbf{Utilisation de typedef avec des unions}
-	
-	Utilisez `typedef` pour créer un alias pour une union contenant un entier, un flottant, et un caractère. Déclarez une variable de ce type et attribuez des valeurs aux différents éléments de l'union.
-	
-	\begin{lstlisting}
-		typedef union {
-			int entier;
-			float flottant;
-			char caractere;
-		} ...;
+	\item Expliquez ce qu'est un pointeur nul (null pointer) et ce qui se passe si vous tentez d'utiliser un pointeur nul.
+	% \textbf{Réponse:} Un pointeur nul (`NULL`) ne pointe pas vers une adresse mémoire valide. Tenter d'utiliser ou de déréférencer un pointeur nul peut provoquer des erreurs de segmentation ou des plantages du programme.
+\end{enumerate}
+
+\subsection{Tableaux}
+\begin{enumerate}
+	\item Déclarez un tableau de 5 entiers et initialisez-le avec des valeurs. Écrivez un programme C pour afficher les valeurs du tableau.
+	\item Modifiez le programme pour inverser les éléments du tableau et afficher le tableau inversé.
+	% \textbf{Réponse:}
+	% \begin{lstlisting}
+		% #include <stdio.h>
 		
-		... d;
-		d.entier = 10;
-		d.flottant = 5.5;
-	\end{lstlisting}
+		% int main() {
+			%     int tableau[5] = {1, 2, 3, 4, 5};
+			
+			%     printf("Tableau initial: ");
+			%     for (int i = 0; i < 5; i++) {
+				%         printf("%d ", tableau[i]);
+				%     }
+			%     printf("\n");
+			
+			%     // Inverser le tableau
+			%     int temp;
+			%     for (int i = 0; i < 2; i++) {
+				%         temp = tableau[i];
+				%         tableau[i] = tableau[4 - i];
+				%         tableau[4 - i] = temp;
+				%     }
+			
+			%     printf("Tableau inversé: ");
+			%     for (int i = 0; i < 5; i++) {
+				%         printf("%d ", tableau[i]);
+				%     }
+			%     printf("\n");
+			
+			%     return 0;
+			% }
+		% \end{lstlisting}
+	
+	\item Écrivez un programme C qui calcule la somme de tous les éléments d'un tableau d'entiers de longueur `n`.
+	% \textbf{Réponse:}
+	% \begin{lstlisting}
+		% #include <stdio.h>
+		
+		% int somme(int tableau[], int taille) {
+			%     int total = 0;
+			
+			%     for (int i = 0; i < taille; i++) {
+				%         total += tableau[i];
+				%     }
+			
+			%     return total;
+			% }
+		
+		% int main() {
+			%     int tableau[5] = {1, 2, 3, 4, 5};
+			
+			%     int total = somme(tableau, 5);
+			
+			%     printf("La somme totale est: %d\n", total);
+			
+			%     return 0;
+			% }
+		% \end{lstlisting}
+	
+	\item Que se passe-t-il si vous essayez d'accéder à un index hors limites (out of bounds) dans un tableau C ? Écrivez un programme pour le démontrer.
+	% \textbf{Réponse:} Accéder à un index hors limites (out of bounds) peut provoquer des erreurs de segmentation ou des plantages du programme.
+	% \begin{lstlisting}
+		% #include <stdio.h>
+		
+		% int main() {
+			%     int tableau[5] = {1, 2, 3, 4, 5};
+			
+			%     // Essayer d'accéder à un index hors limites
+			%     printf("Accès à un index hors limites: %d\n", tableau[10]); // Ceci peut provoquer des erreurs de segmentation
+			
+			%     return 0;
+			% }
+		% \end{lstlisting}
+\end{enumerate}
+
+\subsection{Chaînes de caractères}
+\begin{enumerate}
+	\item Quelle est la particularité des chaînes de caractères en C par rapport aux autres types de données ?
+	\item Écrivez un programme C qui déclare une chaîne de caractères et utilise la bibliothèque `string.h` pour copier du texte dans la chaîne.
+	% \textbf{Réponse:}
+	% \begin{lstlisting}
+		% #include <stdio.h>
+		% #include <string.h>
+		
+		% int main() {
+			%     char chaine[50];
+			
+			%     strcpy(chaine, "Bonjour, monde!");
+			
+			%     printf("Chaîne: %s\n", chaine);
+			
+			%     return 0;
+			% }
+		% \end{lstlisting}
+	
+	\item Écrivez un programme C qui concatène deux chaînes de caractères en utilisant `strcat`.
+	% \textbf{Réponse:}
+	% \begin{lstlisting}
+		% #include <stdio.h>
+		% #include <string.h>
+		
+		% int main() {
+			%     char chaine1[50] = "Bonjour";
+			%     char chaine2[50] = ", monde!";
+			
+			%     strcat(chaine1, chaine2); // Concaténer les deux chaînes
+			
+			%     printf("Résultat de la concaténation: %s\n", chaine1);
+			
+			%     return 0;
+			% }
+		% \end{lstlisting}
+	
+	\item Comment compare-t-on deux chaînes de caractères en C ? Écrivez un programme qui compare deux chaînes et indique si elles sont identiques ou non.
+	% \textbf{Réponse:}
+	% On peut comparer deux chaînes de caractères en utilisant `strcmp` de la bibliothèque `string.h`.
+	% \begin{lstlisting}
+		% #include <stdio.h>
+		% #include <string.h>
+		
+		% int main() {
+			%     char chaine1[50] = "Bonjour";
+			%     char chaine2[50] = "Bonjour";
+			
+			%     int comparaison = strcmp(chaine1, chaine2);
+			
+			%     if (comparaison == 0) {
+				%         printf("Les deux chaînes sont identiques.\n");
+				%     } else if (comparaison < 0) {
+				%         printf("La première chaîne est inférieure.\n");
+				%     } else {
+				%         printf("La première chaîne est supérieure.\n");
+				%     }
+			
+			%     return 0;
+			% }
+		% \end{lstlisting}
+\end{enumerate}
+
+\subsection{Structures}
+\begin{enumerate}
+	\item Déclarez une structure en C pour représenter une personne avec un nom, un âge, et une taille.
+	\item Écrivez un programme C qui utilise cette structure pour créer une personne, assigner des valeurs, et afficher les informations de la personne.
+	% \textbf{Réponse:}
+	% \begin{lstlisting}
+		% #include <stdio.h>
+		% #include <string.h>
+		
+		% typedef struct {
+			%     char nom[50];
+			%     int age;
+			%     float taille;
+			% } Personne;
+		
+		% int main() {
+			%     Personne p;
+			%     strcpy(p.nom, "John Doe");
+			%     p.age = 30;
+			%     p.taille = 1.75;
+			
+			%     printf("Nom: %s\n", p.nom);
+			%     printf("Âge: %d\n", p.age);
+			%     printf("Taille: %.2f m\n", p.taille);
+			
+			%     return 0;
+			% }
+		% \end{lstlisting}
+	
+	\item Écrivez un programme C qui utilise des structures pour représenter un point 3D avec des coordonnées x, y, z. Ensuite, écrivez une fonction qui calcule la distance entre deux points 3D.
+	% \textbf{Réponse:}
+	% \begin{lstlisting}
+		% #include <stdio.h>
+		% #include <math.h>
+		
+		% typedef struct {
+			%     float x;
+			%     float y;
+			%     float z;
+			% } Point3D;
+		
+		% float distance(Point3D p1, Point3D p2) {
+			%     return sqrt(pow(p2.x - p1.x, 2) + pow(p2.y - p1.y, 2) + pow(p2.z - p1.z, 2));
+			% }
+		
+		% int main() {
+			%     Point3D p1 = {0, 0, 0};
+			%     Point3D p2 = {3, 4, 5};
+			
+			%     float dist = distance(p1, p2);
+			
+			%     printf("Distance entre les deux points: %.2f\n", dist);
+			
+			%     return 0;
+			% }
+		% \end{lstlisting}
+	
+	\item Créez une structure pour représenter une voiture avec un nom, une année, et un prix. Écrivez un programme C qui utilise cette structure pour créer une voiture et afficher ses propriétés.
+	% \textbf{Réponse:}
+	% \begin{lstlisting}
+		% #include <stdio.h>
+		% #include <string.h>
+		
+		% typedef struct {
+			%     char nom[50];
+			%     int annee;
+			%     float prix;
+			% } Voiture;
+		
+		% int main() {
+			%     Voiture v;
+			%     strcpy(v.nom, "Toyota");
+			%     v.annee = 2020;
+			%     v.prix = 25000.50;
+			
+			%     printf("Voiture: %s\n", v.nom);
+			%     printf("Année: %d\n", v.annee);
+			%     printf("Prix: %.2f\n", v.prix);
+			
+			%     return 0;
+			% }
+		% \end{lstlisting}
 \end{enumerate}
