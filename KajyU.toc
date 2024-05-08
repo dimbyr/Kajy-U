@@ -66,7 +66,7 @@
 \contentsline {subsection}{\numberline {4.4.5}Résumé}{31}{subsection.4.4.5}%
 \contentsline {section}{\numberline {4.5}Graphes}{31}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Construction d'un graphe}{31}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Ajout d'arêtes (liens) dans un graphe}{31}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.2}Ajout d'arêtes (liens) dans un graphe}{32}{subsection.4.5.2}%
 \contentsline {subsection}{\numberline {4.5.3}Utilisations courantes des graphes}{32}{subsection.4.5.3}%
 \contentsline {subsection}{\numberline {4.5.4}Algorithmes de parcours de graphes}{32}{subsection.4.5.4}%
 \contentsline {subsection}{\numberline {4.5.5}Résumé}{33}{subsection.4.5.5}%
