@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {1.4.1}Variables et types de données}{12}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Pointeurs}{12}{subsection.1.4.2}%
 \contentsline {subsection}{\numberline {1.4.3}Tableaux}{12}{subsection.1.4.3}%
-\contentsline {subsection}{\numberline {1.4.4}Chaînes de caractères}{12}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.4}Chaînes de caractères}{13}{subsection.1.4.4}%
 \contentsline {subsection}{\numberline {1.4.5}Structures}{13}{subsection.1.4.5}%
 \contentsline {chapter}{\numberline {2}Algorithmes de tri et de recherche}{14}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Qu’est-ce qu’un algorithme?}{14}{section.2.1}%
@@ -51,7 +51,7 @@
 \contentsline {subsection}{\numberline {4.2.4}Vérification si la pile est vide}{27}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}Utilisations courantes des piles}{27}{subsection.4.2.5}%
 \contentsline {subsection}{\numberline {4.2.6}Résumé}{27}{subsection.4.2.6}%
-\contentsline {section}{\numberline {4.3}Files}{27}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Files}{28}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Construction d'une file}{28}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Insertion d'un élément dans une file (enfilage)}{28}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Suppression d'un élément dans une file (défilage)}{28}{subsection.4.3.3}%
@@ -59,7 +59,7 @@
 \contentsline {subsection}{\numberline {4.3.5}Utilisations courantes des files}{29}{subsection.4.3.5}%
 \contentsline {subsection}{\numberline {4.3.6}Résumé}{29}{subsection.4.3.6}%
 \contentsline {section}{\numberline {4.4}Arbres binaires}{29}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Construction d'un arbre binaire}{29}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.1}Construction d'un arbre binaire}{30}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Insertion dans un arbre binaire}{30}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Utilisations courantes des arbres binaires}{30}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}Algorithmes de parcours des arbres binaires}{30}{subsection.4.4.4}%
@@ -71,4 +71,3 @@
 \contentsline {subsection}{\numberline {4.5.4}Algorithmes de parcours de graphes}{32}{subsection.4.5.4}%
 \contentsline {subsection}{\numberline {4.5.5}Résumé}{33}{subsection.4.5.5}%
 \contentsline {chapter}{\numberline {5}Applications d'algorithmes en IA}{34}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Greedy algorithm}{34}{section.5.1}%

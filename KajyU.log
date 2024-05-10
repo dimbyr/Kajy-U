@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  8 MAY 2024 16:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.17)  10 MAY 2024 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1545,7 +1545,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 63.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<./figure/hay.jpg, id=131, 3767.07375pt x 2510.37875pt>
+<./figure/hay.jpg, id=127, 3767.07375pt x 2510.37875pt>
 File: ./figure/hay.jpg Graphic file (type jpg)
 <use ./figure/hay.jpg>
 Package pdftex.def Info: ./figure/hay.jpg  used on input line 63.
@@ -1573,7 +1573,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 63.
-<./figure/Kajy U.png, id=132, 447.17062pt x 490.83376pt>
+<./figure/Kajy U.png, id=128, 447.17062pt x 490.83376pt>
 File: ./figure/Kajy U.png Graphic file (type png)
 <use ./figure/Kajy U.png>
 Package pdftex.def Info: ./figure/Kajy U.png  used on input line 63.
@@ -1684,11 +1684,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
  (./chapters/chap4.tex
 Chapitre 4.
-<image/linkedlist.jpeg, id=532, 1011.78pt x 509.905pt>
+<image/linkedlist.jpeg, id=527, 1011.78pt x 509.905pt>
 File: image/linkedlist.jpeg Graphic file (type jpg)
 <use image/linkedlist.jpeg>
 Package pdftex.def Info: image/linkedlist.jpeg  used on input line 8.
-(pdftex.def)             Requested size: 303.53633pt x 152.97267pt.
+(pdftex.def)             Requested size: 334.60422pt x 168.62706pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 9.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
@@ -1701,25 +1701,25 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/sc' will be
 
 
  <./image/linkedlist.jpeg>]
-<image/stack.jpeg, id=541, 700.6175pt x 778.91pt>
+<image/stack.jpeg, id=536, 700.6175pt x 778.91pt>
 File: image/stack.jpeg Graphic file (type jpg)
 <use image/stack.jpeg>
 Package pdftex.def Info: image/stack.jpeg  used on input line 52.
 (pdftex.def)             Requested size: 209.12683pt x 232.49817pt.
- [26 <./image/stack.jpeg>]
-<image/q.jpeg, id=549, 974.64125pt x 463.7325pt>
+ [26 <./image/stack.jpeg>] [27]
+<image/q.jpeg, id=551, 974.64125pt x 463.7325pt>
 File: image/q.jpeg Graphic file (type jpg)
 <use image/q.jpeg>
 Package pdftex.def Info: image/q.jpeg  used on input line 81.
 (pdftex.def)             Requested size: 334.60422pt x 159.20244pt.
- [27] [28 <./image/q.jpeg>]
-<image/binary_tree.jpeg, id=566, 857.2025pt x 637.38126pt>
+ [28 <./image/q.jpeg>]
+<image/binary_tree.jpeg, id=560, 857.2025pt x 637.38126pt>
 File: image/binary_tree.jpeg Graphic file (type jpg)
 <use image/binary_tree.jpeg>
 Package pdftex.def Info: image/binary_tree.jpeg  used on input line 109.
 (pdftex.def)             Requested size: 334.60422pt x 248.80138pt.
  [29 <./image/binary_tree.jpeg>] [30]
-<image/graph.jpeg, id=583, 934.49126pt x 402.50375pt>
+<image/graph.jpeg, id=578, 934.49126pt x 402.50375pt>
 File: image/graph.jpeg Graphic file (type jpg)
 <use image/graph.jpeg>
 Package pdftex.def Info: image/graph.jpeg  used on input line 159.
@@ -1760,11 +1760,11 @@ Package minitoc(hints) Warning: W0024
 (./chapters/chap2.aux) (./chapters/chap3.aux) (./chapters/chap4.aux)
 (./chapters/chap5.aux))
 Package rerunfilecheck Info: File `KajyU.out' has not changed.
-(rerunfilecheck)             Checksum: A5A4566FC0EA2EF22FB80B894E6ACACF;4185.
+(rerunfilecheck)             Checksum: 33AEBDB74BE8B1CFB30D2FC6FC5496C4;4025.
  ) 
 Here is how much of TeX's memory you used:
- 41018 strings out of 476097
- 783649 string characters out of 5791138
+ 41017 strings out of 476097
+ 783632 string characters out of 5791138
  2070851 words of memory out of 5000000
  60075 multiletter control sequences out of 15000+600000
  563164 words of font info for 92 fonts, out of 8000000 for 9000
@@ -1782,10 +1782,10 @@ l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 exlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/local/texlive/20
 23/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/local/texlive/2023/texmf-
 dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on KajyU.pdf (37 pages, 2336068 bytes).
+Output written on KajyU.pdf (37 pages, 2337125 bytes).
 PDF statistics:
- 744 PDF objects out of 1000 (max. 8388607)
- 647 compressed objects within 7 object streams
- 334 named destinations out of 1000 (max. 500000)
- 350 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 739 PDF objects out of 1000 (max. 8388607)
+ 642 compressed objects within 7 object streams
+ 333 named destinations out of 1000 (max. 500000)
+ 342 words of extra memory for PDF output out of 10000 (max. 10000000)
 
