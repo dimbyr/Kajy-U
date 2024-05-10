@@ -219,3 +219,208 @@ int main() {
 1. Quelle est la différence entre une structure et une union en langage C?
    - A) Les structures permettent de stocker des valeurs de types différents, tandis que les unions permettent de stocker des valeurs du même type.
    - B) Les structures permettent de stocker des valeurs du même type, tandis que les unions permettent de stocker des
+   
+   
+
+## Quiz: Types de données
+
+### Question 1: Types de données de base
+Quels sont les types de données de base couramment utilisés en C ?
+a) `int`, `float`, `double`, `char`  
+b) `int`, `float`, `string`, `object`  
+c) `boolean`, `double`, `string`, `array`  
+d) `int`, `float`, `double`, `list`  
+
+**Réponse**: a) `int`, `float`, `double`, `char`
+
+### Question 2: Déclarations de variables
+Quelle est la déclaration correcte d'un entier, d'un flottant et d'un caractère ?
+a) `int nombre; float poids; char initiale;`  
+b) `integer nombre; float poids; char initiale;`  
+c) `int nombre; double poids; character initiale;`  
+d) `integer nombre; float poids; character initiale;`  
+
+**Réponse**: a) `int nombre; float poids; char initiale;`
+
+### Question 3: Tableaux
+Quel est le code correct pour déclarer un tableau d'entiers de taille 5 ?
+a) `int tableau[5];`  
+b) `array tableau[5];`  
+c) `int tableau[4];`  
+d) `array tableau[4];`  
+
+**Réponse**: a) `int tableau[5];`
+
+### Question 4: Structures
+Quelle est la meilleure explication d'une structure en C ?
+a) Un type de données dérivé qui peut contenir des variables de différents types  
+b) Une collection d'entiers  
+c) Un tableau de structures  
+d) Une collection de chaînes de caractères  
+
+**Réponse**: a) Un type de données dérivé qui peut contenir des variables de différents types
+
+### Question 5: Utilisation des structures
+Quel code crée et initialise une structure appelée `Personne` avec les champs `nom`, `âge`, et `taille` ?
+a) 
+```c
+struct Personne {
+    char nom[50];
+    int age;
+    float taille;
+};
+
+struct Personne p;
+strcpy(p.nom, "John Doe");
+p.age = 30;
+p.taille = 1.75;
+```
+b) 
+```c
+struct Personne {
+    char nom[50];
+    int age;
+    float taille;
+};
+
+struct Personne p = { "John Doe", 30, 1.75 };
+```
+c) 
+```c
+struct Personne {
+    char nom[50];
+    int age;
+    float taille;
+};
+
+struct Personne p = { 30, "John Doe", 1.75 };
+```
+d) 
+```c
+struct Personne {
+    char nom[50];
+    int age;
+    float taille;
+};
+
+struct Personne p = { "John Doe", 30 };
+```
+
+**Réponse**: b)
+
+### Question 6: Typedef
+Quelle est la fonction du mot-clé `typedef` en C ?
+a) Créer des alias pour des types de données existants  
+b) Créer des structures  
+c) Déclarer des fonctions  
+d) Créer des tableaux  
+
+**Réponse**: a) Créer des alias pour des types de données existants
+
+### Question 7: Chaînes de caractères
+Quelle est la meilleure description des chaînes de caractères en C ?
+a) Un tableau de caractères terminé par un caractère nul  
+b) Une chaîne de caractères terminée par un espace  
+c) Un tableau d'entiers  
+d) Une collection de caractères  
+
+**Réponse**: a) Un tableau de caractères terminé par un caractère nul
+
+### Question 8: Initialisation des pointeurs
+Quelle est la façon correcte d'initialiser un pointeur vers un entier ?
+a) 
+```c
+int a = 10;
+int *ptr = &a;
+```
+b) 
+```c
+int a = 10;
+int ptr = a;
+```
+c) 
+```c
+int a = 10;
+int *ptr = a;
+```
+d) 
+```c
+int a = 10;
+int ptr = &a;
+```
+
+**Réponse**: a)
+
+### Question 9: Utilisation des pointeurs
+Quel code modifie la valeur d'un entier à l'aide d'un pointeur ?
+a) 
+```c
+int a = 10;
+int *ptr = &a;
+*ptr = 20;
+```
+b) 
+```c
+int a = 10;
+int *ptr = a;
+*ptr = 20;
+```
+c) 
+```c
+int a = 10;
+int ptr = 20;
+```
+d) 
+```c
+int a = 10;
+int *ptr = &a;
+ptr = 20;
+```
+
+**Réponse**: a)
+
+### Question 10: Déclaration de tableaux de structures
+Quel code déclare un tableau de structures appelé `Personne` de taille 5 ?
+a) 
+```c
+struct Personne {
+    char nom[50];
+    int age;
+    float taille;
+};
+
+struct Personne personnes[5];
+```
+b) 
+```c
+struct Personne {
+    char nom[50];
+    int age;
+    float taille;
+};
+
+struct Personne personnes(5);
+```
+c) 
+```c
+struct Personne {
+    char nom[50];
+    int age;
+    float taille;
+};
+
+struct Personne personnes[4];
+```
+d) 
+```c
+struct Personne {
+    char nom[50];
+    int age;
+    float taille;
+};
+
+struct Personne personnes;
+```
+
+**Réponse**: a)
+
