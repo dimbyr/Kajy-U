@@ -1,12 +1,12 @@
 
-```
+
 # Quizzes and Answers: Complexité algorithmique
 
 ## Quiz 1: Notation O
 1. Quelle est la complexité temporelle de la fonction suivante?
 ```c
 void afficherTableau(int arr[], int n) {
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++ {
         printf("%d ", arr[i]);
     }
 }
