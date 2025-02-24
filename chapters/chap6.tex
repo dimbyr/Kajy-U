@@ -1,0 +1,1494 @@
+\chapter{Corrig\'ees des exercices}
+\section{Structures de données fondamentales}
+
+\subsection{Variables et types de données}
+\begin{enumerate}
+	\item Quelle est la différence entre les types de données suivants :
+	\begin{enumerate}
+		\item \textbf{int}
+		\item \textbf{float}
+		\item \textbf{char}
+	\end{enumerate}
+	
+	\item Écrivez un programme C qui déclare des variables pour chaque type de données mentionné et affiche leurs valeurs.
+	
+	 \textbf{Réponse:}
+	 \begin{lstlisting}
+		 #include <stdio.h>
+		
+		 int main() {
+			     int entier = 42; 
+			     float flottant = 3.14; 
+			     char caractere = 'A'; 
+			
+			     printf("Entier: %d\n", entier);
+			     printf("Flottant: %.2f\n", flottant);
+			     printf("Caractere: %c\n", caractere);
+			
+			     return 0;
+			 }
+		 \end{lstlisting}
+	
+	\item Écrivez un programme C qui utilise des variables de différents types de données pour calculer la somme d'un entier et d'un flottant, puis affichez le résultat.
+	
+	 \textbf{Réponse:}
+	 \begin{lstlisting}
+		 #include <stdio.h>
+		
+		 int main() {
+			     int entier = 10;
+			     float flottant = 2.5;
+			
+			     float somme = entier + flottant; 
+			
+			     printf("La somme est: %.2f\n", somme);
+			
+			     return 0;
+			 }
+		 \end{lstlisting}
+	
+	\item Quelles sont les limites de valeurs pour les types de données suivants :
+	\begin{enumerate}
+		\item \textbf{int}
+		\item \textbf{float}
+		\item \textbf{double}
+	\end{enumerate}
+	\textit{Indication:} Consid\'erer le nombre de bits et octets. Par exemple, un caract\`re ASCII est repr\'esent\'e par un octet, c'est-\`a-dire 8 bits. Le caract\`ere "A" est repr\'esent\'e par 01000001. Avec huit chiffres de 0 et 1, on peut representer $2^8 = 256$ valeurs.  Pour les nombres  sign\'es (int, float, double, ...), l'oppos\'e est represent\'e diff\'eremment. 
+	
+	 \textbf{Réponse:}
+	 \begin{enumerate}
+	 	\item `int`: généralement de `-2.147.483.648` à `2.147.483.647`.
+	 \item `float`: de `1,2E-38` à `3,4E+38`.
+	 \item `double`: de `2,3E-308` à `1,7E+308`.
+	 \end{enumerate}
+\end{enumerate}
+
+\subsection{Pointeurs}
+\begin{enumerate}
+	\item Quelle est la différence entre une variable et un pointeur ?
+	\item Écrivez un programme C qui utilise des pointeurs pour modifier la valeur d'une variable.
+	
+	 \textbf{Réponse:}
+	 \begin{lstlisting}
+		 #include <stdio.h>
+		
+		 int main() {
+			     int x = 10;
+			     int *p = &x; 
+			
+			     printf("Valeur_de_x_avant_modification: %d\n", x);
+			
+			     *p = 20;
+			
+			     printf("Valeur_de_x_apres_modification: %d\n", x);
+			
+			     return 0;
+			 }
+		 \end{lstlisting}
+	
+	\item Écrivez un programme C qui utilise des pointeurs pour échanger les valeurs de deux variables.
+	
+	 \textbf{Réponse:}
+	 \begin{lstlisting}
+		 #include <stdio.h>
+		
+		 void echanger(int *a, int *b) {
+			     int temp = *a;
+			     *a = *b;
+			     *b = temp;
+			 }
+		
+		 int main() {
+			     int x = 10;
+			     int y = 20;
+			
+			     printf("Avant l'echange: x = %d, y = %d\n", x, y);
+			
+			     echanger(&x, &y);
+			
+			     printf("Apres l'echange: x = %d, y = %d\n", x, y);
+			
+			     return 0;
+			 }
+		 \end{lstlisting}
+	
+	\item Expliquez ce qu'est un pointeur nul (null pointer) et ce qui se passe si vous tentez d'utiliser un pointeur nul.
+	
+	 \textbf{Réponse:} Un pointeur nul (`NULL`) ne pointe pas vers une adresse mémoire valide. Tenter d'utiliser ou de déréférencer un pointeur nul peut provoquer des erreurs de segmentation ou des plantages du programme.
+\end{enumerate}
+
+\subsection{Tableaux}
+\begin{enumerate}
+	\item Déclarez un tableau de 5 entiers et initialisez-le avec des valeurs. Écrivez un programme C pour afficher les valeurs du tableau.
+	\item Modifiez le programme pour inverser les éléments du tableau et afficher le tableau inversé.
+
+	 \textbf{Réponse:}
+	 \begin{lstlisting}
+		 #include <stdio.h>
+		
+		 int main() {
+			     int tableau[5] = {1, 2, 3, 4, 5};
+			
+			     printf("Tableau initial: ");
+			     for (int i = 0; i < 5; i++) {
+				         printf("%d ", tableau[i]);
+				     }
+			     printf("\n");
+			
+			     // Inverser le tableau
+			     int temp;
+			     for (int i = 0; i < 2; i++) {
+				         temp = tableau[i];
+				         tableau[i] = tableau[4 - i];
+				         tableau[4 - i] = temp;
+				     }
+			
+			     printf("Tableau inversE: ");
+			     for (int i = 0; i < 5; i++) {
+				         printf("%d ", tableau[i]);
+				     }
+			     printf("\n");
+			
+			     return 0;
+			 }
+		 \end{lstlisting}
+	
+	\item Écrivez un programme C qui calcule la somme de tous les éléments d'un tableau d'entiers de longueur `n`.
+
+
+	 \textbf{Réponse:}
+	 \begin{lstlisting}
+		 #include <stdio.h>
+		
+		 int somme(int tableau[], int taille) {
+			     int total = 0;
+			
+			     for (int i = 0; i < taille; i++) {
+				         total += tableau[i];
+				     }
+			
+			     return total;
+			 }
+		
+		 int main() {
+			     int tableau[5] = {1, 2, 3, 4, 5};
+			
+			     int total = somme(tableau, 5);
+			
+			     printf("La somme totale est: %d\n", total);
+			
+			     return 0;
+			 }
+		 \end{lstlisting}
+	
+	\item Que se passe-t-il si vous essayez d'accéder à un index hors limites (out of bounds) dans un tableau C ? Écrivez un programme pour le démontrer.
+	
+	 \textbf{Réponse:} Accéder à un index hors limites (out of bounds) peut provoquer des erreurs de segmentation ou des plantages du programme.
+	 \begin{lstlisting}
+		 #include <stdio.h>
+		
+		 int main() {
+			     int tableau[5] = {1, 2, 3, 4, 5};
+			
+			     // Essayer d'acceder a un index hors limites
+			     printf("AccEs a un index hors limites: %d\n", tableau[10]); 
+			     // Ceci peut provoquer des erreurs de segmentation
+			
+			     return 0;
+			 }
+		 \end{lstlisting}
+\end{enumerate}
+
+\subsection{Chaînes de caractères}
+\begin{enumerate}
+	\item Quelle est la particularité des chaînes de caractères en C par rapport aux autres types de données ?
+	\item Écrivez un programme C qui déclare une chaîne de caractères et utilise la bibliothèque `string.h` pour copier du texte dans la chaîne.
+	
+	 \textbf{Réponse:}
+	 
+	 \begin{lstlisting}
+		 #include <stdio.h>
+		 #include <string.h>
+		
+		 int main() {
+			     char chaine[50];
+			
+			     strcpy(chaine, "Bonjour, monde!");
+			
+			     printf("Chaîne: %s\n", chaine);
+			
+			     return 0;
+			 }
+		 \end{lstlisting}
+	
+	\item Écrivez un programme C qui concatène deux chaînes de caractères en utilisant `strcat`.
+	
+	 \textbf{Réponse:}
+	 \begin{lstlisting}
+		 #include <stdio.h>
+		 #include <string.h>
+		
+		 int main() {
+			     char chaine1[50] = "Bonjour";
+			     char chaine2[50] = ", monde!";
+			
+			     strcat(chaine1, chaine2); // Concaténer les deux chaînes
+			
+			     printf("Résultat de la concaténation: %s\n", chaine1);
+			
+			     return 0;
+			 }
+ \end{lstlisting}
+	
+	\item Comment compare-t-on deux chaînes de caractères en C ? Écrivez un programme qui compare deux chaînes et indique si elles sont identiques ou non.
+
+	 \textbf{Réponse:}
+	 On peut comparer deux chaînes de caractères en utilisant `strcmp` de la bibliothèque `string.h`.
+	 \begin{lstlisting}
+		 #include <stdio.h>
+		 #include <string.h>
+		
+		 int main() {
+			     char chaine1[50] = "Bonjour";
+			     char chaine2[50] = "Bonjour";
+			
+			     int comparaison = strcmp(chaine1, chaine2);
+			
+			     if (comparaison == 0) {
+				         printf("Les deux chaînes sont identiques.\n");
+				     } else if (comparaison < 0) {
+				         printf("La première chaîne est inférieure.\n");
+				     } else {
+				         printf("La première chaîne est supérieure.\n");
+				     }
+			
+			     return 0;
+			 }
+		 \end{lstlisting}
+\end{enumerate}
+
+\subsection{Structures}
+\begin{enumerate}
+	\item Déclarez une structure en C pour représenter une personne avec un nom, un âge, et une taille.
+	\item Écrivez un programme C qui utilise cette structure pour créer une personne, assigner des valeurs, et afficher les informations de la personne.
+	
+	 \textbf{Réponse:}
+	 \begin{lstlisting}
+		 #include <stdio.h>
+		 #include <string.h>
+		
+		 typedef struct {
+			     char nom[50];
+			     int age;
+			     float taille;
+			 } Personne;
+		
+		 int main() {
+			     Personne p;
+			     strcpy(p.nom, "John Doe");
+			     p.age = 30;
+			     p.taille = 1.75;
+			
+			     printf("Nom: %s\n", p.nom);
+			     printf("Âge: %d\n", p.age);
+			     printf("Taille: %.2f m\n", p.taille);
+			
+			     return 0;
+			 }
+		 \end{lstlisting}
+	
+	\item Écrivez un programme C qui utilise des structures pour représenter un point 3D avec des coordonnées x, y, z. Ensuite, écrivez une fonction qui calcule la distance entre deux points 3D.
+	
+	 \textbf{Réponse:}
+	 \begin{lstlisting}
+		 #include <stdio.h>
+		 #include <math.h>
+		
+		 typedef struct {
+			     float x;
+			     float y;
+			     float z;
+			 } Point3D;
+		
+		 float distance(Point3D p1, Point3D p2) {
+			     return sqrt(pow(p2.x - p1.x, 2) + pow(p2.y - p1.y, 2) + pow(p2.z - p1.z, 2));
+			 }
+		
+		 int main() {
+			     Point3D p1 = {0, 0, 0};
+			     Point3D p2 = {3, 4, 5};
+			
+			     float dist = distance(p1, p2);
+			
+			     printf("Distance entre les deux points: %.2f\n", dist);
+			
+			     return 0;
+			 }
+		 \end{lstlisting}
+	
+	\item Créez une structure pour représenter une voiture avec un nom, une année, et un prix. Écrivez un programme C qui utilise cette structure pour créer une voiture et afficher ses propriétés.
+
+	 \textbf{Réponse:}
+	 \begin{lstlisting}
+		 #include <stdio.h>
+		 #include <string.h>
+		
+		 typedef struct {
+			     char nom[50];
+			     int annee;
+			     float prix;
+			 } Voiture;
+		
+		 int main() {
+			     Voiture v;
+			     strcpy(v.nom, "Toyota");
+			     v.annee = 2020;
+			     v.prix = 25000.50;
+			
+			     printf("Voiture: %s\n", v.nom);
+			     printf("Année: %d\n", v.annee);
+			     printf("Prix: %.2f\n", v.prix);
+			
+			     return 0;
+			 }
+		 \end{lstlisting}
+\end{enumerate}
+
+\section{Algorithmes de tri et de recherche}
+
+\subsection{Algorithmes de tri}
+
+\begin{enumerate}
+	\item Pour chaque algorithme de tri, implémentez-le en C et testez-le avec les cas suivants :
+	\begin{enumerate}
+		\item Un tableau vide.
+		\item Un tableau contenant un seul élément.
+		\item Un tableau déjà trié.
+		\item Le tableau \([9, 1, 9, 0, 2, 6, 6, 5, 3, 4, 7]\).
+	\end{enumerate}
+	
+	\subsubsection{Tri à bulle (Bubble Sort)}
+	
+	\textbf{Réponse:}
+	\begin{lstlisting}
+		#include <stdio.h>
+		
+		void bubbleSort(int arr[], int n) {
+			for (int i = 0; i < n-1; i++) {
+				for (int j = 0; j < n-i-1; j++) {
+					if (arr[j] > arr[j+1]) {
+						// Échanger les éléments
+						int temp = arr[j];
+						arr[j] = arr[j+1];
+						arr[j+1] = temp;
+					}
+				}
+			}
+		}
+		
+		void printArray(int arr[], int size) {
+			for (int i = 0; i < size; i++) {
+				printf("%d ", arr[i]);
+			}
+			printf("\n");
+		}
+		
+		int main() {
+			int arr[] = {9, 1, 9, 0, 2, 6, 6, 5, 3, 4, 7};
+			int n = sizeof(arr)/sizeof(arr[0]);
+			
+			bubbleSort(arr, n);
+			printf("Array trié : ");
+			printArray(arr, n);
+			
+			return 0;
+		}
+	\end{lstlisting}
+	
+	\subsubsection{Tri par insertion (Insertion Sort)}
+	
+	\textbf{Réponse:}
+	\begin{lstlisting}
+		#include <stdio.h>
+		
+		void insertionSort(int arr[], int n) {
+			for (int i = 1; i < n; i++) {
+				int key = arr[i];
+				int j = i - 1;
+				while (j >= 0 && arr[j] > key) {
+					arr[j + 1] = arr[j];
+					j = j - 1;
+				}
+				arr[j + 1] = key;
+			}
+		}
+		
+		void printArray(int arr[], int size) {
+			for (int i = 0; i < size; i++) {
+				printf("%d ", arr[i]);
+			}
+			printf("\n");
+		}
+		
+		int main() {
+			int arr[] = {9, 1, 9, 0, 2, 6, 6, 5, 3, 4, 7};
+			int n = sizeof(arr)/sizeof(arr[0]);
+			
+			insertionSort(arr, n);
+			printf("Array trié : ");
+			printArray(arr, n);
+			
+			return 0;
+		}
+	\end{lstlisting}
+	
+	\subsubsection{Tri rapide (Quick Sort)}
+	
+	\textbf{Réponse:}
+	\begin{lstlisting}
+		#include <stdio.h>
+		
+		int partition(int arr[], int low, int high) {
+			int pivot = arr[high];
+			int i = (low - 1);
+			
+			for (int j = low; j < high; j++) {
+				if (arr[j] < pivot) {
+					i++;
+					int temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+				}
+			}
+			int temp = arr[i + 1];
+			arr[i + 1] = arr[high];
+			arr[high] = temp;
+			return i + 1;
+		}
+		
+		void quickSort(int arr[], int low, int high) {
+			if (low < high) {
+				int pi = partition(arr, low, high);
+				quickSort(arr, low, pi - 1);
+				quickSort(arr, pi + 1, high);
+			}
+		}
+		
+		void printArray(int arr[], int size) {
+			for (int i = 0; i < size; i++) {
+				printf("%d ", arr[i]);
+			}
+			printf("\n");
+		}
+		
+		int main() {
+			int arr[] = {9, 1, 9, 0, 2, 6, 6, 5, 3, 4, 7};
+			int n = sizeof(arr)/sizeof(arr[0]);
+			
+			quickSort(arr, 0, n - 1);
+			printf("Array trié : ");
+			printArray(arr, n);
+			
+			return 0;
+		}
+	\end{lstlisting}
+\end{enumerate}
+
+\subsection{Algorithmes de recherche}
+
+\begin{enumerate}
+	\item Pour chaque algorithme de recherche, implémentez-le en C et testez-le en cherchant les éléments 8, 1 et 0 dans le tableau \([9, 1, 9, 0, 2, 6, 6, 5, 3, 4, 7]\).
+	
+	\subsubsection{Recherche linéaire (Linear Search)}
+	
+	\textbf{Réponse:}
+	\begin{lstlisting}
+		#include <stdio.h>
+		
+		int linearSearch(int arr[], int n, int key) {
+			for (int i = 0; i < n; i++) {
+				if (arr[i] == key) {
+					return i; // Retourne l'indice où l'élément est trouvé
+				}
+			}
+			return -1; // L'élément n'est pas trouvé
+		}
+		
+		int main() {
+			int arr[] = {9, 1, 9, 0, 2, 6, 6, 5, 3, 4, 7};
+			int n = sizeof(arr)/sizeof(arr[0]);
+			
+			printf("Recherche de l'élément 8: %d\n", linearSearch(arr, n, 8));
+			printf("Recherche de l'élément 1: %d\n", linearSearch(arr, n, 1));
+			printf("Recherche de l'élément 0: %d\n", linearSearch(arr, n, 0));
+			
+			return 0;
+		}
+	\end{lstlisting}
+	
+	\subsubsection{Recherche binaire (Binary Search)}
+	
+	La recherche binaire n'est applicable que si le tableau est trié. Voici l'implémentation pour une recherche binaire dans un tableau trié.
+	
+	\textbf{Réponse:}
+	\begin{lstlisting}
+		#include <stdio.h>
+		
+		int binarySearch(int arr[], int low, int high, int key) {
+			while (low <= high) {
+				int mid = low + (high - low) / 2;
+				if (arr[mid] == key) {
+					return mid;
+				}
+				if (arr[mid] < key) {
+					low = mid + 1;
+				} else {
+					high = mid - 1;
+				}
+			}
+			return -1; // L'élément n'est pas trouvé
+		}
+		
+		int main() {
+			int arr[] = {0, 1, 4, 4, 4, 5, 6, 7, 9, 9};
+			int n = sizeof(arr)/sizeof(arr[0]);
+			
+			printf("Recherche de l'élément 0: %d\n", binarySearch(arr, 0, n - 1, 0));
+			printf("Recherche de l'élément 2: %d\n", binarySearch(arr, 0, n - 1, 2));
+			printf("Recherche de l'élément 7: %d\n", binarySearch(arr, 0, n - 1, 7));
+			printf("Recherche de l'élément 9: %d\n", binarySearch(arr, 0, n - 1, 9));
+			
+			return 0;
+		}
+	\end{lstlisting}
+	
+	\item Lequel de ces algorithmes n'est pas applicable au tableau précédent ? Pourquoi ?
+	
+	La recherche binaire n'est pas applicable au tableau \([9, 1, 9, 0, 2, 6, 6, 5, 3, 4, 7]\) car il n'est pas trié. La recherche binaire fonctionne uniquement sur des tableaux triés, car elle divise le tableau en deux parties et suppose que les éléments à gauche sont inférieurs à ceux à droite. Dans ce cas, un tri préalable est nécessaire.
+\end{enumerate}
+
+\section{Complexité algorithmique}
+
+%\section{Exercices}
+
+\begin{enumerate}
+	\item Quelle est la complexité temporelle des opérations suivantes ?
+	\begin{enumerate}
+		\item Parcourir un tableau d'entiers de longueur $n$.
+		
+		\textbf{Réponse} : 
+		La complexité temporelle de l'opération "parcourir un tableau d'entiers" est $O(n)$. En effet, dans cette opération, chaque élément du tableau est visité une fois, ce qui signifie qu'il y a $n$ opérations à effectuer, où $n$ est la taille du tableau. La notation $O(n)$ exprime que la durée de l'opération est linéaire par rapport à la taille du tableau.
+		
+		\item Multiplier deux matrices de taille $n \times n$.
+		
+		\textbf{Réponse} : 
+		La multiplication de deux matrices carrées de taille $n \times n$ nécessite d'effectuer $n^2$ multiplications. En effet, chaque élément de la matrice résultat est le produit de $n$ éléments (lignes de la première matrice et colonnes de la deuxième matrice). Donc, pour chaque élément de la matrice résultat (qui est $n^2$ éléments au total), nous devons effectuer $n$ multiplications, ce qui donne une complexité de $O(n^3)$. 
+		Cette complexité est dans le cas général pour une multiplication de matrices à l'aide de l'algorithme classique. Des algorithmes plus avancés, comme l'algorithme de Strassen, peuvent réduire cette complexité à $O(n^{2.81})$, mais l'algorithme classique reste de complexité $O(n^3)$.
+		
+		\item Effectuer une recherche binaire sur un tableau trié.
+		
+		\textbf{Réponse} : 
+		La recherche binaire dans un tableau trié a une complexité temporelle de $O(\log n)$. L'idée principale de la recherche binaire est de diviser à chaque étape le tableau en deux sous-tableaux, réduisant ainsi de moitié l'espace de recherche à chaque itération. Cette opération est répétée jusqu'à ce que l'élément recherché soit trouvé ou que l'espace de recherche soit vide. 
+		La complexité $\log n$ provient du fait que l'on réduit par moitié la taille de la partie restante du tableau à chaque itération. La recherche binaire est donc très efficace pour les tableaux triés, car elle évite de parcourir l'intégralité du tableau. Contrairement à une recherche linéaire qui aurait une complexité $O(n)$, la recherche binaire est logarithmique.
+		
+	\end{enumerate}
+	
+	\item Quelle est la complexité temporelle du code suivant ?
+	\begin{lstlisting}
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				printf("%d ", i * j);
+			}
+		}
+	\end{lstlisting}
+	
+	\textbf{Réponse} :
+	La complexité temporelle de ce code est $O(n^2)$. Voici pourquoi :
+	
+	- La première boucle \texttt{for (int i = 0; i < n; i++)} s'exécute $n$ fois, car $i$ varie de $0$ à $n-1$.
+	- La deuxième boucle imbriquée \texttt{for (int j = 0; j < n; j++)} s'exécute également $n$ fois pour chaque itération de la première boucle.
+	
+	Par conséquent, pour chaque itération de la première boucle (qui se répète $n$ fois), la deuxième boucle s'exécute également $n$ fois, ce qui donne un total de $n \times n = n^2$ itérations au total. C'est ce que l'on appelle une complexité quadratique.
+	
+	- Le \texttt{printf} à l'intérieur des boucles effectue une opération constante à chaque itération (une simple impression), ce qui ne change pas la complexité globale de l'algorithme. L'opération $\texttt{printf}$ elle-même, bien que coûteuse en termes de temps d'exécution réel, reste considérée comme une opération de complexité constante dans ce contexte.
+	
+	\item Comment pouvez-vous améliorer cet algorithme pour réduire sa complexité ?
+	
+	\textbf{Réponse} :
+	Pour réduire la complexité de cet algorithme, il faudrait d'abord identifier s'il y a une optimisation possible dans la logique de l'algorithme. Ici, le problème semble être celui d'afficher tous les produits de $i \times j$ pour $i, j$ allant de $0$ à $n-1$. 
+	Une possible amélioration serait de revoir la structure du code pour éviter des calculs redondants. En effet, si on cherche à afficher les produits $i \times j$ et que l'on parcourt les deux indices $i$ et $j$ indépendamment, cela entraîne une complexité $O(n^2)$. Cependant, il est possible de réorganiser le calcul en utilisant des propriétés symétriques des produits, comme dans le cas d'un tableau triangulaire ou d'autres structures spécifiques.
+	
+	En fonction de l'objectif spécifique du programme (comme stocker les résultats ou effectuer un calcul particulier), il pourrait être possible de réduire la quantité de travail en évitant de calculer des produits pour des paires $(i, j)$ identiques (par exemple, en exploitant la symétrie si $i \times j = j \times i$), mais cela dépend du contexte de l'application.
+\end{enumerate}
+
+\section{Structures de données avancées}
+
+\subsection{Listes chaînées}
+
+\begin{enumerate}
+	\item \textbf{Création d'une liste chaînée} :
+	
+	\textbf{Réponse} :
+	Pour créer une liste chaînée, nous devons définir une structure pour les nœuds de la liste, où chaque nœud contiendra une donnée et un pointeur vers le nœud suivant. La tête de la liste est initialisée à \texttt{NULL} pour indiquer que la liste est vide.
+	
+	\begin{lstlisting}[language=C]
+		#include <stdio.h>
+		#include <stdlib.h>
+		
+		struct Node {
+			int data;
+			struct Node* next;
+		};
+		
+		struct Node* head = NULL;  // Initialisation de la tête de la liste à NULL
+		
+		// Fonction pour créer une nouvelle liste
+		void createList(int value) {
+			struct Node* newNode = malloc(sizeof(struct Node));
+			newNode->data = value;
+			newNode->next = NULL;
+			head = newNode;
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La fonction \texttt{createList} alloue de la mémoire pour un nouveau nœud, définit sa donnée, et initialise son pointeur suivant à \texttt{NULL}. Elle affecte ensuite ce nœud à la tête de la liste.
+	
+	\item \textbf{Insertion d'un nœud au début de la liste} :
+	
+	\textbf{Réponse} :
+	Pour insérer un nœud au début de la liste chaînée, nous créons un nouveau nœud et nous mettons à jour son pointeur \texttt{next} pour qu'il pointe vers l'ancienne tête de la liste. Ensuite, nous mettons la tête de la liste pour qu'elle pointe vers ce nouveau nœud.
+	
+	\begin{lstlisting}[language=C]
+		// Fonction pour insérer un nœud au début de la liste
+		void insertAtBeginning(int value) {
+			struct Node* newNode = malloc(sizeof(struct Node));
+			newNode->data = value;
+			newNode->next = head;  // Le nouveau nœud pointe vers l'ancienne tête
+			head = newNode;  // La tête pointe maintenant vers le nouveau nœud
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La fonction \texttt{insertAtBeginning} crée un nouveau nœud avec la valeur donnée, fait pointer ce nœud vers l'ancienne tête de la liste, puis met la tête de la liste pour qu'elle pointe vers le nouveau nœud. Cela insère efficacement le nœud au début de la liste.
+	
+	\item \textbf{Insertion d'un nœud à une position spécifique} :
+	
+	\textbf{Réponse} :
+	Pour insérer un nœud à une position spécifique dans la liste, nous devons parcourir la liste jusqu'à la position souhaitée, puis insérer le nœud à cet endroit en ajustant les pointeurs. Si la position est zéro, on insère au début de la liste.
+	
+	\begin{lstlisting}[language=C]
+		// Fonction pour insérer un nœud à une position spécifique
+		void insertAtPosition(int value, int position) {
+			if (position == 0) {
+				insertAtBeginning(value);
+				return;
+			}
+			
+			struct Node* newNode = malloc(sizeof(struct Node));
+			newNode->data = value;
+			struct Node* current = head;
+			
+			for (int i = 0; i < position - 1 && current != NULL; i++) {
+				current = current->next;
+			}
+			
+			if (current == NULL) {
+				printf("Position invalide\n");
+				return;
+			}
+			
+			newNode->next = current->next;
+			current->next = newNode;
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La fonction \texttt{insertAtPosition} parcourt la liste jusqu'à la position spécifiée. Si la position est zéro, elle appelle la fonction \texttt{insertAtBeginning}. Sinon, elle insère un nouveau nœud à la position donnée en ajustant les pointeurs. Si la position est invalide, un message d'erreur est affiché.
+	
+	\item \textbf{Suppression d'un nœud de la liste chaînée} :
+	
+	\textbf{Réponse} :
+	Pour supprimer un nœud de la liste chaînée, nous devons parcourir la liste jusqu'à ce que nous trouvions le nœud à supprimer. Ensuite, nous ajustons le pointeur du nœud précédent pour qu'il pointe vers le nœud suivant du nœud à supprimer.
+	
+	\begin{lstlisting}[language=C]
+		// Fonction pour supprimer un nœud d'une liste chaînée
+		void deleteNode(int value) {
+			struct Node* current = head;
+			struct Node* previous = NULL;
+			
+			// Si la tête contient la valeur à supprimer
+			if (current != NULL && current->data == value) {
+				head = current->next;
+				free(current);
+				return;
+			}
+			
+			// Parcours de la liste à la recherche du nœud
+			while (current != NULL && current->data != value) {
+				previous = current;
+				current = current->next;
+			}
+			
+			// Si la valeur n'est pas trouvée
+			if (current == NULL) {
+				printf("Valeur non trouvée dans la liste\n");
+				return;
+			}
+			
+			// Supprimer le nœud
+			previous->next = current->next;
+			free(current);
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La fonction \texttt{deleteNode} commence par vérifier si le nœud à supprimer est le premier nœud de la liste (la tête). Si ce n'est pas le cas, elle parcourt la liste pour trouver le nœud correspondant à la valeur à supprimer. Une fois le nœud trouvé, elle ajustera le pointeur du nœud précédent pour qu'il saute le nœud à supprimer et libère la mémoire allouée pour ce nœud.
+	
+\end{enumerate}
+
+
+
+
+\subsection{Piles}
+
+\begin{enumerate}
+	\item \textbf{Construction d'une pile} :
+	
+	\textbf{Réponse} :
+	Pour construire une pile, vous devez définir une structure qui contient les éléments de la pile et un pointeur ou un indice qui indique le sommet de la pile. La structure suivante utilise un tableau pour représenter la pile et un indice pour suivre le sommet de la pile.
+	
+	\begin{lstlisting}[language=C]
+		#include <stdio.h>
+		#include <stdlib.h>
+		
+		#define MAX 10
+		
+		struct Stack {
+			int items[MAX];
+			int top;
+		};
+		
+		// Fonction pour initialiser la pile
+		void initStack(struct Stack* stack) {
+			stack->top = -1;  // La pile est vide au départ
+		}
+		
+		// Fonction pour vérifier si la pile est vide
+		int isEmpty(struct Stack* stack) {
+			return stack->top == -1;
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La fonction \texttt{initStack} initialise la pile en définissant le sommet à \texttt{-1}, ce qui indique que la pile est vide. La fonction \texttt{isEmpty} permet de vérifier si la pile est vide en vérifiant si l'indice du sommet est égal à \texttt{-1}.
+	
+	\item \textbf{Insertion d'un élément dans une pile (empilage)} :
+	
+	\textbf{Réponse} :
+	L'empilage consiste à ajouter un élément au sommet de la pile. Voici la fonction pour empiler un élément dans la pile, en vérifiant d'abord si la pile n'est pas pleine.
+	
+	\begin{lstlisting}[language=C]
+		// Fonction pour empiler un élément
+		void push(struct Stack* stack, int value) {
+			if (stack->top == MAX - 1) {
+				printf("Erreur : pile pleine\n");
+				return;
+			}
+			stack->items[++stack->top] = value;  // Incrémente le sommet puis ajoute l'élément
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La fonction \texttt{push} ajoute un élément au sommet de la pile. Si le sommet est égal à \texttt{MAX - 1}, cela signifie que la pile est pleine et une erreur est renvoyée. Sinon, l'élément est ajouté au sommet, et l'indice du sommet est incrémenté.
+	
+	\item \textbf{Suppression d'un élément dans une pile (dépilage)} :
+	
+	\textbf{Réponse} :
+	Le dépilage consiste à retirer l'élément du sommet de la pile. Si la pile est vide, une erreur est renvoyée. Voici la fonction pour dépiler un élément de la pile :
+	
+	\begin{lstlisting}[language=C]
+		// Fonction pour dépiler un élément
+		int pop(struct Stack* stack) {
+			if (isEmpty(stack)) {
+				printf("Erreur : pile vide\n");
+				return -1;  // Valeur spéciale pour indiquer une erreur
+			}
+			return stack->items[stack->top--];  // Retourne l'élément au sommet puis décrémente le sommet
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La fonction \texttt{pop} supprime l'élément au sommet de la pile. Si la pile est vide, elle renvoie une erreur. Sinon, elle retourne l'élément au sommet et décrémente l'indice du sommet pour retirer l'élément de la pile.
+	
+	\item \textbf{Test de la pile} :
+	
+	\textbf{Réponse} :
+	Voici un exemple de code qui utilise les fonctions d'empilage et de dépilage sur une pile.
+	
+	\begin{lstlisting}[language=C]
+		int main() {
+			struct Stack stack;
+			initStack(&stack);
+			
+			push(&stack, 10);
+			push(&stack, 20);
+			push(&stack, 30);
+			
+			printf("Dépiler : %d\n", pop(&stack));  // Devrait afficher 30
+			printf("Dépiler : %d\n", pop(&stack));  // Devrait afficher 20
+			printf("Dépiler : %d\n", pop(&stack));  // Devrait afficher 10
+			
+			return 0;
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	Dans cet exemple, nous empilons trois éléments (10, 20, 30) dans la pile et ensuite nous les dépilons un par un. Les éléments sont retirés dans l'ordre inverse de leur insertion, conformément au principe LIFO (Last In, First Out).
+	
+\end{enumerate}
+
+%
+
+\subsection{Files}
+
+\begin{enumerate}
+	\item \textbf{Construction d'une file} :
+	
+	\textbf{Réponse} :
+	Pour construire une file, vous devez définir une structure qui contient les éléments de la file, ainsi que des pointeurs pour l'avant et l'arrière. Ces pointeurs permettent de gérer les opérations d'enfilage (ajout d'un élément à l'arrière) et de défilage (retrait du premier élément). Voici un exemple de structure de file en C :
+	
+	\begin{lstlisting}[language=C]
+		#include <stdio.h>
+		#include <stdlib.h>
+		
+		struct Node {
+			int data;
+			struct Node* next;
+		};
+		
+		struct Queue {
+			struct Node* front;
+			struct Node* rear;
+		};
+		
+		// Fonction pour initialiser la file
+		void initQueue(struct Queue* q) {
+			q->front = NULL;
+			q->rear = NULL;
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La structure \texttt{Queue} contient deux pointeurs, \texttt{front} et \texttt{rear}, qui pointent respectivement vers le premier et le dernier élément de la file. La fonction \texttt{initQueue} initialise ces pointeurs à \texttt{NULL} pour indiquer que la file est vide.
+	
+	\item \textbf{Insertion d'un élément dans une file (enfilage)} :
+	
+	\textbf{Réponse} :
+	L'enfilage consiste à ajouter un élément à la fin de la file. Si la file est vide, l'élément ajouté devient à la fois l'avant et l'arrière de la file. Si la file contient déjà des éléments, vous devez ajuster le pointeur \texttt{rear} pour indiquer le nouvel élément.
+	
+	\begin{lstlisting}[language=C]
+		// Fonction pour enfiler un élément
+		void enqueue(struct Queue* q, int value) {
+			struct Node* newNode = malloc(sizeof(struct Node));
+			newNode->data = value;
+			newNode->next = NULL;
+			
+			if (q->rear == NULL) {  // Si la file est vide
+				q->front = newNode;
+				q->rear = newNode;
+			} else {
+				q->rear->next = newNode;
+				q->rear = newNode;
+			}
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La fonction \texttt{enqueue} crée un nouveau nœud et le place à la fin de la file. Si la file est vide, l'élément ajouté devient à la fois le premier et le dernier élément. Sinon, le nouvel élément devient le dernier de la file, et \texttt{rear} est mis à jour pour pointer vers ce nouvel élément.
+	
+	\item \textbf{Suppression d'un élément dans une file (défilage)} :
+	
+	\textbf{Réponse} :
+	Le défilage consiste à retirer le premier élément de la file. Si la file est vide, la fonction retourne une erreur ou une valeur spéciale. Sinon, elle met à jour le pointeur \texttt{front} pour qu'il pointe vers le prochain élément de la file et libère la mémoire du nœud retiré.
+	
+	\begin{lstlisting}[language=C]
+		// Fonction pour défiler un élément
+		int dequeue(struct Queue* q) {
+			if (q->front == NULL) {
+				printf("La file est vide!\n");
+				return -1;  // Valeur d'erreur
+			}
+			
+			struct Node* temp = q->front;
+			int value = temp->data;
+			q->front = q->front->next;
+			
+			if (q->front == NULL) {  // Si la file devient vide après le défilage
+				q->rear = NULL;
+			}
+			
+			free(temp);
+			return value;
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La fonction \texttt{dequeue} retire l'élément au début de la file en mettant à jour le pointeur \texttt{front}. Si la file devient vide après le défilage, le pointeur \texttt{rear} est également mis à \texttt{NULL}. La mémoire du nœud retiré est libérée, et la fonction retourne la valeur de l'élément retiré.
+	
+\end{enumerate}
+
+%
+
+\subsection{Arbres binaires}
+
+\begin{enumerate}
+	\item \textbf{Construction d'un arbre binaire} :
+	
+	\textbf{Réponse} :
+	Pour construire un arbre binaire, vous devez définir une structure qui représente chaque nœud de l'arbre. Chaque nœud contient des données et deux pointeurs, un pour l'enfant gauche et un pour l'enfant droit. L'arbre commence avec un seul nœud racine, et les autres nœuds sont ajoutés en fonction de leur relation avec la racine. Voici un exemple de code en C pour définir la structure d'un arbre binaire :
+	
+	\begin{lstlisting}[language=C]
+		#include <stdio.h>
+		#include <stdlib.h>
+		
+		struct Node {
+			int data;
+			struct Node* left;
+			struct Node* right;
+		};
+		
+		// Fonction pour créer un nouveau nœud
+		struct Node* createNode(int data) {
+			struct Node* newNode = malloc(sizeof(struct Node));
+			newNode->data = data;
+			newNode->left = NULL;
+			newNode->right = NULL;
+			return newNode;
+		}
+		
+		// Fonction pour insérer un élément dans l'arbre binaire
+		void insert(struct Node** root, int data) {
+			if (*root == NULL) {
+				*root = createNode(data);
+				return;
+			}
+			if (data < (*root)->data)
+			insert(&(*root)->left, data);
+			else
+			insert(&(*root)->right, data);
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La structure \texttt{Node} contient un entier \texttt{data} et deux pointeurs \texttt{left} et \texttt{right} qui pointent respectivement vers l'enfant gauche et l'enfant droit. La fonction \texttt{createNode} crée un nouveau nœud avec la valeur donnée, et la fonction \texttt{insert} insère un élément dans l'arbre en suivant la règle de l'arbre binaire de recherche (les éléments plus petits vont à gauche et les plus grands à droite).
+	
+	\item \textbf{Insertion dans un arbre binaire} :
+	
+	\textbf{Réponse} :
+	L'insertion dans un arbre binaire se fait en suivant la règle de comparaison avec la racine. Si le nouvel élément est plus petit que la racine, il va à gauche, sinon il va à droite. Le processus continue récursivement jusqu'à ce qu'un emplacement vide soit trouvé pour le nouvel élément.
+	
+	Voici l'exemple d'insertion dans un arbre binaire :
+	
+	\begin{lstlisting}[language=C]
+		int main() {
+			struct Node* root = NULL;
+			insert(&root, 50);  // Insertion de 50 à la racine
+			insert(&root, 30);  // Insertion de 30 à gauche de 50
+			insert(&root, 70);  // Insertion de 70 à droite de 50
+			insert(&root, 20);  // Insertion de 20 à gauche de 30
+			insert(&root, 40);  // Insertion de 40 à droite de 30
+			insert(&root, 60);  // Insertion de 60 à gauche de 70
+			insert(&root, 80);  // Insertion de 80 à droite de 70
+			return 0;
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	Dans cet exemple, l'arbre est construit à partir de la racine et chaque élément est inséré à la bonne position en fonction de sa valeur par rapport à la racine. Les éléments plus petits que la racine vont à gauche et ceux plus grands vont à droite. L'insertion est effectuée récursivement jusqu'à ce que l'emplacement correct soit trouvé.
+	
+	\item \textbf{Algorithmes de parcours des arbres binaires} :
+	
+	\textbf{Réponse} :
+	Les algorithmes de parcours des arbres binaires sont utilisés pour visiter tous les nœuds de l'arbre dans un ordre spécifique. Il existe trois principaux types de parcours d'arbres binaires :
+	
+	\begin{itemize}
+		\item \textbf{Parcours pré-ordre} : Visite la racine, puis le sous-arbre gauche et enfin le sous-arbre droit.
+		\item \textbf{Parcours en-ordre} : Visite le sous-arbre gauche, puis la racine, et enfin le sous-arbre droit. Ce type de parcours est utilisé dans les arbres binaires de recherche pour parcourir les éléments dans l'ordre croissant.
+		\item \textbf{Parcours post-ordre} : Visite le sous-arbre gauche, puis le sous-arbre droit, et enfin la racine.
+	\end{itemize}
+	
+	Exemple de code pour un parcours en-ordre en C :
+	
+	\begin{lstlisting}[language=C]
+		// Fonction de parcours en-ordre
+		void inorder(struct Node* root) {
+			if (root == NULL) {
+				return;
+			}
+			inorder(root->left);  // Visiter le sous-arbre gauche
+			printf("%d ", root->data);  // Visiter la racine
+			inorder(root->right);  // Visiter le sous-arbre droit
+		}
+		
+		// Fonction pour afficher l'arbre en-ordre
+		int main() {
+			struct Node* root = NULL;
+			insert(&root, 50);
+			insert(&root, 30);
+			insert(&root, 70);
+			insert(&root, 20);
+			insert(&root, 40);
+			insert(&root, 60);
+			insert(&root, 80);
+			
+			printf("Parcours en-ordre : ");
+			inorder(root);  // Afficher les éléments de l'arbre en-ordre
+			return 0;
+		}
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La fonction \texttt{inorder} parcourt l'arbre en-ordre en visitant d'abord le sous-arbre gauche, puis la racine, puis le sous-arbre droit. Le résultat du parcours en-ordre d'un arbre binaire de recherche est toujours les éléments dans l'ordre croissant.
+	
+\end{enumerate}
+
+
+
+\subsection{Graphes}
+
+\begin{enumerate}
+	\item \textbf{Construction d'un graphe} :
+	
+	\textbf{Réponse} :
+	Pour construire un graphe, il faut définir une structure de données qui contient les sommets (ou nœuds) ainsi que les arêtes qui les relient. On peut utiliser une structure avec des listes d'adjacence ou des matrices d'adjacence pour représenter le graphe. Dans ce cas, nous allons utiliser des listes d'adjacence, où chaque sommet a une liste de connexions vers les autres sommets.
+	
+	Voici un exemple de code C pour définir un graphe avec des listes d'adjacence :
+	
+	\begin{lstlisting}[language=C]
+		#include <stdio.h>
+		#include <stdlib.h>
+		
+		// Structure représentant un nœud
+		struct Node {
+			int vertex;
+			struct Node* next;
+		};
+		
+		// Structure représentant un graphe
+		struct Graph {
+			int numVertices;
+			struct Node** adjLists;
+		};
+		
+		// Fonction pour créer un nœud
+		struct Node* createNode(int vertex) {
+			struct Node* newNode = malloc(sizeof(struct Node));
+			newNode->vertex = vertex;
+			newNode->next = NULL;
+			return newNode;
+		}
+		
+		// Fonction pour créer un graphe avec un nombre de sommets donné
+		struct Graph* createGraph(int vertices) {
+			struct Graph* graph = malloc(sizeof(struct Graph));
+			graph->numVertices = vertices;
+			graph->adjLists = malloc(vertices * sizeof(struct Node*));
+			
+			for (int i = 0; i < vertices; i++) {
+				graph->adjLists[i] = NULL; // Initialisation de chaque liste d'adjacence
+			}
+			return graph;
+		}
+		
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	Dans ce code, nous avons une structure \texttt{Node} qui représente un nœud avec un sommet et un pointeur vers le nœud suivant (pour former une liste chaînée). La structure \texttt{Graph} contient un tableau de pointeurs vers les listes d'adjacence. Chaque élément de ce tableau représente un sommet du graphe, et chaque liste contient les sommets connectés à celui-ci.
+	
+	\item \textbf{Ajout d'arêtes dans un graphe} :
+	
+	\textbf{Réponse} :
+	Pour ajouter des arêtes dans un graphe, on insère un nouveau nœud dans la liste d'adjacence du sommet de départ (source) et dans la liste d'adjacence du sommet de destination. Si le graphe est orienté, l'arête va seulement du sommet source vers le sommet destination. Si le graphe est non orienté, l'arête est bidirectionnelle, donc on doit ajouter des connexions dans les deux directions.
+	
+	Voici un exemple de fonction en C pour ajouter une arête dans un graphe non orienté :
+	
+	\begin{lstlisting}[language=C]
+		// Fonction pour ajouter une arête entre deux sommets dans un graphe non orienté
+		void addEdge(struct Graph* graph, int src, int dest) {
+			// Ajouter une arête de src à dest
+			struct Node* newNode = createNode(dest);
+			newNode->next = graph->adjLists[src];
+			graph->adjLists[src] = newNode;
+			
+			// Ajouter une arête de dest à src (pour un graphe non orienté)
+			newNode = createNode(src);
+			newNode->next = graph->adjLists[dest];
+			graph->adjLists[dest] = newNode;
+		}
+		
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La fonction \texttt{addEdge} crée un nouveau nœud pour chaque arête et l'ajoute à la liste d'adjacence correspondante. Dans le cas d'un graphe non orienté, il y a deux ajouts : un de \texttt{src} à \texttt{dest} et un de \texttt{dest} à \texttt{src}, ce qui rend l'arête bidirectionnelle.
+	
+	\item \textbf{Recherche en largeur (Complétez le code)} :
+	
+	\textbf{Réponse} :
+	Pour implémenter la recherche en largeur (BFS), on utilise une file (FIFO) pour explorer chaque niveau du graphe. On commence à partir du sommet source et on explore tous ses voisins, puis les voisins de ces voisins, et ainsi de suite.
+	
+	Voici un exemple de code pour implémenter la recherche en largeur (BFS) :
+	
+	\begin{lstlisting}[language=C]
+		#include <stdio.h>
+		#include <stdlib.h>
+		#include <stdbool.h>
+		
+		// Structure représentant une file
+		struct Queue {
+			int* items;
+			int front, rear, size;
+		};
+		
+		// Fonction pour initialiser la file
+		void initQueue(struct Queue* q, int size) {
+			q->items = malloc(size * sizeof(int));
+			q->front = 0;
+			q->rear = 0;
+			q->size = size;
+		}
+		
+		// Fonction pour ajouter un élément à la file
+		void enqueue(struct Queue* q, int item) {
+			q->items[q->rear++] = item;
+		}
+		
+		// Fonction pour retirer un élément de la file
+		int dequeue(struct Queue* q) {
+			return q->items[q->front++];
+		}
+		
+		// Fonction pour vérifier si la file est vide
+		bool isEmpty(struct Queue* q) {
+			return q->front == q->rear;
+		}
+		
+		// Fonction pour effectuer une recherche en largeur (BFS)
+		void bfs(struct Graph* graph, int start) {
+			bool* visited = malloc(graph->numVertices * sizeof(bool));
+			for (int i = 0; i < graph->numVertices; i++) {
+				visited[i] = false;
+			}
+			
+			struct Queue q;
+			initQueue(&q, graph->numVertices);
+			
+			visited[start] = true;
+			enqueue(&q, start);
+			
+			while (!isEmpty(&q)) {
+				int current = dequeue(&q);
+				printf("%d ", current);
+				
+				struct Node* temp = graph->adjLists[current];
+				while (temp) {
+					if (!visited[temp->vertex]) {
+						visited[temp->vertex] = true;
+						enqueue(&q, temp->vertex);
+					}
+					temp = temp->next;
+				}
+			}
+		}
+		
+	\end{lstlisting}
+	
+	\textbf{Explication} :
+	La fonction \texttt{bfs} commence par marquer le sommet source comme visité et l'ajoute à la file. Ensuite, elle explore tous les voisins du sommet actuel, en ajoutant les non visités à la file. Cela continue jusqu'à ce que tous les sommets accessibles aient été visités.
+	
+\end{enumerate}
+
+\section{Applications d'algorithmes en IA}
+	
+\section*{Régression Linéaire}
+
+\subsection*{Données}
+
+Les données d'entrée sont les suivantes :
+
+\begin{table}[h]
+	\centering
+	\caption{Données pour la régression linéaire}
+	\begin{tabular}{|c|c|}
+		\hline
+		\text{Surface (m²)} & \text{Prix (MGA)} \\ \hline
+		50 & 70,000,000 \\ \hline
+		75 & 95,000,000 \\ \hline
+		100 & 130,000,000 \\ \hline
+	\end{tabular}
+\end{table}
+
+Nous allons utiliser ces données pour calculer les coefficients \(a\) et \(b\) de la régression linéaire, puis prédire \(y\) pour \(x = 80\).
+
+\subsection*{Implémentation en C}
+
+Voici l'implémentation en C pour résoudre l'exercice :
+
+\begin{lstlisting}[caption=Implémentation de la Régression Linéaire en C]
+	#include <stdio.h>
+	
+	// Fonction pour calculer les coefficients a et b
+	void linearRegression(int x[], int y[], int n, float *a, float *b) {
+		int sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0;
+		
+		// Calcul des sommes nécessaires
+		for (int i = 0; i < n; i++) {
+			sumX += x[i];
+			sumY += y[i];
+			sumXY += x[i] * y[i];
+			sumX2 += x[i] * x[i];
+		}
+		
+		// Calcul des coefficients
+		*a = (n * sumXY - sumX * sumY) / (float)(n * sumX2 - sumX * sumX);
+		*b = (sumY - (*a) * sumX) / (float)n;
+	}
+	
+	// Fonction pour prédire y à partir de x
+	float predictY(float a, float b, int x) {
+		return a * x + b;
+	}
+	
+	int main() {
+		// Données fournies
+		int x[] = {50, 75, 100}; // Surface des maisons en m²
+		int y[] = {70000000, 95000000, 130000000}; // Prix en MGA
+		int n = 3; // Nombre de paires de données
+		
+		float a, b;
+		
+		// Appel de la fonction de régression linéaire
+		linearRegression(x, y, n, &a, &b);
+		
+		// Affichage des résultats
+		printf("Coefficients de la régression linéaire :\n");
+		printf("a = %.2f\n", a);
+		printf("b = %.2f\n\n", b);
+		
+		// Prédire le prix pour x = 80
+		int x_predict = 80;
+		float predicted_y = predictY(a, b, x_predict);
+		
+		printf("Le prix prédit pour une surface de %d m² est : %.2f MGA\n", x_predict, predicted_y);
+		
+		return 0;
+	}
+\end{lstlisting}
+
+\subsection*{Explication du Code}
+
+Le programme calcule les coefficients \(a\) et \(b\) de la régression linéaire en utilisant les formules suivantes :
+\[
+a = \frac{n \sum x_i y_i - \sum x_i \sum y_i}{n \sum x_i^2 - (\sum x_i)^2}
+\]
+\[
+b = \frac{\sum y_i - a \sum x_i}{n}
+\]
+Ensuite, il utilise ces coefficients pour prédire \(y\) pour \(x = 80\).
+
+\subsection*{Résultats}
+
+En exécutant ce programme avec les données fournies, le programme affiche les coefficients de régression et la prédiction pour \(x = 80\).
+
+
+
+\section*{Régression Logistique}
+
+
+\subsection*{Implémentation en C}
+
+Voici l'implémentation en C pour résoudre l'exercice :
+
+\begin{lstlisting}[caption=Implémentation de la Régression Logistique en C]
+	#include <stdio.h>
+	#include <math.h>
+	
+	// Fonction pour calculer z
+	float computeZ(float beta0, float beta1, float x1) {
+		return beta0 + beta1 * x1;
+	}
+	
+	// Fonction sigmoïde pour transformer z en probabilité P
+	float sigmoid(float z) {
+		return 1 / (1 + exp(-z));
+	}
+	
+	int main() {
+		// Données d'exemple
+		float beta0 = 0.5;  // Coefficient intercept
+		float beta1 = 0.1;  // Coefficient pour x1 (temps)
+		float x1 = 12;      // Temps en minutes
+		
+		// Calcul de z
+		float z = computeZ(beta0, beta1, x1);
+		
+		// Calcul de la probabilité P
+		float P = sigmoid(z);
+		
+		// Affichage des résultats
+		printf("Valeur de z : %.2f\n", z);
+		printf("Probabilité P : %.2f\n", P);
+		
+		return 0;
+	}
+\end{lstlisting}
+
+Le programme utilise la fonction sigmoïde pour transformer la valeur \( z \) calculée en probabilité \( P \), qui peut ensuite être utilisée pour prendre des décisions dans un modèle de régression logistique.
+
+\subsection*{Explication}
+
+Le programme calcule d'abord \( z \) en utilisant la formule de la régression linéaire :
+
+\[
+z = \beta_0 + \beta_1 \cdot x_1
+\]
+
+Ensuite, il applique la fonction sigmoïde :
+
+\[
+P = \frac{1}{1 + e^{-z}}
+\]
+
+Cela donne la probabilité \( P \) associée à une certaine valeur \( x_1 \) (dans ce cas, 12 minutes).
+
+
+\section*{ K-means}
+
+Voici un programme en C qui résout l'exercice demandé. Le programme suit les étapes suivantes :
+\begin{itemize}
+	\item Accepter une liste de points \( (x, y) \).
+	\item Initialiser 2 centroïdes aléatoires.
+	\item Assigner chaque point au centroïde le plus proche.
+	\item Recalculer les centroïdes et afficher les groupes finaux.
+\end{itemize}
+
+\subsection*{Données}
+
+Les données d'entrée sont les suivantes :
+
+\begin{table}[h]
+	\centering
+	\caption{Données pour K-means}
+	\begin{tabular}{|c|c|}
+		\hline
+		Point & Coordonnées $(x, y)$ \\ \hline
+		A     & (1, 2)               \\ \hline
+		B     & (3, 4)               \\ \hline
+		C     & (5, 6)               \\ \hline
+		D     & (8, 9)               \\ \hline
+	\end{tabular}
+\end{table}
+
+\subsection*{Implémentation en C}
+
+Voici l'implémentation en C pour résoudre l'exercice :
+
+\begin{lstlisting}[caption=Implémentation de l'algorithme K-means en C]
+	#include <stdio.h>
+	#include <math.h>
+	#include <stdlib.h>
+	
+	// Structure pour un point (x, y)
+	typedef struct {
+		float x;
+		float y;
+	} Point;
+	
+	// Fonction pour calculer la distance entre deux points
+	float distance(Point a, Point b) {
+		return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));
+	}
+	
+	// Fonction pour initialiser les centroïdes aléatoires
+	void initializeCentroids(Point points[], int k, Point centroids[]) {
+		centroids[0] = points[0];  // Initialisation manuelle pour le premier centroïde
+		centroids[1] = points[3];  // Initialisation manuelle pour le deuxième centroïde
+	}
+	
+	// Fonction pour assigner chaque point au centroïde le plus proche
+	void assignPointsToCentroids(Point points[], int n, Point centroids[], int clusters[]) {
+		for (int i = 0; i < n; i++) {
+			float minDistance = distance(points[i], centroids[0]);
+			clusters[i] = 0;
+			
+			for (int j = 1; j < 2; j++) {
+				float dist = distance(points[i], centroids[j]);
+				if (dist < minDistance) {
+					minDistance = dist;
+					clusters[i] = j;
+				}
+			}
+		}
+	}
+	
+	// Fonction pour recalculer les centroïdes
+	void recalculateCentroids(Point points[], int n, Point centroids[], int clusters[]) {
+		float sumX[2] = {0, 0}, sumY[2] = {0, 0};
+		int count[2] = {0, 0};
+		
+		for (int i = 0; i < n; i++) {
+			sumX[clusters[i]] += points[i].x;
+			sumY[clusters[i]] += points[i].y;
+			count[clusters[i]]++;
+		}
+		
+		for (int i = 0; i < 2; i++) {
+			centroids[i].x = sumX[i] / count[i];
+			centroids[i].y = sumY[i] / count[i];
+		}
+	}
+	
+	int main() {
+		// Données des points
+		Point points[] = {{1, 2}, {3, 4}, {5, 6}, {8, 9}};
+		int n = 4;  // Nombre de points
+		
+		// Initialisation des centroïdes
+		Point centroids[2];
+		initializeCentroids(points, 2, centroids);
+		
+		// Assignation des points aux centroïdes
+		int clusters[4];
+		assignPointsToCentroids(points, n, centroids, clusters);
+		
+		// Affichage des groupes après la première assignation
+		printf("Assignation des points aux clusters :\n");
+		for (int i = 0; i < n; i++) {
+			printf("Point (%f, %f) -> Cluster %d\n", points[i].x, points[i].y, clusters[i]);
+		}
+		
+		// Recalcul des centroïdes
+		recalculateCentroids(points, n, centroids, clusters);
+		
+		// Affichage des nouveaux centroïdes
+		printf("\nNouveaux centroïdes :\n");
+		for (int i = 0; i < 2; i++) {
+			printf("Centroïde %d : (%f, %f)\n", i + 1, centroids[i].x, centroids[i].y);
+		}
+		
+		return 0;
+	}
+\end{lstlisting}
+
+Le programme fonctionne comme suit :
+1. Il initialise deux centroïdes à partir des points donnés (ici, manuellement sélectionnés pour simplifier).
+2. Chaque point est assigné au centroïde le plus proche.
+3. Les centroïdes sont recalculés en prenant la moyenne des points de chaque groupe.
+4. Enfin, les résultats sont affichés, montrant les groupes de points ainsi que les nouveaux centroïdes.
+
+\subsection*{Explication des résultats}
+
+Après avoir exécuté le programme, vous obtiendrez l'assignation des points à leurs clusters respectifs et les nouveaux centroïdes recalculés. L'algorithme peut être itéré plusieurs fois pour améliorer les résultats.
+
+
+

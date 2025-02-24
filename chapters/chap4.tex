@@ -41,7 +41,35 @@ Pour supprimer un nœud d'une liste chaînée, vous avez deux approches principa
 
 Les listes chaînées offrent une structure flexible pour stocker des données et permettent des opérations d'insertion et de suppression efficaces. L'utilisation de pointeurs est essentielle pour manipuler la structure. Il est également crucial de gérer correctement la mémoire, surtout lors de la suppression de nœuds ou de la libération de la liste entière.
 
-Voici un exemple d'implémentation d'une liste chaînée en C : [Repository containing codes to be pasted here]
+%Voici un exemple d'implémentation d'une liste chaînée en C : [Repository containing codes to be pasted here]
+
+
+\section*{Exercices}
+\begin{enumerate}
+	\item \textbf{Création} : 
+	\begin{enumerate}
+		\item Écrivez un programme en C pour créer une liste chaînée contenant les nombres suivants : \texttt{10}, \texttt{20}, \texttt{30}.
+		\item Affichez les éléments de la liste chaînée dans l'ordre.
+	\end{enumerate}
+	
+	\item \textbf{Insertion} : 
+	\begin{enumerate}
+		\item Ajoutez un élément \texttt{40} à la fin de la liste chaînée existante.
+		\item Ajoutez un élément \texttt{5} au début de la liste chaînée.
+	\end{enumerate}
+	
+	\item \textbf{Suppression} : 
+	\begin{enumerate}
+		\item Supprimez l'élément \texttt{20} de la liste chaînée.
+		\item Supprimez l'élément à la position \texttt{2} (indice basé sur \texttt{0}).
+	\end{enumerate}
+	
+%	\item \textbf{Exploration} : 
+%	\begin{enumerate}
+%		\item Affichez tous les éléments de la liste chaînée après chaque opération d'insertion ou de suppression.
+%	\end{enumerate}
+\end{enumerate}
+
 
 \section{Piles}
 
@@ -72,6 +100,33 @@ Les piles sont utilisées dans de nombreux contextes, tels que les opérations d
 Les piles offrent une structure simple mais puissante pour gérer des opérations où le dernier entré est le premier à sortir. Elles sont utilisées dans de nombreux domaines informatiques, y compris les algorithmes de récursion et les éditeurs de texte. Comprendre leur fonctionnement et savoir comment les utiliser efficacement est essentiel pour tout développeur.
 
 
+\section*{Exercices}
+\begin{enumerate}
+	\item \textbf{Création} :
+	\begin{enumerate}
+		\item Implémentez une pile en C à l'aide d'un tableau de taille \texttt{5}. Ajoutez les éléments suivants : \texttt{10}, \texttt{20}, \texttt{30}.
+		\item Affichez les éléments actuels de la pile.
+	\end{enumerate}
+	
+	\item \textbf{Empilage (Push)} :
+	\begin{enumerate}
+		\item Ajoutez deux nouveaux éléments \texttt{40} et \texttt{50} dans la pile.
+		\item Essayez d’ajouter un élément \texttt{60} et gérez l’erreur si la pile est pleine.
+	\end{enumerate}
+	
+	\item \textbf{Dépilage (Pop)} :
+	\begin{enumerate}
+		\item Supprimez le dernier élément inséré et affichez l’état actuel de la pile.
+		\item Continuez à dépiler jusqu’à ce que la pile soit vide et gérez l’erreur si la pile est déjà vide.
+	\end{enumerate}
+	
+	\item \textbf{Vérification} : 
+	\begin{enumerate}
+		\item Ajoutez une vérification pour savoir si la pile est vide ou pleine avant chaque opération.
+	\end{enumerate}
+\end{enumerate}
+
+
 \section{Files}
 
 Les \emph{files} (ou FIFO, First In First Out) sont des structures de données où le premier élément inséré est le premier à sortir. Contrairement aux piles, où le dernier élément ajouté est le premier à sortir, les files fonctionnent comme des files d'attente dans un magasin, où les premiers arrivés sont les premiers servis.
@@ -99,6 +154,33 @@ Les files sont largement utilisées dans des applications informatiques où des 
 
 \subsection{Résumé}
 Les files offrent une structure pratique pour des opérations où le premier élément inséré est le premier à sortir. Elles ont de nombreuses applications dans le monde informatique, de la gestion des tâches aux systèmes de files d'attente. Comprendre leur fonctionnement est essentiel pour travailler efficacement avec des structures FIFO.
+
+\section*{Exercices}
+\begin{enumerate}
+	\item \textbf{Création} :
+	\begin{enumerate}
+		\item Implémentez une file en C à l'aide d’un tableau de taille \texttt{5}. Ajoutez les éléments suivants : \texttt{1}, \texttt{2}, \texttt{3}.
+		\item Affichez les éléments actuels de la file.
+	\end{enumerate}
+	
+	\item \textbf{Enfilage (Enqueue)} :
+	\begin{enumerate}
+		\item Ajoutez deux nouveaux éléments \texttt{4} et \texttt{5} dans la file.
+		\item Essayez d’ajouter un élément \texttt{6} et gérez l’erreur si la file est pleine.
+	\end{enumerate}
+	
+	\item \textbf{Défilage (Dequeue)} :
+	\begin{enumerate}
+		\item Supprimez le premier élément inséré et affichez l’état actuel de la file.
+		\item Continuez à défiler jusqu’à ce que la file soit vide et gérez l’erreur si la file est déjà vide.
+	\end{enumerate}
+	
+	\item \textbf{Exploration} :
+	\begin{enumerate}
+		\item Affichez tous les éléments de la file après chaque opération.
+	\end{enumerate}
+\end{enumerate}
+
 
 \section{Arbres binaires}
 
@@ -150,6 +232,88 @@ Les algorithmes de parcours des arbres binaires ont des applications variées. L
 \subsection{Résumé}
 Les arbres binaires sont des structures de données polyvalentes, idéales pour des opérations de recherche et de tri. Ils permettent des algorithmes efficaces pour parcourir des données de manière structurée. Comprendre comment insérer des nœuds et utiliser des arbres binaires est crucial pour travailler avec des structures de données avancées.
 
+\section*{Exercices}
+\begin{enumerate}
+	\item \textbf{Création (Complétez le code)} :
+	\begin{enumerate}
+		\item Le code ci-dessous initialise une structure pour un nœud d'arbre binaire. Complétez-le en ajoutant la fonction \texttt{createNode} pour allouer de la mémoire et initialiser un nœud.
+		\begin{verbatim}
+			struct Node {
+				int data;
+				struct Node* left;
+				struct Node* right;
+			};
+			
+			--- Ajoutez la fonction createNode ici ---
+			
+			int main() {
+				struct Node* root = createNode(50);
+				printf("Racine créée avec succès : %d", root->data);
+				return 0;
+			}
+		\end{verbatim}
+	\end{enumerate}
+	
+	\item \textbf{Insertion (Ajoutez les lignes manquantes)} :
+	\begin{enumerate}
+		\item Complétez la fonction d'insertion dans un arbre binaire. Ajoutez les conditions pour insérer un nœud à gauche ou à droite.
+		\begin{verbatim}
+			struct Node* insert(struct Node* root, int data) {
+				if (root == NULL) {
+					return createNode(data);
+				}
+				if (data < root->data) {
+					// Ligne manquante pour insérer à gauche
+				} else {
+					// Ligne manquante pour insérer à droite
+				}
+				return root;
+			}
+		\end{verbatim}
+		\item Testez votre fonction en insérant les éléments suivants : \texttt{30}, \texttt{70}, \texttt{20}.
+	\end{enumerate}
+	
+	\item \textbf{Parcours (Complétez le code)} :
+	\begin{enumerate}
+		\item Complétez la fonction de parcours en pré-ordre en remplissant la logique pour visiter les enfants gauche et droit :
+		\begin{verbatim}
+			void preOrder(struct Node* root) {
+				if (root != NULL) {
+					printf("%d ", root->data);
+					--- Ajoutez l'appel pour visiter l'enfant gauche ---
+					--- Ajoutez l'appel pour visiter l'enfant droit ---
+				}
+			}
+		\end{verbatim}
+		\item Affichez les éléments de l’arbre en utilisant votre fonction.
+	\end{enumerate}
+	
+	\item \textbf{Suppression (Avec guide)} :
+	\begin{enumerate}
+		\item Ajoutez la logique pour supprimer un nœud ayant deux enfants :
+		\begin{verbatim}
+			struct Node* deleteNode(struct Node* root, int data) {
+				if (root == NULL) return root;
+				if (data < root->data) {
+					root->left = deleteNode(root->left, data);
+				} else if (data > root->data) {
+					root->right = deleteNode(root->right, data);
+				} else {
+					if (root->left == NULL && root->right == NULL) {
+						free(root);
+						return NULL;
+					}
+					// Ajoutez ici la logique pour trouver le successeur en-ordre
+				}
+				return root;
+			}
+		\end{verbatim}
+		\item Supprimez l’élément \texttt{70} de l’arbre existant et affichez les éléments en parcours en-ordre.
+	\end{enumerate}
+\end{enumerate}
+
+
+
 \section{Graphes}
 
 Les \emph{graphes} sont des structures de données composées de nœuds (ou sommets) et d'arêtes (les connexions entre les nœuds). Les graphes peuvent être orientés ou non orientés. Dans un graphe orienté, les arêtes ont une direction (comme une flèche). Dans un graphe non orienté, les arêtes n'ont pas de direction particulière. Les graphes sont utilisés pour résoudre des problèmes complexes comme la recherche des plus courts chemins, la détection de cycles, ou le partitionnement.
@@ -180,13 +344,13 @@ Les graphes peuvent résoudre des problèmes comme la recherche du plus court ch
 Les algorithmes de parcours de graphes permettent d'explorer ou de traverser les graphes de différentes manières. Les méthodes courantes de parcours incluent la recherche en profondeur (DFS) et la recherche en largeur (BFS).
 
 \begin{enumerate}[label=\alph*)]
-	\item \textbf{Recherche en profondeur (DFS)}
+	\item \textbf{Recherche en profondeur (DFS -- [Depth First Search])}
 	
 	DFS explore le graphe en suivant chaque branche aussi loin que possible avant de revenir en arrière. Elle utilise une pile pour mémoriser les nœuds visités. DFS est souvent utilisée pour détecter des cycles, trouver des composants connexes, ou résoudre des problèmes de recherche de chemins.
 	
 	- Fonctionnement : DFS commence à partir d'un nœud et explore tous ses voisins. Ensuite, il passe au nœud suivant non visité, poursuivant ainsi la profondeur jusqu'à ce qu'il n'y ait plus de nœuds à visiter. Puis, il revient en arrière pour explorer d'autres chemins.
 	
-	\item \textbf{Recherche en largeur (BFS)}
+	\item \textbf{Recherche en largeur (BFS -- [Breadth First Search])}
 	
 	BFS explore le graphe couche par couche, en visitant tous les voisins d'un nœud avant de passer au suivant. Elle utilise une file pour mémoriser les nœuds à visiter. BFS est couramment utilisée pour trouver des plus courts chemins dans des graphes non pondérés ou pour des problèmes de recherche de niveaux.
 	
@@ -205,3 +369,88 @@ Les algorithmes de parcours comme la recherche en profondeur (DFS) et la recherc
 
 Les graphes peuvent résoudre des problèmes tels que la recherche des plus courts chemins, la détection de cycles, ou la recherche de composants connexes. Ils permettent également de modéliser des systèmes complexes avec des connexions multiples. La compréhension des graphes, de leurs applications et des algorithmes de parcours est essentielle pour résoudre des problèmes avancés en informatique.
 
+
+
+\section*{Exercices}
+\begin{enumerate}
+	\item \textbf{Création (Complétez le code)} :
+	\begin{enumerate}
+		\item Complétez la fonction pour créer un graphe. Ajoutez la logique pour initialiser chaque liste d’adjacence.
+		\begin{verbatim}
+			struct Graph* createGraph(int vertices) {
+				struct Graph* graph = malloc(sizeof(struct Graph));
+				graph->numVertices = vertices;
+				graph->adjLists = malloc(vertices * sizeof(struct Node*));
+				for (int i = 0; i < vertices; i++) {
+					--- Ajoutez la ligne pour initialiser chaque liste d'adjacence ---
+				}
+				return graph;
+			}
+		\end{verbatim}
+	\end{enumerate}
+	
+	\item \textbf{Ajout d’arêtes (Complétez la fonction)} :
+	\begin{enumerate}
+		\item Complétez la fonction pour ajouter une arête entre deux sommets dans un graphe non orienté :
+		\begin{verbatim}
+			void addEdge(struct Graph* graph, int src, int dest) {
+				struct Node* newNode = malloc(sizeof(struct Node));
+				newNode->vertex = dest;
+				newNode->next = --- Ajoutez ici pour lier au sommet source ---
+				graph->adjLists[src] = newNode;
+				
+				// Ajouter la même logique pour dest -> src
+			}
+		\end{verbatim}
+		\item Ajoutez des arêtes entre les sommets \texttt{A}, \texttt{B}, \texttt{C}, et \texttt{D}.
+	\end{enumerate}
+	
+	\item \textbf{Recherche en largeur (Complétez le code)} :
+	\begin{enumerate}
+		\item Ajoutez la logique pour visiter tous les voisins d’un sommet dans la fonction BFS :
+		\begin{verbatim}
+			void BFS(struct Graph* graph, int startVertex) {
+				int visited[graph->numVertices];
+				for (int i = 0; i < graph->numVertices; i++) visited[i] = 0;
+				
+				struct Queue* queue = createQueue();
+				visited[startVertex] = 1;
+				enqueue(queue, startVertex);
+				
+				while (!isEmpty(queue)) {
+					int currentVertex = dequeue(queue);
+					printf("%d ", currentVertex);
+					
+					struct Node* temp = graph->adjLists[currentVertex];
+					while (temp) {
+						int adjVertex = temp->vertex;
+						if (!visited[adjVertex]) {
+							visited[adjVertex] = 1;
+							--- Ajoutez ici la logique pour mettre en file le sommet voisin ---
+						}
+						temp = temp->next;
+					}
+				}
+			}
+		\end{verbatim}
+		\item Testez la fonction BFS à partir du sommet \texttt{A}.
+	\end{enumerate}
+	
+	\item \textbf{Exploration (Ajoutez des vérifications)} :
+	\begin{enumerate}
+		\item Ajoutez une fonction pour vérifier si une arête existe entre deux sommets :
+		\begin{verbatim}
+			int edgeExists(struct Graph* graph, int src, int dest) {
+				struct Node* temp = graph->adjLists[src];
+				while (temp != NULL) {
+					if (temp->vertex == dest) {
+						--- Retournez une valeur indiquant que l'arête existe ---
+					}
+					temp = temp->next;
+				}
+				--- Retournez une valeur indiquant que l'arête n'existe pas ---
+			}
+		\end{verbatim}
+		\item Testez la fonction pour les sommets \texttt{A} et \texttt{D}.
+	\end{enumerate}
+\end{enumerate}

@@ -1,46 +1,53 @@
 % !TeX spellcheck = en_US
 \documentclass[11pt,fancy,authorye]{elegantbook}
+
+% Force chapter numbering
+\renewcommand{\chaptermark}[1]{%
+	\markboth{\thechapter.\ #1}{}}
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptername\ \thechapter}{20pt}{\Huge}
+
+% Ensure numbering depth
+\setcounter{secnumdepth}{1} % Number chapters and sections
+\setcounter{tocdepth}{2}    % Ensure depth in TOC
+
 \usepackage{xcolor}
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+
 % Custom definitions for French keywords in algorithmicx
 \algrenewcommand\algorithmicif{\textbf{Si}}
 \algrenewcommand\algorithmicelse{\textbf{Sinon}}
 \algrenewcommand\algorithmicfor{\textbf{Pour}}
 \algrenewcommand\algorithmicdo{\textbf{Faire}}
 \algrenewcommand\algorithmicwhile{\textbf{Tant~que}}
-%\algrenewcommand\algorithmicendwhile{\textbf{Fin Tant que}}
-%\algrenewcommand\algorithmicelseif{\textbf{Sinon Si}}
-
 \algrenewcommand\algorithmicthen{\textbf{Alors}}
 \algrenewcommand\algorithmicend{\textbf{Fin}}
 \algrenewcommand\algorithmicreturn{\textbf{Retour}}
-
-
+\usepackage[utf8]{inputenc} % For UTF-8 encoding
 \usepackage[T1]{fontenc}
-%\usepackage{titletoc}
 \usepackage{minitoc}
 \usepackage{mdframed}
 \usepackage{verbatim}
 \usepackage{listings}
+\usepackage{xcolor}  % To use colors
+
 \lstset{% Formatting C codes
 	language=C,
 	basicstyle=\ttfamily,
+	inputencoding=utf8,      % Ensure UTF-8 encoding for code
+	extendedchars=true,      % Enable extended characters
+	literate={é}{{\'e}}1,    % Map 'é' to its LaTeX representation
 	numbers=left,
-	xleftmargin=1.5cm, % Adjust this value as needed
-	xrightmargin=.5cm, % Adjust this value as needed
+	xleftmargin=1.5cm,
+	xrightmargin=.5cm,
+	showstringspaces=false,
+	backgroundcolor=\color{lightgray}  % Set background color to light gray
 }
 
-
 \definecolor{remarkcolor}{RGB}{255,128,0} % Define the color for "Remark"
-% Define a command for chapter-wise mini tables of contents
-%\newcommand{\chaptertoc}{%
-%	\startcontents[chapters]
-%	\printcontents[chapters]{}{1}{\section*{\contentsname}}
-%	\vspace{1cm} % Adjust the spacing as needed
-%}
 
 \newtheorem{remarque}{Remarque}
 
@@ -49,14 +56,12 @@
 
 \author{Dimby Rabearivony}
 \date{\today}
-\version{1.0}
-
+\version{1.1}
 
 \extrainfo{"Ny fahalalana no valamparihiko."}
 
 \logo{Kajy U.png}
 \cover{hay.jpg}
-%\usepackage{minitoc}
 
 \begin{document}
 	
@@ -66,18 +71,15 @@
 	\tableofcontents
 	
 	\mainmatter
-	\include{chapters/chap0.tex}
-	\include{chapters/chap1.tex}
-	\include{chapters/chap2.tex}
-	\include{chapters/chap3.tex}
-	\include{chapters/chap4.tex}
-	\include{chapters/chap5.tex}
-
-%\chapter{Structures de donn\'ees fondamentales}
-%\chapter{Algorithmes de recherche et de tri}
-%\chapter{Complexité algorithmique}
-
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{reference}	
+	\include{chapters/chap0.tex} % Chapitre 0
+	\include{chapters/chap1.tex} % Chapitre 1
+	\include{chapters/chap2.tex} % Chapitre 2
+	\include{chapters/chap3.tex} % Chapitre 3
+	\include{chapters/chap4.tex} % Chapitre 4
+	\include{chapters/chap5.tex} % Chapitre 5
+	\include{chapters/chap6.tex} % Solutions for exercises
+	
+	%\nocite{*}
+	%\bibliographystyle{plain}
+	%\bibliography{reference}	
 \end{document}

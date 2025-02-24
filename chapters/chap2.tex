@@ -136,18 +136,18 @@ Le \emph{tri} consiste à organiser les données dans un ordre particulier. Les 
 	\end{algorithmic}
 \end{algorithm}
 
-\begin{algorithm}
-	\caption{Tri par tas (HeapSort)}
-	\begin{algorithmic}[1]
-		\Function{HeapSort}{tableau}
-		\State Construire le tas
-		\For{i de n - 1 à 1}
-		\State échanger tableau[0] et tableau[i]
-		\State Réorganiser le tas pour maintenir la propriété du tas
-		\EndFor
-		\EndFunction
-	\end{algorithmic}
-\end{algorithm}
+%\begin{algorithm}
+%	\caption{Tri par tas (HeapSort)}
+%	\begin{algorithmic}[1]
+%		\Function{HeapSort}{tableau}
+%		\State Construire le tas
+%		\For{i de n - 1 à 1}
+%		\State échanger tableau[0] et tableau[i]
+%		\State Réorganiser le tas pour maintenir la propriété du tas
+%		\EndFor
+%		\EndFunction
+%	\end{algorithmic}
+%\end{algorithm}
 
 		Les algorithmes de tri sont essentiels pour organiser les données efficacement. Chacun de ces algorithmes a ses avantages et inconvénients, avec des applications spécifiques en fonction des contraintes de temps et d'espace. Le choix de l'algorithme de tri dépendra de nombreux facteurs, y compris la taille de la liste, les caractéristiques des données, et les exigences de performance. 
 		
@@ -168,9 +168,9 @@ Les algorithmes de recherche permettent de trouver des éléments spécifiques d
 %	\textbf{Exemple de recherche binaire}
 	
 	
-	\item \textbf{Recherche par hachage (Hash Table Search)} : Ce type de recherche utilise une table de hachage pour trouver rapidement des éléments. Une fonction de hachage convertit chaque élément en une clé unique pour le stockage et la recherche. C'est très rapide pour les grandes listes, mais peut être complexe à mettre en place.
-	
-	\item \textbf{Recherche dans un arbre binaire (Binary Tree Search)} : Cette recherche utilise une structure appelée arbre binaire, où chaque nœud a jusqu'à deux enfants. La recherche se fait en parcourant les nœuds selon des règles spécifiques, ce qui peut être efficace pour certaines opérations de recherche.
+%	\item \textbf{Recherche par hachage (Hash Table Search)} : Ce type de recherche utilise une table de hachage pour trouver rapidement des éléments. Une fonction de hachage convertit chaque élément en une clé unique pour le stockage et la recherche. C'est très rapide pour les grandes listes, mais peut être complexe à mettre en place.
+%	
+%	\item \textbf{Recherche dans un arbre binaire (Binary Tree Search)} : Cette recherche utilise une structure appelée arbre binaire, où chaque nœud a jusqu'à deux enfants. La recherche se fait en parcourant les nœuds selon des règles spécifiques, ce qui peut être efficace pour certaines opérations de recherche.
 	
 	\item \textbf{Recherche interpolée (Interpolation Search)} : Cette recherche est une version améliorée de la recherche binaire pour les listes avec des valeurs bien réparties. Elle utilise une formule pour estimer la position de la valeur recherchée, ce qui la rend plus précise.
 	
@@ -180,9 +180,6 @@ Les algorithmes de recherche permettent de trouver des éléments spécifiques d
 	\item \textbf{Recherche par saut (Jump Search)} : C'est une recherche linéaire optimisée pour les grandes listes. Elle saute de blocs en blocs pour trouver la plage dans laquelle l'élément pourrait se trouver, puis fait une recherche linéaire à l'intérieur de cette plage.
 	
 %	\textbf{Exemple de recherche par saut}
-
-
-
 
 	\begin{algorithm}
 	\caption{Recherche linéaire}
@@ -252,6 +249,7 @@ Les algorithmes de recherche permettent de trouver des éléments spécifiques d
 	\end{algorithmic}
 \end{algorithm}
 \end{enumerate}
+
 \section{Exercices}
 \begin{enumerate}
 	\item Pour chacun des algorithmes de tri cités dans ce chapitre :

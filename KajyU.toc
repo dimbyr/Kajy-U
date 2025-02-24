@@ -1,27 +1,27 @@
 \babel@toc {french}{}\relax 
 \contentsline {chapter}{\numberline {1}Structures de donn\'ees fondamentales}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Variables}{3}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Déclaration de variables}{3}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Initialisation des variables}{3}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Utilisation des variables}{3}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Portée des variables}{4}{subsection.1.1.4}%
+\contentsline {subsection}{Déclaration de variables}{3}{section*.3}%
+\contentsline {subsection}{Initialisation des variables}{3}{lstnumber.-1.3}%
+\contentsline {subsection}{Utilisation des variables}{3}{lstnumber.-2.3}%
+\contentsline {subsection}{Portée des variables}{4}{lstnumber.-3.5}%
 \contentsline {section}{\numberline {1.2}Pointeurs}{5}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Déclaration de pointeurs}{5}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Initialisation de pointeurs}{5}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Utilisation de pointeurs}{5}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Double pointeurs}{6}{subsection.1.2.4}%
-\contentsline {subsection}{\numberline {1.2.5}Utilisation avancée des pointeurs}{6}{subsection.1.2.5}%
-\contentsline {subsection}{\numberline {1.2.6}Pointeurs et mémoire dynamique}{7}{subsection.1.2.6}%
+\contentsline {subsection}{Déclaration de pointeurs}{5}{section*.4}%
+\contentsline {subsection}{Initialisation de pointeurs}{5}{lstnumber.-5.3}%
+\contentsline {subsection}{Utilisation de pointeurs}{5}{lstnumber.-6.3}%
+\contentsline {subsection}{Double pointeurs}{6}{lstnumber.-7.9}%
+\contentsline {subsection}{Utilisation avancée des pointeurs}{6}{lstnumber.-8.7}%
+\contentsline {subsection}{Pointeurs et mémoire dynamique}{7}{lstnumber.-9.6}%
 \contentsline {section}{\numberline {1.3}Types de données}{7}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Types de données de base}{7}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Types de données dérivés}{8}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Typedef}{9}{subsection.1.3.3}%
-\contentsline {section}{\numberline {1.4}Exercices}{12}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Variables et types de données}{12}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Pointeurs}{12}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Tableaux}{12}{subsection.1.4.3}%
-\contentsline {subsection}{\numberline {1.4.4}Chaînes de caractères}{13}{subsection.1.4.4}%
-\contentsline {subsection}{\numberline {1.4.5}Structures}{13}{subsection.1.4.5}%
+\contentsline {subsection}{Types de données de base}{7}{section*.5}%
+\contentsline {subsection}{Types de données dérivés}{8}{lstnumber.-11.4}%
+\contentsline {subsection}{Typedef}{9}{lstnumber.-15.3}%
+\contentsline {section}{\numberline {1.4}Exercices}{11}{section.1.4}%
+\contentsline {subsection}{Variables et types de données}{11}{section*.6}%
+\contentsline {subsection}{Pointeurs}{12}{Item.18}%
+\contentsline {subsection}{Tableaux}{12}{Item.22}%
+\contentsline {subsection}{Chaînes de caractères}{12}{Item.26}%
+\contentsline {subsection}{Structures}{12}{Item.30}%
 \contentsline {chapter}{\numberline {2}Algorithmes de tri et de recherche}{14}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Qu’est-ce qu’un algorithme?}{14}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Récursion}{14}{section.2.2}%
@@ -30,44 +30,72 @@
 \contentsline {section}{\numberline {2.5}Exercices}{17}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Complexité algorithmique}{20}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Les bornes asymptotiques}{20}{section.3.1}%
-\contentsline {section}{\numberline {3.2}La notation O}{20}{section.3.2}%
+\contentsline {section}{\numberline {3.2}La notation O}{21}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Les notations $\Omega $ et $\theta $}{21}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Complexité de certains algorithmes}{21}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Temps constant (O(1))}{22}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Temps linéaire (O(n))}{22}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Temps quadratique (O($n^2$))}{22}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Temps exponentiel (O($2^n$))}{23}{subsection.3.4.4}%
+\contentsline {section}{\numberline {3.4}Complexité de certains algorithmes}{22}{section.3.4}%
+\contentsline {subsection}{Temps constant (O(1))}{22}{section*.7}%
+\contentsline {subsection}{Temps linéaire (O(n))}{22}{algorithm.13}%
+\contentsline {subsection}{Temps quadratique (O($n^2$))}{22}{algorithm.14}%
+\contentsline {subsection}{Temps exponentiel (O($2^n$))}{22}{algorithm.15}%
 \contentsline {section}{\numberline {3.5}Exercices}{23}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Structures de données avancées}{25}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Listes chaînées}{25}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Création d'une liste chaînée}{25}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Insertion d'un nœud dans la liste chaînée}{25}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Suppression d'un nœud de la liste chaînée}{25}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Résumé}{26}{subsection.4.1.4}%
+\contentsline {subsection}{Création d'une liste chaînée}{25}{figure.caption.8}%
+\contentsline {subsection}{Insertion d'un nœud dans la liste chaînée}{25}{figure.caption.8}%
+\contentsline {subsection}{Suppression d'un nœud de la liste chaînée}{26}{figure.caption.8}%
+\contentsline {subsection}{Résumé}{26}{figure.caption.8}%
 \contentsline {section}{\numberline {4.2}Piles}{26}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Construction d'une pile}{26}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Insertion d'un élément dans une pile (empilage)}{27}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Suppression d'un élément dans une pile (dépilage)}{27}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Vérification si la pile est vide}{27}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Utilisations courantes des piles}{27}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Résumé}{27}{subsection.4.2.6}%
+\contentsline {subsection}{Construction d'une pile}{27}{figure.caption.9}%
+\contentsline {subsection}{Insertion d'un élément dans une pile (empilage)}{27}{figure.caption.9}%
+\contentsline {subsection}{Suppression d'un élément dans une pile (dépilage)}{27}{figure.caption.9}%
+\contentsline {subsection}{Vérification si la pile est vide}{27}{figure.caption.9}%
+\contentsline {subsection}{Utilisations courantes des piles}{28}{figure.caption.9}%
+\contentsline {subsection}{Résumé}{28}{figure.caption.9}%
 \contentsline {section}{\numberline {4.3}Files}{28}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Construction d'une file}{28}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Insertion d'un élément dans une file (enfilage)}{28}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Suppression d'un élément dans une file (défilage)}{28}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Vérification si la file est vide}{28}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Utilisations courantes des files}{29}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}Résumé}{29}{subsection.4.3.6}%
-\contentsline {section}{\numberline {4.4}Arbres binaires}{29}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Construction d'un arbre binaire}{30}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Insertion dans un arbre binaire}{30}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Utilisations courantes des arbres binaires}{30}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Algorithmes de parcours des arbres binaires}{30}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Résumé}{31}{subsection.4.4.5}%
-\contentsline {section}{\numberline {4.5}Graphes}{31}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Construction d'un graphe}{31}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Ajout d'arêtes (liens) dans un graphe}{32}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Utilisations courantes des graphes}{32}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.5.4}Algorithmes de parcours de graphes}{32}{subsection.4.5.4}%
-\contentsline {subsection}{\numberline {4.5.5}Résumé}{33}{subsection.4.5.5}%
-\contentsline {chapter}{\numberline {5}Applications d'algorithmes en IA}{34}{chapter.5}%
+\contentsline {subsection}{Construction d'une file}{29}{figure.caption.10}%
+\contentsline {subsection}{Insertion d'un élément dans une file (enfilage)}{29}{figure.caption.10}%
+\contentsline {subsection}{Suppression d'un élément dans une file (défilage)}{29}{figure.caption.10}%
+\contentsline {subsection}{Vérification si la file est vide}{29}{figure.caption.10}%
+\contentsline {subsection}{Utilisations courantes des files}{29}{figure.caption.10}%
+\contentsline {subsection}{Résumé}{30}{figure.caption.10}%
+\contentsline {section}{\numberline {4.4}Arbres binaires}{30}{section.4.4}%
+\contentsline {subsection}{Construction d'un arbre binaire}{31}{figure.caption.11}%
+\contentsline {subsection}{Insertion dans un arbre binaire}{31}{figure.caption.11}%
+\contentsline {subsection}{Utilisations courantes des arbres binaires}{31}{figure.caption.11}%
+\contentsline {subsection}{Algorithmes de parcours des arbres binaires}{31}{figure.caption.11}%
+\contentsline {subsection}{Résumé}{32}{Item.104}%
+\contentsline {section}{\numberline {4.5}Graphes}{34}{section.4.5}%
+\contentsline {subsection}{Construction d'un graphe}{35}{figure.caption.12}%
+\contentsline {subsection}{Ajout d'arêtes (liens) dans un graphe}{35}{figure.caption.12}%
+\contentsline {subsection}{Utilisations courantes des graphes}{35}{figure.caption.12}%
+\contentsline {subsection}{Algorithmes de parcours de graphes}{35}{figure.caption.12}%
+\contentsline {subsection}{Résumé}{36}{Item.117}%
+\contentsline {chapter}{\numberline {5}Applications d'algorithmes en IA}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{39}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Algorithmes d'Apprentissage Supervisé}{39}{section.5.2}%
+\contentsline {subsection}{Régression Linéaire}{39}{section*.13}%
+\contentsline {subsection}{Régression Logistique}{40}{Item.134}%
+\contentsline {subsection}{Clustering avec K-means}{41}{Item.139}%
+\contentsline {chapter}{\numberline {6}Corrig\'ees des exercices}{43}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Structures de données fondamentales}{43}{section.6.1}%
+\contentsline {subsection}{Variables et types de données}{43}{section*.20}%
+\contentsline {subsection}{Pointeurs}{44}{Item.158}%
+\contentsline {subsection}{Tableaux}{45}{Item.162}%
+\contentsline {subsection}{Chaînes de caractères}{47}{lstnumber.-30.11}%
+\contentsline {subsection}{Structures}{49}{lstnumber.-33.19}%
+\contentsline {section}{\numberline {6.2}Algorithmes de tri et de recherche}{51}{section.6.2}%
+\contentsline {subsection}{Algorithmes de tri}{51}{section*.21}%
+\contentsline {subsubsection}{Tri à bulle (Bubble Sort)}{51}{Item.179}%
+\contentsline {subsubsection}{Tri par insertion (Insertion Sort)}{52}{lstnumber.-37.32}%
+\contentsline {subsubsection}{Tri rapide (Quick Sort)}{53}{lstnumber.-38.31}%
+\contentsline {subsection}{Algorithmes de recherche}{55}{lstnumber.-39.45}%
+\contentsline {subsubsection}{Recherche linéaire (Linear Search)}{55}{Item.180}%
+\contentsline {subsubsection}{Recherche binaire (Binary Search)}{55}{lstnumber.-40.21}%
+\contentsline {section}{\numberline {6.3}Complexité algorithmique}{57}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Structures de données avancées}{58}{section.6.4}%
+\contentsline {subsection}{Listes chaînées}{58}{section*.22}%
+\contentsline {subsection}{Piles}{61}{lstnumber.-46.28}%
+\contentsline {subsection}{Files}{63}{lstnumber.-50.14}%
+\contentsline {subsection}{Arbres binaires}{66}{lstnumber.-53.18}%
+\contentsline {subsection}{Graphes}{68}{lstnumber.-56.25}%
+\contentsline {section}{\numberline {6.5}Applications d'algorithmes en IA}{72}{section.6.5}%
